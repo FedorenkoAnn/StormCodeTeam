@@ -1,0 +1,77 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    min-width: 100vw;
+  
+    font-family: var(--font-main);
+    font-size: 18px;
+    overflow-x: hidden;
+    transition: background-color 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+  }
+  main {
+    flex-grow: 1;
+  }
+
+/* cкидання налаштувань браузера */
+.link {
+  text-decoration: none;
+}
+
+.list {
+  list-style: none;
+}
+
+
+
+h1,
+h2,
+h3,
+h4,
+p,
+ul {
+  margin-top: 0;
+  margin-bottom: 0;
+}
+
+ul {
+  padding-left: 0;
+  list-style: none;
+}
+
+/* базові параметри зображень*/
+img {
+  display: block;
+  width: 100%;
+  border-radius: 8px;
+}
+
+
+/* налаштування контейнерів*/
+@media screen and (min-width: 300px) {
+  .container {
+    display: flex;
+    flex-direction: row;
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .container {
+    max-width: 768px;
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .container {
+    max-width: 1440px;
+    padding-left: 24px;
+    padding-right: 24px;
+  }
+}
