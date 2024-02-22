@@ -1,5 +1,13 @@
+.home-section {
+  display: flex;
+}
+
+.sidebar-section {
+  width: 100%;
+}
+
 /* .sidebar-container {
-  
+  width: ;
 } */
 
 .sidebar-box-categories {
