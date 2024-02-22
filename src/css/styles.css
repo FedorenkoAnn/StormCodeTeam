@@ -4,9 +4,17 @@
   | default @import url()
   |============================
 */
+@import url('./base.css');
+@import url('./common.css');
+@import url('./fonts.css');
+@import url('./index.css');
 @import url('./reset.css');
-@import url('./vite-promo.css');
+@import url('./vars.css');
+
 @import url('./header.css');
+@import url('./home.css');
+@import url('./modal.css');
+
 
 :root {
   font-family: Inter, Avenir, Helvetica, Arial, sans-serif;
