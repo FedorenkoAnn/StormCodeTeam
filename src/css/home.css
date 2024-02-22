@@ -32,7 +32,7 @@
   width: 356px;
   height: 472px;
   display: flex;
-  list-style-type: none;
+  overflow: scroll;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
