@@ -1,0 +1,37 @@
+/* підключення шрифтів*/
+
+@font-face {
+  font-family:'DM Sans';
+  src: url('../fonts/DMSans-Bold.ttf'),
+   url('../fonts/DMSans-Bold.woff2');
+  font-weight: 700;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'DM Sans';
+  src: url('../fonts/DMSans-Medium.ttf'),
+   url('../fonts/DMSans-Medium.woff2');
+  font-weight: 500;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'DM Sans';
+  src: url('../fonts/DMSans-Regular.ttf'),
+   url('../fonts/DMSans-Regular.woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: normal;
+}
+
+@font-face {
+  font-family:'DM Sans';
+  src: url('../fonts/DMSans-Italic.ttf'),
+   url('../fonts/DMSans-Regular.woff2');
+  font-weight: 400;
+  font-display: swap;
+  font-style: italic;
+}
