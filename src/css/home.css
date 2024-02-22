@@ -1,3 +1,21 @@
+/* Mobile */
+
+@media (max-width: 375px) {
+  .home-section .sidebar-container {
+    width: 100%;
+    max-width: calc(335px - 40px);
+  }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
+}
+
+@media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
+}
+
+@media screen and (min-width: 1440px) {
+}
+
 .home-section {
   display: flex;
 }
