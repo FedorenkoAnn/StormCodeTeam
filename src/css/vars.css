@@ -1,0 +1,20 @@
+:root {
+    --font-main: 'DM Sans';
+    --light-body-color: #d0d0d0;
+    --light-nav-text-color: #000;
+    --light-header-bg-color: #fff;
+    --light-border-n-text-color: #111;
+    --light-accent-color: #4f2ee8;
+    --light-accent-color-2: #eac645;
+    --light-description-text: #11111199;
+    --light-header-secondary-color: #b4afaf;
+  
+    --dark-body-color: #202024;
+    --dark-nav-text-color: #f3f3f3;
+    --dark-header-bg-color: #111111;
+    --dark-border-n-text-color: #ffffff;
+    --dark-accent-color: #4f2ee8;
+    --dark-accent-color-2: #eac645;
+    --dark-description-text: #ffffff99;
+    --dark-header-secondary-color: #b4afaf84;
+}

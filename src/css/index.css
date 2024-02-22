@@ -6,3 +6,4 @@
 
 /* підключення загальних стилів*/
 @import './base.css';
+@import './vars.css';
