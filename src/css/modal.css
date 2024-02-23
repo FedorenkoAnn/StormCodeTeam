@@ -1,0 +1,158 @@
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.backdrop {
+  display: flex;
+  position: fixed;
+  z-index: 1;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  position: absolute;
+  width: 579px;
+  height: 500px;
+  padding: 40px;
+  background-color: #fefefe;
+  border-radius: 1px solid #888;
+  box-sizing: border-box;
+  border: 2px solid rgb(17, 17, 17);
+  border-radius: 18px;
+  background: rgb(255, 255, 255);
+}
+
+@media screen and (min-width: 768px) {
+  .modal-content {
+    max-width: 579px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .modal-content {
+    max-width: 579px;
+  }
+}
+
+.list-container {
+  text-align: left;
+  flex: 1;
+}
+
+.title {
+  width: 192px;
+  height: 28px;
+  color: rgb(17, 17, 17);
+  font-family: DM Sans;
+  font-size: 24px;
+  font-weight: 700;
+  line-height: 28px;
+  text-align: left;
+  margin-bottom: 8px;
+}
+.list-details {
+  list-style-type: none;
+  padding-left: 24px;
+  margin: 0;
+}
+
+.list-name {
+  margin-bottom: 20px;
+  color: rgb(180, 175, 175);
+  font-family: DM Sans;
+  font-style: italic;
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 18px;
+
+  text-align: left;
+}
+.list-descr {
+  margin-bottom: 26px;
+}
+.list-links {
+  display: flex;
+}
+
+.modal-close {
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  top: 31px;
+  right: 31px;
+  color: #aaa;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.modal-close:hover,
+.modal-close:focus {
+  color: black;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-body {
+  display: flex;
+}
+
+.image-container img {
+  width: 192px;
+  height: 281px;
+}
+.shopping-list {
+  margin-top: 40px;
+  width: 499px;
+  height: 64px;
+  left: 40px;
+  top: 361px;
+  box-sizing: border-box;
+  border: 2px solid rgb(79, 46, 232);
+  border-radius: 40px;
+  color: rgb(17, 17, 17);
+  font-family: DM Sans;
+  font-size: 18px;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: -1%;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.shopping-list:hover,
+:focus {
+  color: white;
+  background-color: rgb(79, 46, 232);
+}
+
+.modal-bottom-text {
+  margin-top: 8px;
+  position: absolute;
+  width: 315px;
+  height: 28px;
+  left: 128px;
+  right: 127px;
+
+  color: rgba(17, 17, 17, 0.5);
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -4%;
+  text-align: center;
+}

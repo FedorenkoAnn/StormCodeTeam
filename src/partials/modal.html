@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Modal</title>
+  </head>
+  <body>
+    <button class="button" onclick="openModal()">
+      Відкрити модальне вікно
+    </button>
+
+    <div class="backdrop">
+      <div class="modal-content">
+        <button type="button" class="modal-close" onclick="closeModal()">
+          <svg class="modal-close-btn-icon" width="14" height="14">
+            <use xlink:href="#icon-Icon"></use>
+          </svg>
+        </button>
+        <div class="modal-body">
+          <div class="image-container">
+            <img src="./src/images/image-desc.jpeg" alt="Зображення" />
+          </div>
+          <div class="list-container">
+            <ul class="list-details">
+              <li class="title">Hello beautiful</li>
+              <li class="list-name">Ann Napolitano</li>
+              <li class="list-descr">
+                In a homage to Louisa May Alcott’s “Little Women,” a young man’s
+                dark past resurfaces as he gets to the know the family of his
+                college sweetheart.
+              </li>
+              <div class="list-links">
+                <li class="list-amazon">
+                  <a href="./images/image-amazon.png" alt="amazon"
+                    ><img src="./images/image-amazon.png" alt="Amazon"
+                  /></a>
+                  >
+                </li>
+                <li class="list-google">
+                  <a href="./images/image-google.png" alt="google"
+                    ><img src="./images/image-google.png" alt="Google"
+                  /></a>
+                  >
+                </li>
+              </div>
+            </ul>
+          </div>
+        </div>
+        <button type="button" class="shopping-list">
+          Add to shopping list
+        </button>
+        <p class="modal-bottom-text">
+          Сongratulations! You have added the book to the shopping list. To
+          delete, press the button “Remove from the shopping list”.
+        </p>
+      </div>
+    </div>
+    <script src="./script.js"></script>
+  </body>
+</html>
