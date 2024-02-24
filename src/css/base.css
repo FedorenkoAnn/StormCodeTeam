@@ -65,30 +65,29 @@ img {
 
 
 /* налаштування контейнерів*/
-@media screen and (min-width: 300px) {
-  .container {
-    display: flex;
-    flex-direction: row;
-    max-width: 375px;
-    margin-left: auto;
-    margin-right: auto;
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+.container{
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+@media screen and (min-width: 375px) {
+  max-width: 375px;
 }
 
 @media screen and (min-width: 768px) {
-  .container {
-    max-width: 768px;
+   
+    width: 768px;
     padding-left: 32px;
     padding-right: 32px;
-  }
+  
 }
 
 @media screen and (min-width: 1440px) {
-  .container {
-    max-width: 1440px;
+  
+    width: 1440px;
     padding-left: 24px;
     padding-right: 24px;
-  }
+  
+}
 }

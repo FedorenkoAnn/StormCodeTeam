@@ -1,4 +1,5 @@
 import axios from 'axios';
+
 //Перелік категорій книг
 
 async function getCategoryList() {
@@ -29,10 +30,14 @@ async function getByCategoryBooks(paramCategory) {
 // Детальна інформація про книгу
 
 async function getBookById(paramId) {
+
   const idBook = await axios.get(
     `https://books-backend.p.goit.global/books/${paramId}`
   );
   return idBook;
 }
 
+
 export { getCategoryList, getTopBooks, getByCategoryBooks, getBookById };
+
+
