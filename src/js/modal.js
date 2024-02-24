@@ -1,7 +1,14 @@
+const modalCloseBtn = document.querySelector('.modal-close-btn');
+const backdrop = document.querySelector('.backdrop');
 function closeModal() {
   const backdrop = document.querySelector('.backdrop');
   backdrop.style.display = 'none';
 }
+
+modalCloseBtn.addEventListener('click', () => {
+  closeModal();
+});
+
 function openModal() {
   const backdrop = document.querySelector('.backdrop');
   backdrop.style.display = 'block';
@@ -19,7 +26,7 @@ document
   .addEventListener('click', toggleShoppingList);
 
 function darkTheme() {
-  // const modalCloseBtnIcon = document.querySelector('modal-close-btn-icon use');
+  const modalCloseBtnIcon = document.querySelector('modal-close-btn-icon use');
   const modalContentElem = document.querySelector('.modal-content');
   const titleElem = document.querySelector('.title');
   const listNameElem = document.querySelector('.list-name');
