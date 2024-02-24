@@ -76,7 +76,7 @@
     rgb(79, 46, 232) 18.027%,
     rgb(255, 255, 255) 100%
   );
-  overflow: scroll;
+  /* overflow: scroll; */
 }
 
 .sidebar-support {
@@ -113,6 +113,9 @@
 .sidebar-list-support {
   display: flex;
   flex-direction: column;
+  width: 159px;
+  height: 292px;
+  min-width: 0;
 }
 
 .sidebar-company-img-box {
@@ -154,24 +157,24 @@
 .sidebar-img {
 } */
 
-.sidebar-swiper {
-  position: absolute;
+.swiper {
+  /* position: absolute;
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
   width: 38px;
   height: 38px;
   right: 159px;
-  top: 412px;
+  top: 412px; */
   /* transform: rotate(90deg); */
 }
 
 .sidebar-swiper-arrowe {
-  margin-top: 12px;
+  /* margin-top: 12px;
   margin-left: 15px;
   width: 6.58px;
   height: 12.83px;
   left: 17.42px;
   top: 14.38px;
   transform: rotate(-90deg);
-  background-color: rgb(79, 46, 232);
+  background-color: rgb(79, 46, 232); */
 }
