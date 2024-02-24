@@ -9,10 +9,8 @@
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .sidebar-container {
-
     width: 100%;
     padding-top: 40px;
-   
   }
 }
 
@@ -34,8 +32,7 @@
     gap: 0;
     row-gap: 0px;
     column-gap: 0px;
-}
-  
+  }
 }
 
 .home-section {
@@ -56,23 +53,21 @@
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
+  }
 }
-}
-@media screen and (min-width: 768px){
-.sidebar-box-categories {
+@media screen and (min-width: 768px) {
+  .sidebar-box-categories {
     gap: 32px;
     padding-bottom: 100px;
     display: flex;
+  }
 }
-}
-
-
 
 .sidebar-box-categories {
   width: 356px;
   height: 472px;
   display: flex;
-  overflow: scroll;
+  /* overflow: scroll; */
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
@@ -81,17 +76,16 @@
 }
 
 @media screen and (min-width: 300px) {
-  .sidebar-list-categories{
+  .sidebar-list-categories {
     max-height: 228px;
     overflow-y: scroll;
+  }
 }
-}
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .sidebar-list-categories {
     max-height: 472px;
+  }
 }
-}
-
 
 .sidebar-list-categories {
   display: flex;
@@ -107,16 +101,14 @@
   .sidebar-favorite {
     font-size: 14px;
     line-height: 1.12px;
+  }
 }
-}
-@media screen and (min-width: 768px){
-  .sidebar-favorite{
+@media screen and (min-width: 768px) {
+  .sidebar-favorite {
     font-size: 16px;
     line-height: 1.33px;
-
+  }
 }
-}
-
 
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
@@ -129,21 +121,19 @@
   margin-bottom: 32px;
 }
 
-
 @media screen and (min-width: 300px) {
   .sidebar-box-support {
     width: 100%;
     height: 352px;
     display: block;
     position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+  }
 }
-}
-@media screen and (min-width: 768px){
+@media screen and (min-width: 768px) {
   .sidebar-box-support {
     height: 472px;
     width: 335px;
-
-}
+  }
 }
 .sidebar-box-support {
   position: relative;
