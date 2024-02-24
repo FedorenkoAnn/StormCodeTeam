@@ -15,6 +15,7 @@ allCategoriesBtn.addEventListener('click', async () => {
         const category = 'Hardcover Fiction'; 
         const response = await getByCategoryBooks(category);
         const books = response.data;
+        console.log(books);
         const booksByCategory = books.map(({ book_image, title, author }) => ({
             book_image,
             title,
