@@ -1,33 +1,36 @@
 import { getByCategoryBooks } from './api.js';
 
-const allCategoriesBtn = document.querySelector('.test-button');
+const allCategoriesList = document.querySelector('.js-list');
+const categoriesItem = document.querySelectorAll('.js-category');
 const hardcoverBooksList = document.querySelector('.books-list');
 
-document.addEventListener('DOMContentLoaded', () => {
-    const isButtonHidden = localStorage.getItem('isButtonHidden');
-    if (isButtonHidden === 'true') {
-        allCategoriesBtn.style.display = 'none';
-    }
-});
+// document.addEventListener('DOMContentLoaded', () => {
+//     const isButtonHidden = localStorage.getItem('isButtonHidden');
+//     if (isButtonHidden === 'true') {
+//         allCategoriesList.style.display = 'none';
+//     }
+// });
 
-allCategoriesBtn.addEventListener('click', async () => {
+allCategoriesList.addEventListener('click', async (event) => {
     try {
-        const category = 'Hardcover Fiction'; 
-        const response = await getByCategoryBooks(category);
-        const books = response.data;
-        console.log(books);
+        if (Array.from(categoriesItem).includes(event.target)) {
+            const category = event.target.textContent.trim(); 
+            const response = await getByCategoryBooks(category);
+            const books = response.data; 
+            console.log(books);
 
-        const booksByCategory = books.map(({ book_image, title, author }) => ({
-            book_image,
-            title,
-            author
-        }));
-        const markup = createHardcoverMarkup(category, booksByCategory);
+            const booksByCategory = books.map(({ _id, book_image, title, author }) => ({
+                book_image,
+                title,
+                author,
+                _id
+            }));
+            const markup = createHardcoverMarkup(category, booksByCategory);
 
-        hardcoverBooksList.innerHTML = markup;
+            hardcoverBooksList.innerHTML = markup;
 
-        localStorage.setItem('isButtonHidden', 'true');
-        allCategoriesBtn.style.display = 'none';
+            localStorage.setItem('isButtonHidden', 'true');
+        }
     } catch (error) {
         console.error(error);
     }
@@ -35,8 +38,8 @@ allCategoriesBtn.addEventListener('click', async () => {
 
 function createHardcoverMarkup(category, booksByCategory) {
     const categoryTitle = `<h2 class="hardcover-category-title">${category.replace(/(\w+)/g, (match, p1, offset) => offset === 0 ? match : `<span class="book-categories-span">${match}</span>`)}</h2>`;
-    const booksMarkup = booksByCategory.map(({ book_image, title, author }) =>
-        `<li class="hardcover-item">         
+    const booksByCategoryMarkup = booksByCategory.map(({ _id, book_image, title, author }) =>
+        `<li class="hardcover-item" id=${_id}>         
             <div class="hardcover-container">
                 <div class="hardcover-wrapper">
                     <img class="hardcover-image" src="${book_image}"/>
@@ -48,5 +51,5 @@ function createHardcoverMarkup(category, booksByCategory) {
             </div>
         </li>`
     ).join('');
-    return categoryTitle + '<ul class="hardcover-list">' + booksMarkup + '</ul>';
+    return categoryTitle + '<ul class="hardcover-list">' + booksByCategoryMarkup + '</ul>';
 }
