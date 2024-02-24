@@ -5,26 +5,16 @@ import Swiper from 'swiper/bundle';
 import 'swiper/css/bundle';
 
 // init Swiper:
-// const swiper = document.querySelector('.swiper', {
-//   // Navigation arrows
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
+// const swiper = document.querySelector('swiper');
 
-//   direction: 'vertical',
-// }).swiper;
-
-const swiper = new Swiper('.swiper', {
+const swiper = new Swiper('swiper', {
   // Navigation arrows
   navigation: {
     nextEl: '.swiper-button-next',
     prevEl: '.swiper-button-prev',
   },
-  scrollbar: {
-    el: '.swiper-scrollbar',
-  },
-
+  keyboard: true,
+  mousewhell: true,
   direction: 'vertical',
 });
 

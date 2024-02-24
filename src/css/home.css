@@ -186,6 +186,7 @@
   width: 159px;
   height: 292px;
   min-width: 0;
+  position: relative;
 }
 
 .sidebar-company-img-box {
@@ -227,24 +228,41 @@
 .sidebar-img {
 } */
 
-.swiper {
-  /* position: absolute;
+/* .swiper {
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
   width: 38px;
   height: 38px;
   right: 159px;
-  top: 412px; */
-  /* transform: rotate(90deg); */
-}
+  top: 412px;
+  transform: rotate(90deg);
+} */
 
-.sidebar-swiper-arrowe {
-  /* margin-top: 12px;
+/* .sidebar-swiper-arrowe {
+  margin-top: 12px;
   margin-left: 15px;
   width: 6.58px;
   height: 12.83px;
   left: 17.42px;
   top: 14.38px;
   transform: rotate(-90deg);
-  background-color: rgb(79, 46, 232); */
+  background-color: rgb(79, 46, 232);
+} */
+
+.swiper-wrapper {
+  width: 159px;
+  height: 292px;
+  position: relative;
+  /* width: 100%;
+  height: 100%; */
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  transition-property: transform;
+  transition-timing-function: var(
+    --swiper-wrapper-transition-timing-function,
+    initial
+  );
+  box-sizing: content-box;
+  min-width: 0;
 }
