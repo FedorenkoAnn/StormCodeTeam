@@ -17,3 +17,22 @@ function toggleShoppingList() {
 document
   .querySelector('.shopping-list')
   .addEventListener('click', toggleShoppingList);
+
+function darkTheme() {
+  // const modalCloseBtnIcon = document.querySelector('modal-close-btn-icon use');
+  const modalContentElem = document.querySelector('.modal-content');
+  const titleElem = document.querySelector('.title');
+  const listNameElem = document.querySelector('.list-name');
+  const listDescrElem = document.querySelector('.list-descr');
+  const shoppingListElem = document.querySelector('.shopping-list');
+  const modalBottomTextElem = document.querySelector('.modal-bottom-text');
+
+  // modalCloseBtnIcon.setAttribute('href', './img/icons.svg#icon-close-white');
+  modalContentElem.style.backgroundColor = 'rgb(208, 208, 208)';
+  titleElem.style.color = 'rgb(255, 255, 255)';
+  listNameElem.style.color = 'rgb(255, 255, 255)';
+  listDescrElem.style.color = 'rgb(255, 255, 255)';
+  shoppingListElem.style.color = 'rgb(255, 255, 255)';
+  modalBottomTextElem.style.color = 'rgb(255, 255, 255)';
+}
+// darkTheme();
