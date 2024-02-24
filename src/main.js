@@ -1,7 +1,7 @@
-import './js/header';
-import './js/sidebar';
-import './js/bestsellers';
-import './js/hardcover';
-import './js/shopping-list';
+import './js/header.js';
+import './js/sidebar.js';
+import './js/bestsellers.js';
+import './js/hardcover.js';
+import './js/shopping-list.js';
 import './js/modal.js';
 import './js/api.js';
