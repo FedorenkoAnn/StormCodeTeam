@@ -269,22 +269,30 @@ body.dark-mode .sidebar-favorite:focus {
   margin-left: 38px;
 }
 
-/* .sidebar-company-number {
-  position: absolute;
+.sidebar-company-link:active,
+.sidebar-company-link:hover,
+.sidebar-company-link:focus {
+  background-color: none;
+  color: none;
+  fill: none;
+}
+
+.sidebar-company-number {
+  /* position: absolute;
   flex-direction: row;
   justify-content: center;
   align-items: flex-end;
   padding: 0px;
   width: 14px;
-  height: 18px;
+  height: 18px; */
   color: rgb(255, 255, 255);
-  font-family: sans-serif, 'DM Sans';
+  /* font-family: sans-serif, 'DM Sans';
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
   letter-spacing: 0.04em;
-  text-align: left;
-} */
+  text-align: left; */
+}
 
 /* .sidebar-img {
   height: 32px;
