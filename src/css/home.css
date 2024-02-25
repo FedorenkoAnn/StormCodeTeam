@@ -258,11 +258,16 @@ body.dark-mode .sidebar-favorite:focus {
   height: 32px;
 }
 
-/* .sidebar-company-link:focus,
-.sidebar-company-link:focus {
+/* .sidebar-company-link {
+  background-color: black;
+  color: #000;
+  fill: #000;
 }
 
 .sidebar-img {
+  background-color: black;
+  color: #000;
+  fill: #000;
 } */
 
 /* .swiper-button-next {
@@ -308,7 +313,7 @@ body.dark-mode .sidebar-favorite:focus {
 .slider-container {
   width: 159px;
   height: 292px;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 .swiper-container {
   width: 159px;

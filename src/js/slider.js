@@ -2,7 +2,7 @@ import Swiper from 'swiper/bundle';
 
 import 'swiper/css/bundle';
 
-const swiper = new Swiper('.container-swiper', {
+const swiper = new Swiper('.swiper-scrollbar', {
   scrollbar: {
     el: '.swiper-scrollbar',
     draggable: true,
