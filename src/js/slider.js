@@ -2,7 +2,14 @@ import Swiper from 'swiper/bundle';
 
 import 'swiper/css/bundle';
 
-const swiper = new Swiper('.swiper-container', {
+const swiper = new Swiper('.swiper-scrollbar', {
+  scrollbar: {
+    el: '.swiper-scrollbar',
+    draggable: true,
+  },
+});
+
+const newSwiper = new Swiper('.swiper-container', {
   slidesPerView: 6,
   spaceBetween: 20,
   direction: 'vertical',

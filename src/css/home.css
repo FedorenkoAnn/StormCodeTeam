@@ -258,14 +258,20 @@ body.dark-mode .sidebar-favorite:focus {
   height: 32px;
 }
 
-/* .sidebar-company-link:focus,
-.sidebar-company-link:focus {
+/* .sidebar-company-link {
+  background-color: black;
+  color: #000;
+  fill: #000;
 }
 
 .sidebar-img {
+  background-color: black;
+  color: #000;
+  fill: #000;
 } */
 
-/* .swiper {
+/* .swiper-button-next {
+  position: absolute;
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
   width: 38px;
@@ -305,16 +311,15 @@ body.dark-mode .sidebar-favorite:focus {
 } */
 
 .slider-container {
-  max-width: 300px;
-  height: 500px;
-  border-radius: 15px;
-  padding: 10px;
-  position: relative;
-  background-color: #7d2908;
+  width: 159px;
+  height: 292px;
+  /* overflow: hidden; */
 }
 .swiper-container {
-  height: 90%;
+  width: 159px;
+  height: 292px;
 }
-.card {
-  background-color: #7042d3;
+.swiper-wrapper {
+  width: 159px;
+  height: 292px;
 }

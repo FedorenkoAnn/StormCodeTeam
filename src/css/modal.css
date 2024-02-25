@@ -21,6 +21,7 @@
   background-color: rgba(17, 17, 17, 0.4);
   justify-content: center;
   align-items: center;
+  visibility: hidden;
 }
 
 .modal-content {
