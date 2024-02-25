@@ -1,35 +1,39 @@
-<div class="backdrop" id="bookModal">
-  <div class="modal-window">
-    <div class="modal-content">
-      <div class="modal-top">
-        <h1 class="modal-title" id="bookModalTitle"></h1>
-        <button
-          type="button"
-          class="modal-close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <svg class="book-modal-close" width="24" height="24">
-            <use href="./images/icons.svg#x-close"></use>
-          </svg>
-          <!-- <span aria-hidden="true">&times;</span> -->
-        </button>
+<div class="backdrop">
+  <div class="modal-content">
+    <button type="button" class="modal-close-btn">
+      <svg class="modal-close-btn-icon" width="14" height="14">
+        <use href="./img/icons.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="modal-body">
+      <div class="image-container">
+        <img src="./img/image.jpeg" alt="image" />
       </div>
-      <div class="modal-body" id="bookModalBody">
-        <!-- Тут буде показано деталі книги -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="addToShoppingList">
-          Add to shopping list
-        </button>
-        <p class="modal-footer-text" id="modalFooterText">
-          Congratulations! You have added the book to the shopping list. To
-          delete, press the button “Remove from the shopping list”.
-        </p>
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Close
-        </button> -->
+      <div class="list-container">
+        <ul class="list-details">
+          <li class="title">Hello beautiful</li>
+          <li class="list-name">Ann Napolitano</li>
+          <li class="list-descr">
+            In a homage to Louisa May Alcott’s “Little Women,” a young man’s
+            dark past resurfaces as he gets to the know the family of his
+            college sweetheart.
+          </li>
+          <div class="list-links">
+            <li class="list-amazon">
+              <img src="./img/amazon.png" alt="amazon" />
+            </li>
+            <li class="list-google">
+              <img src="./img/google.png" alt="google" />
+            </li>
+          </div>
+        </ul>
       </div>
     </div>
+    <button type="button" class="shopping-list">Add to shopping list</button>
+    <p class="modal-bottom-text">
+      Сongratulations! You have added the book to the shopping list. To delete,
+      press the button “Remove from the shopping list”.
+    </p>
   </div>
 </div>
+<script src="./js/modal.js"></script>
