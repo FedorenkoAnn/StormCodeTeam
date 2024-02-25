@@ -34,6 +34,29 @@
     column-gap: 0px;
   }
 }
+/* .home-section {
+  display: flex;
+  flex-direction: column;
+} */
+
+@media screen and (min-width: 1440px) {
+  .home-section {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .sidebar-section {
+    max-width: 356px;
+  }
+}
+
+.sidebar-section {
+  width: 100%;
+}
+
+/* .sidebar-container {
+  width: ;
+} */
 
 @media screen and (min-width: 300px) {
   .sidebar-box-categories {
