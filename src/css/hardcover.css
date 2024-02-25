@@ -1,0 +1,227 @@
+/*Books by category*/
+
+@media screen and (max-width: 374.98px) {
+
+    .hardcover-category-title {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 30px;
+        font-weight: 700;
+        line-height: 1.2;
+    }
+    
+    .hardcover-wrapper {
+        width: 100%;
+        max-width: 335px;
+    }
+    
+    .hardcover-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .book-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .hardcover-item {
+        list-style-type: none;
+        /* width: 180px; */
+    }
+    
+    .hardcover-image {
+        max-width: 335px;
+    }
+    
+    .hardcover-text-container {
+        padding-top: 14px;
+    }
+    
+    .hardcover-title {
+        font-size: 16px;
+    }
+    
+    .hardcover-text {
+        font-size: 12px;
+        font-style: italic;
+        color: var(--light-header-secondary-color);
+    }
+    
+    .book-categories-span {
+        color: var(--light-accent-color);
+    }
+    }
+    
+
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
+    
+    .hardcover-category-title {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        font-size: 32px;
+        font-weight: 700;
+        line-height: 1.2;
+        letter-spacing: 0.02em;
+    }
+    
+    .hardcover-wrapper {
+        width: 100%;
+        max-width: 335px;
+    }
+    
+    .hardcover-list {
+        display: flex;
+        flex-direction: column;
+        gap: 40px;
+    }
+    
+    .book-list {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+    }
+    
+    .hardcover-container{
+    }
+    
+    .hardcover-item {
+        list-style-type: none;
+        /* width: 180px; */
+    }
+    
+    .hardcover-image {
+        max-width: 335px;
+    }
+    
+    .hardcover-text-container {
+        padding-top: 14px;
+    }
+    
+    .hardcover-title {
+        font-size: 16px;
+    }
+    
+    .hardcover-text {
+        font-size: 12px;
+        font-style: italic;
+        color: var(--light-header-secondary-color);
+    }
+    
+    /* .hardcover-category-title {
+        padding-top: 40px;
+        padding-bottom: 40px;
+      } */
+    
+    .book-categories-span {
+        color: var(--light-accent-color);
+    }
+    }
+    
+@media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
+    
+    .book-list {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .hardcover-container {
+        width: 218px;
+    }
+
+    .hardcover-category-title {
+        padding-bottom: 40px;
+        font-size: 48px;
+        font-weight: 700;
+        line-height: 52px;
+        letter-spacing: -4%;
+    }
+    
+    .hardcover-list {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 40px;
+        column-gap: 24px
+    }
+    
+    .hardcover-item {
+        flex-basis: calc((100% - 40px) / 3);
+        max-width: 218px;
+        height: 366px;
+
+    }
+
+    .hardcover-wrapper {
+    }
+
+    .hardcover-image {
+        max-height: 316px;
+    }
+    
+    .hardcover-title {
+        font-size: 16px;
+        letter-spacing: -0.02em;
+    }
+    
+    .hardcover-text {
+        font-size: 12px;
+        font-style: italic;
+        color: var(--light-header-secondary-color);
+    }
+    .book-categories-span {
+        color: var(--light-accent-color);
+    }
+    }
+    
+@media screen and (min-width: 1440px) {
+        .book-list {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .hardcover-container {
+            width: 180px;
+        }
+    
+        .hardcover-category-title {
+            padding: 40px 40px 75px;
+            font-size: 48px;
+        }
+        
+        .hardcover-list {
+            display: flex;
+            flex-wrap: wrap;
+            row-gap: 40px;
+            column-gap: 24px;
+            max-width: 996px;
+            margin-left: 40px;
+        }
+        
+        .hardcover-item {
+            flex-basis: calc((100% - 40px) / 5);
+            max-width: 180px;
+            /* height: 366px; */
+    
+        }
+    
+        .hardcover-wrapper {
+        }
+    
+        .hardcover-image {
+            max-height: 256px;
+        }
+        
+        .hardcover-title {
+            font-size: 16px;
+            letter-spacing: -0.02em;
+        }
+        
+        .hardcover-text {
+            font-size: 12px;
+            font-style: italic;
+            color: var(--light-header-secondary-color);
+        }
+        .book-categories-span {
+            color: var(--light-accent-color);
+        }
+    }

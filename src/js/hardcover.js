@@ -29,7 +29,6 @@ allCategoriesList.addEventListener('click', async (event) => {
 
             hardcoverBooksList.innerHTML = markup;
 
-            localStorage.setItem('isButtonHidden', 'true');
         }
     } catch (error) {
         console.error(error);

@@ -35,9 +35,20 @@
   }
 }
 
-.home-section {
+/* .home-section {
   display: flex;
   flex-direction: column;
+} */
+
+@media screen and (min-width: 1440px) {
+  .home-section {
+    display: flex;
+    flex-wrap: nowrap;
+  }
+
+  .sidebar-section {
+    max-width: 356px;
+  }
 }
 
 .sidebar-section {
