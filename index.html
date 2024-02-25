@@ -211,41 +211,45 @@
   <div class="home books-list"></div>
 </div>
 
-    <div class="backdrop" id="bookModal">
-  <div class="modal-window">
-    <div class="modal-content">
-      <div class="modal-top">
-        <h1 class="modal-title" id="bookModalTitle"></h1>
-        <button
-          type="button"
-          class="modal-close"
-          data-dismiss="modal"
-          aria-label="Close"
-        >
-          <svg class="book-modal-close" width="24" height="24">
-            <use href="./images/icons.svg#x-close"></use>
-          </svg>
-          <!-- <span aria-hidden="true">&times;</span> -->
-        </button>
+    <div class="backdrop">
+  <div class="modal-content">
+    <button type="button" class="modal-close-btn">
+      <svg class="modal-close-btn-icon" width="14" height="14">
+        <use href="/StormCodeTeam/assets/icons-7bdd1b90.svg#icon-x-close"></use>
+      </svg>
+    </button>
+    <div class="modal-body">
+      <div class="image-container">
+        <img src="/StormCodeTeam/assets/image-98842880.jpeg" alt="image" />
       </div>
-      <div class="modal-body" id="bookModalBody">
-        <!-- Тут буде показано деталі книги -->
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-primary" id="addToShoppingList">
-          Add to shopping list
-        </button>
-        <p class="modal-footer-text" id="modalFooterText">
-          Congratulations! You have added the book to the shopping list. To
-          delete, press the button “Remove from the shopping list”.
-        </p>
-        <!-- <button type="button" class="btn btn-secondary" data-dismiss="modal">
-          Close
-        </button> -->
+      <div class="list-container">
+        <ul class="list-details">
+          <li class="title">Hello beautiful</li>
+          <li class="list-name">Ann Napolitano</li>
+          <li class="list-descr">
+            In a homage to Louisa May Alcott’s “Little Women,” a young man’s
+            dark past resurfaces as he gets to the know the family of his
+            college sweetheart.
+          </li>
+          <div class="list-links">
+            <li class="list-amazon">
+              <img src="data:image/png;base64,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" alt="amazon" />
+            </li>
+            <li class="list-google">
+              <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAACEAAAAgCAYAAACcuBHKAAAABHNCSVQICAgIfAhkiAAABOpJREFUWIWtmM9vVFUUxz/nvnkz06lloC0CJQQFGhJBNBFDDLpSF7BgbWI0BH/9CSYGtYTERBewNiJ/gO6Q+CPEmEBIjGFhpDuESCAlalut0OmbefPOcXHn/ZjptJ2iJ7m5mffOvfd7v+d7zn13hDXMDAHgVKdfj32IAYj4fiVbdeKpKdyro4R7NlIixq0bRIjyN23miWUKHQiEgcf8JdXmP5XtFadjSVt3SuBGEcrIOtgwDKNlic4HJXe7qW5uPmnObHubJQSEnJ1uEFM4djAMwfOGvAVyGKPe8Vp/ODwUEBbArqraucAlV7jDYpGZUteQYYZIyi/h7F2Mp4EQwfWNaL9nK8FUxkGOOmR7EgcfB7ta3wGL/UHUw0mQEygHECljrCGpAYB5cwhlzA44JyeIwlsQ/5y/TMcbArJPjWfNpGwJYgr/W0sQTEKMg4nK/izrUibMEM5S1SF2YDJmEDyUAtYiSgmAMcF2cJaqGZEI5sNxCmF8pEbSHs3YEcCFvg09iuw6BvXdoE1s5keYuQzRHHSUR3UMJl5AJp4DV4GFm9itCxD9AUkMGqfhckgwSnmkxqn7TUhBAIiGplR9FhqYQFBGDp5EHj8CtS1QqnjaJl+B2evopTdg6U8Y2ox7+XMYfxLCYRCBdhN54gT227fYT6dB22SiMSo4DZdpgpaJGIICKmCC7H0N2X8cNjwG5REIKhBUoToKWw/hjn4BQ1t8v/WQfx5UvV95BDY8huw7jux93W9KJZ1baFm3JjJTIc8zB/VJKA2DBH53aZgQCGuw9RkIN/m+V0QiPpTiYOMkmPMKBbDuNOoBUajMIpitVaEEIlsOoMfMyNjNxklexbtAWFLYqTBYobS10sgvbhkI86yUVgABDrRDlcgAC+QMr+4EaKfPd9cHRMNjyGNfPGJWMR2goPSGw4BWPxBAzoQMzMTKB3Q/EA5kuYYKSqwVnPEABmJiAB8K86Y9texVNxNtybSDCDIIE4MATYWZSt2AIH/dBUIVJNWCSwFY5wQqrig+/yWdHJ+Hpt0+2XhyTQioGUFfEItA6PI5srCYL7nRAhYvgQuQah3KNZBS7m8JtBpYtACaIOEQVOvggkJ401CIX6/cA6IBhMX4isHSA+zedZKv34f5m/kupYR78T3c/mPQakJ0H52+gH7/UafYdMQ3upvgyGmIHnjBF0LXIFdFBqJWFovbhRppoJfPwg+fdCgtzCCg35z0z1sROv2V/x0vdmuk8RfJZ0chKHcEnIXIamXJPPNwNKNYpBJ1pU+rycoWoxc/gFYLvXjSH9VJr4/5lkQU5xWjSRLFVPxvn6JTGFG9QSLzpqKWnnartTiG5iJYy/dxvPYY35RE5onqDaY8b65DknHmbqSJ3EWZEyUZ/NNNBv7EQ0lQ5lTlDmfuRqlMs2IlgonYtKm7ZuZiVCxLq//aPAPm53XXymLTxVtZV52YN3djk8l5zDaDPAWE2EPcvJabAjHGL4qcB3ej+LILxJZHfl+iMX6p2S5FAfImcNig3imi6/70lU5OCSwAVwU7F5TiK9Rml3r8ckuvgffemRgaHY4nnLox50o725aMOedCbJA6ns4spqpxSYI51fZtdTo3vxjObPt0ZvVrYK/ZFI65PSGV+6VZl7jxgRHALDCugdIcaTP26+AX4r5A0kvyw/410LPrfvYvKL6Xz1QlXq0AAAAASUVORK5CYII=" alt="google" />
+            </li>
+          </div>
+        </ul>
       </div>
     </div>
+    <button type="button" class="shopping-list">Add to shopping list</button>
+    <p class="modal-bottom-text">
+      Сongratulations! You have added the book to the shopping list. To delete,
+      press the button “Remove from the shopping list”.
+    </p>
   </div>
 </div>
+<script src="./js/modal.js"></script>
 
     <!DOCTYPE html>
 <html lang="uk">
