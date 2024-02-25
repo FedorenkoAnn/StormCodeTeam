@@ -19,3 +19,13 @@ const newSwiper = new Swiper('.swiper-container', {
     prevEl: '.swiper-button-prev',
   },
 });
+
+document.addEventListener('DOMContentLoaded', function () {
+  const supportArrow = document.querySelector('.support-arrow');
+  const sidebarList = document.querySelector('.sidebar-list-support');
+
+  supportArrow.addEventListener('click', function () {
+    // Прокрутка содержимого вниз на 100 пикселей
+    sidebarList.scrollTop += 100;
+  });
+});

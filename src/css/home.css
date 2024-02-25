@@ -1,31 +1,31 @@
 /* Mobile */
 
-@media (max-width: 375px) {
+/* @media (max-width: 375px) {
   .home-section .sidebar-container {
     width: 100%;
     max-width: calc(335px - 40px);
   }
-}
+} */
 
-@media screen and (min-width: 375px) and (max-width: 767.98px) {
+/* @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .sidebar-container {
     width: 100%;
     padding-top: 40px;
   }
-}
+} */
 
 /* Tablet */
 
-@media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
+/* @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .sidebar-container {
     padding-bottom: 100px;
     display: flex;
   }
-}
+} */
 
 /* Desctop */
 
-@media screen and (min-width: 1440px) {
+/* @media screen and (min-width: 1440px) {
   .sidebar-container {
     flex-direction: column;
     flex-basis: 380px;
@@ -33,7 +33,65 @@
     row-gap: 0px;
     column-gap: 0px;
   }
+} */
+
+/* @media screen and (min-width: 300px) {
+  .sidebar-box-categories {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
 }
+
+@media screen and (min-width: 768px) {
+  .sidebar-box-categories {
+    gap: 32px;
+    padding-bottom: 100px;
+    display: flex;
+  }
+} */
+
+/* @media screen and (min-width: 300px) {
+  .sidebar-list-categories {
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .sidebar-list-categories {
+    max-height: 472px;
+  }
+} */
+
+/* @media screen and (min-width: 300px) {
+  .sidebar-favorite {
+    font-size: 14px;
+    line-height: 1.12px;
+  }
+}
+@media screen and (min-width: 768px) {
+  .sidebar-favorite {
+    font-size: 16px;
+    line-height: 1.33px;
+  }
+} */
+
+@media screen and (min-width: 300px) {
+  .sidebar-box-support {
+    width: 100%;
+    height: 352px;
+    display: block;
+    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+  }
+}
+
+/* @media screen and (min-width: 768px) {
+  .sidebar-box-support {
+    height: 472px;
+    width: 335px;
+  }
+} */
 
 .home-section {
   display: flex;
@@ -42,25 +100,6 @@
 
 .sidebar-section {
   width: 100%;
-}
-
-/* .sidebar-container {
-  width: ;
-} */
-
-@media screen and (min-width: 300px) {
-  .sidebar-box-categories {
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-box-categories {
-    gap: 32px;
-    padding-bottom: 100px;
-    display: flex;
-  }
 }
 
 .sidebar-box-categories {
@@ -75,18 +114,6 @@
   margin-bottom: 68px;
 }
 
-@media screen and (min-width: 300px) {
-  .sidebar-list-categories {
-    max-height: 228px;
-    overflow-y: scroll;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-list-categories {
-    max-height: 472px;
-  }
-}
-
 .sidebar-list-categories {
   display: flex;
   flex-direction: column;
@@ -95,19 +122,6 @@
   padding: 0px;
   /* margin: 32px 0px; */
   width: 356px;
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-favorite {
-    font-size: 14px;
-    line-height: 1.12px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-favorite {
-    font-size: 16px;
-    line-height: 1.33px;
-  }
 }
 
 .sidebar-favorite {
@@ -158,20 +172,6 @@ body.dark-mode .sidebar-favorite:focus {
   cursor: pointer;
 }
 
-@media screen and (min-width: 300px) {
-  .sidebar-box-support {
-    width: 100%;
-    height: 352px;
-    display: block;
-    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-box-support {
-    height: 472px;
-    width: 335px;
-  }
-}
 .sidebar-box-support {
   position: relative;
   width: 356px;
@@ -191,9 +191,13 @@ body.dark-mode .sidebar-favorite:focus {
   display: flex;
   flex-direction: row;
   /* justify-content: center; */
-  align-items: center;
-  padding: 0px;
-  position: relative;
+  /* align-items: center; */
+  /* padding: 0px; */
+  /* position: relative; */
+  /* margin-left: 40px;
+  margin-top: 26px; */
+  /* padding-left: 40px;
+  padding-top: 26px; */
 }
 
 .sidebar-title {
@@ -213,8 +217,8 @@ body.dark-mode .sidebar-favorite:focus {
   width: 20px;
   height: 32px;
   background-color: rgb(255, 255, 255);
-  left: 235px;
-  top: 18px;
+  left: 228px;
+  top: 24px;
 }
 
 .sidebar-list-support {
@@ -224,6 +228,11 @@ body.dark-mode .sidebar-favorite:focus {
   height: 292px;
   min-width: 0;
   position: relative;
+}
+
+.sidebar-swiper {
+  height: 292px;
+  overflow-y: hidden;
 }
 
 .sidebar-company-img-box {
@@ -245,7 +254,7 @@ body.dark-mode .sidebar-favorite:focus {
   width: 14px;
   height: 18px;
   color: rgb(255, 255, 255);
-  font-family: sans-serif, 'DM Sans';
+  /* font-family: sans-serif, 'DM Sans'; */
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -254,8 +263,25 @@ body.dark-mode .sidebar-favorite:focus {
 }
 
 .sidebar-company-img {
-  margin-left: 14px;
+  padding-left: 34px;
   height: 32px;
+}
+
+.sidebar-img {
+  height: 32px;
+  /* fill: #fff; */
+  /* color: #ffffff; */
+}
+
+.support-arrow {
+  /* position: absolute; */
+  border-radius: 50px;
+  background-color: rgb(255, 255, 255);
+  width: 38px;
+  height: 38px;
+  right: 159px;
+  top: 412px;
+  /* transform: rotate(90deg); */
 }
 
 /* .sidebar-company-link {
@@ -268,17 +294,6 @@ body.dark-mode .sidebar-favorite:focus {
   background-color: black;
   color: #000;
   fill: #000;
-} */
-
-/* .swiper-button-next {
-  position: absolute;
-  border-radius: 50px;
-  background-color: rgb(255, 255, 255);
-  width: 38px;
-  height: 38px;
-  right: 159px;
-  top: 412px;
-  transform: rotate(90deg);
 } */
 
 /* .sidebar-swiper-arrowe {
@@ -310,16 +325,12 @@ body.dark-mode .sidebar-favorite:focus {
   min-width: 0;
 } */
 
-.slider-container {
+/* .slider-container {
   width: 159px;
   height: 292px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .swiper-container {
   width: 159px;
   height: 292px;
-}
-.swiper-wrapper {
-  width: 159px;
-  height: 292px;
-}
+} */
