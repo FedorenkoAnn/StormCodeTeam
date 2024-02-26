@@ -83,52 +83,6 @@
 //   updateScrollButtons();
 // });
 
-// =======================================================================================
-
-// document.addEventListener('DOMContentLoaded', function () {
-//   var list = document.querySelector('.sidebar-swiper-list');
-//   var scrollStep = 100; // Величина прокрутки
-
-//   // Функция прокрутки вверх
-//   function scrollUp() {
-//     list.scrollTop -= scrollStep;
-//     updateScrollButtons();
-//   }
-
-//   // Функция прокрутки вниз
-//   function scrollDown() {
-//     list.scrollTop += scrollStep;
-//     updateScrollButtons();
-//   }
-
-//   // Функция обновления состояния кнопок прокрутки
-//   function updateScrollButtons() {
-//     var scrollTop = list.scrollTop;
-//     var maxScrollTop = list.scrollHeight - list.clientHeight;
-
-//     // Показать/скрыть кнопку прокрутки вверх
-//     document
-//       .querySelector('.support-arrow-up')
-//       .classList.toggle('visually-hidden', scrollTop === 0);
-
-//     // Показать/скрыть кнопку прокрутки вниз
-//     document
-//       .querySelector('.support-arrow-down')
-//       .classList.toggle('visually-hidden', scrollTop >= maxScrollTop);
-//   }
-
-//   // Добавление обработчиков событий для кнопок прокрутки
-//   document
-//     .querySelector('.support-arrow-up')
-//     .addEventListener('click', scrollUp);
-//   document
-//     .querySelector('.support-arrow-down')
-//     .addEventListener('click', scrollDown);
-
-//   // Обновление состояния кнопок прокрутки при загрузке страницы
-//   updateScrollButtons();
-// });
-
 const supportList = document.querySelector('.sidebar-swiper-list');
 const arrowDown = document.querySelector('.support-arrow-down');
 const arrowUp = document.querySelector('.support-arrow-up');

@@ -189,6 +189,7 @@
 
 .sidebar-section {
   width: 100%;
+  margin-right: 40px;
 }
 
 /* .sidebar-container {
@@ -207,12 +208,15 @@
 .sidebar-box-categories {
   width: 356px;
   display: flex;
-  /* overflow-y: scroll; */
+  overflow-y: scroll;
+  overflow-x: hidden;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px;
   margin-bottom: 68px;
+  scrollbar-width: thin; /* Применение стиля скроллбара (необходимо для Firefox) */
+  scrollbar-color: rgb(251, 11, 11);
 }
 
 .sidebar-list-categories {
@@ -348,26 +352,29 @@ body.dark-mode .sidebar-favorite:focus {
   align-items: center;
   gap: 16px;
   margin-left: 38px;
+  color: inherit;
+  background-color: transparent;
 }
 
-.sidebar-company-link:active,
+/* .sidebar-company-link:active,
 .sidebar-company-link:hover,
 .sidebar-company-link:focus {
   background-color: none;
   color: none;
   fill: none;
-}
+  color: currentColor;
+  display: none;
+} */
 
 .sidebar-company-number {
-  /* position: absolute;
-  flex-direction: row;
+  /* flex-direction: row;
   justify-content: center;
   align-items: flex-end;
   padding: 0px;
   width: 14px;
   height: 18px; */
   color: rgb(255, 255, 255);
-  /* font-family: sans-serif, 'DM Sans';
+  /* font-family: 'DM Sans';
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
@@ -375,11 +382,9 @@ body.dark-mode .sidebar-favorite:focus {
   text-align: left; */
 }
 
-/* .sidebar-img {
-  height: 32px;
-  fill: #fff;
-  color: #ffffff;
-} */
+.sidebar-img {
+  filter: brightness(0) invert(1);
+}
 
 .visually-hidden {
   position: absolute;
@@ -402,20 +407,23 @@ body.dark-mode .sidebar-favorite:focus {
   height: 38px;
   margin-top: 24px;
   margin-left: 159px;
-  border: 1px solid rgba(0, 0, 0, 0);
 }
 
-.support-arrow:hover {
+.support-arrow:hover,
+.support-arrow:focus {
   transform: scale(1.05);
 }
 
-.support-button {
-  width: 20px;
-  height: 20px;
-  fill: rgb(79, 46, 232);
+.support-arrow:active,
+.support-arrow:focus,
+.support-arrow:hover {
+  background-color: #fff;
 }
 
-.support-button-down {
+.support-button {
+  margin-top: 5px;
+  width: 15px;
+  height: 10px;
   fill: rgb(79, 46, 232);
 }
 
