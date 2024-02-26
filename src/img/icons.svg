@@ -20,9 +20,9 @@
     <symbol id="icon-text-left" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.286" d="M22.667 13.333H4M28 8H4M28 18.667H4M22.667 24H4"/>
     </symbol>
-    <symbol id="icon-x-close" viewBox="0 0 32 32">
-      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="3.429" d="M24 8 8 24M8 8l16 16"/>
-    </symbol>
+    <symbol id="icon-Icon-1" viewBox="0 0 32 32">
+<path stroke-linejoin="round" stroke-linecap="butt" stroke-miterlimit="4" stroke-width="5.643" d="M29.167 2.833l-26.334 26.334M2.833 2.833l26.334 26.334"></path>
+</symbol>
     <symbol id="icon-lock" viewBox="0 0 32 32">
       <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.286" d="M22.667 14.667v-4a6.667 6.667 0 0 0-13.334 0v4M10.4 28h11.2c2.24 0 3.36 0 4.216-.436a3.991 3.991 0 0 0 1.748-1.748C28 24.96 28 23.84 28 21.6v-.533c0-2.24 0-3.36-.436-4.216a3.991 3.991 0 0 0-1.748-1.748c-.856-.436-1.976-.436-4.216-.436H10.4c-2.24 0-3.36 0-4.216.436a3.996 3.996 0 0 0-1.748 1.748C4 17.707 4 18.827 4 21.067v.533c0 2.24 0 3.36.436 4.216a3.991 3.991 0 0 0 1.748 1.748C7.04 28 8.16 28 10.4 28z"/>
     </symbol>
