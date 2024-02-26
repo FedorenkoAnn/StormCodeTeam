@@ -1,3 +1,4 @@
+
 .header {
   padding: 20px 0;
   border: 1.5px solid #111111;
@@ -105,3 +106,46 @@ body.dark-mode .header {
   background-color: #111111;
   border: 1.5px solid #ffffff;
 }
+
+
+@media screen and (max-width: 374.98px) {
+  .header {
+    width: 100vw;
+    z-index: 100;
+    background-color: var(--light-header-bg-color);
+    border: 1.5px solid #111;
+    border-radius: 0 0 8px 8px;
+    padding-top: 17px;
+    padding-bottom: 16px;
+    transition: background-color 1s cubic-bezier(.075,.82,.165,1);
+    position: sticky;
+    top: 0;
+    right: 0;
+    }
+
+    .nav-list {
+      display: none;
+    }
+}
+
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
+  .header {
+  width: 100vw;
+  z-index: 100;
+  background-color: var(--light-header-bg-color);
+  border: 1.5px solid #111;
+  border-radius: 0 0 8px 8px;
+  padding-top: 17px;
+  padding-bottom: 16px;
+  transition: background-color 1s cubic-bezier(.075,.82,.165,1);
+  position: sticky;
+  top: 0;
+  right: 0;
+  
+  }
+
+  .nav-list {
+    display: none;
+  }
+}
+
