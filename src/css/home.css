@@ -1,10 +1,68 @@
 /* Mobile */
 
 @media (max-width: 375px) {
+
+  .sidebar-section {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   .home-section .sidebar-container {
     width: 100%;
     max-width: calc(335px - 40px);
+    
   }
+  .sidebar-box-categories {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+  }
+  .sidebar-list-categories {
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+
+  .sidebar-favorite {
+    width: 100%;
+    letter-spacing: -.02em;
+    color: rgba(17,17,17,.6);
+    font-size: 14px;
+    line-height: 1.12px;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-favorite:hover {
+    font-size: 14px;
+
+  }
+
+  .sidebar-list-support{
+    height: 352px;
+    overflow: hidden;
+  }
+
+  .sidebar-box-support {
+    width: 100%;
+    height: 352px;
+    display: block;
+    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+    margin-top: 40px;
+  }
+
+  .sidebar-title {
+    color: #fff;
+    align-items: center;
+    /* margin-bottom: 40px; */
+    display: flex;
+  }
+
+  .support-arrow {
+    margin-bottom: 15px;
+   
+  }
+
 }
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
@@ -12,14 +70,77 @@
     width: 100%;
     padding-top: 40px;
   }
+  .sidebar-box-categories {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .sidebar-list-categories {
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+
+  .sidebar-favorite {
+    font-size: 14px;
+    line-height: 1.12px;
+    letter-spacing: -.02em;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-favorite:hover {
+    font-size: 14px;
+
+  }
+
+  .sidebar-list-support{
+    height: 352px;
+    overflow: hidden;
+  }
+
+  .sidebar-box-support {
+    width: 356px;
+    height: 352px;
+    display: block;
+    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+  }
+  .support-arrow {
+    margin-bottom: 15px;
+  }
 }
 
 /* Tablet */
 
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .sidebar-container {
+    padding-top: 40px;
     padding-bottom: 100px;
     display: flex;
+    gap: 32px;
+  }
+
+  .sidebar-box-categories {
+    padding-bottom: 100px;
+    display: flex;
+  }
+
+  .sidebar-list-categories {
+    max-height: 472px;
+  }
+
+  .sidebar-favorite {
+    font-size: 16px;
+    line-height: 1.33px;
+    margin-bottom: 32px;
+  }
+
+  .sidebar-favorite:hover {
+    font-size: 16px;
+
+  }
+
+  .sidebar-box-support {
+    height: 472px;
+    width: 335px;
   }
 }
 
@@ -32,15 +153,11 @@
     gap: 0;
     row-gap: 0px;
     column-gap: 0px;
+      width: 100%;
+      padding-top: 40px;
+  
   }
-}
 
-/* .home-section {
-  display: flex;
-  flex-direction: column;
-} */
-
-@media screen and (min-width: 1440px) {
   .home-section {
     display: flex;
     flex-wrap: nowrap;
@@ -49,7 +166,38 @@
   .sidebar-section {
     max-width: 356px;
   }
+
+  .sidebar-list-categories {
+    max-height: 472px;
+
+  }
+
+  .sidebar-favorite {
+    margin-bottom: 32px;
+    font-weight: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(17,17,17,.6);
+  }
+  .sidebar-favorite:hover {
+    font-size: 18px;
+
+  }
+
+  .sidebar-list-support {
+    height: 490px;
+  }
+
+  .sidebar-box-support {
+        margin-top: 86px;
+  }
+  
 }
+/* .home-section {
+  display: flex;
+  flex-direction: column;
+} */
+
 
 .sidebar-section {
   width: 100%;
@@ -59,43 +207,24 @@
   width: ;
 } */
 
-@media screen and (min-width: 300px) {
-  .sidebar-box-categories {
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-box-categories {
-    gap: 32px;
-    padding-bottom: 100px;
-    display: flex;
-  }
+/* .home-section {
+  display: flex;
+  flex-direction: column;
+} */
+
+.sidebar-section {
+  width: 100%;
 }
 
 .sidebar-box-categories {
   width: 356px;
-  height: 472px;
   display: flex;
-  /* overflow: scroll; */
+  overflow-y: scroll;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px;
   margin-bottom: 68px;
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-list-categories {
-    max-height: 228px;
-    overflow-y: scroll;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-list-categories {
-    max-height: 472px;
-  }
 }
 
 .sidebar-list-categories {
@@ -107,36 +236,26 @@
   /* margin: 32px 0px; */
   width: 356px;
 }
-
-@media screen and (min-width: 300px) {
-  .sidebar-favorite {
-    font-size: 14px;
-    line-height: 1.12px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-favorite {
-    font-size: 16px;
-    line-height: 1.33px;
-  }
+.sidebar-list-support {
+  /* height: 490px; */
 }
 
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
   font-family: sans-serif, 'DM Sans';
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.02em;
+  /* letter-spacing: 0.02em; */
   text-align: left;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
 }
 
 .sidebar-favorite:hover,
 .sidebar-favorite:focus {
   color: rgb(79, 46, 232);
   font-family: sans-serif, 'DM Sans';
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -169,24 +288,10 @@ body.dark-mode .sidebar-favorite:focus {
   cursor: pointer;
 }
 
-@media screen and (min-width: 300px) {
-  .sidebar-box-support {
-    width: 100%;
-    height: 352px;
-    display: block;
-    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-box-support {
-    height: 472px;
-    width: 335px;
-  }
-}
 .sidebar-box-support {
   position: relative;
-  width: 356px;
-  height: 474px;
+  /* width: 356px; */
+  /* height: 474px; */
   border-radius: 16px;
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
   background: radial-gradient(
@@ -195,16 +300,22 @@ body.dark-mode .sidebar-favorite:focus {
     rgb(255, 255, 255) 100%
   );
   /* overflow: scroll; */
+  /* margin-top: 86px; */
+}
+
+.sidebar-list-support {
+  display: flex;
+  flex-direction: column;
+  position: relative;
 }
 
 .sidebar-support {
-  /* margin: 0px 12px; */
   display: flex;
   flex-direction: row;
-  /* justify-content: center; */
+  flex-direction: row;
+  justify-content: flex-start;
   align-items: center;
-  padding: 0px;
-  position: relative;
+  padding-left: 20px;
 }
 
 .sidebar-title {
@@ -223,31 +334,35 @@ body.dark-mode .sidebar-favorite:focus {
   position: absolute;
   width: 20px;
   height: 32px;
-  background-color: rgb(255, 255, 255);
-  left: 235px;
-  top: 18px;
+  /* background-color: rgb(255, 255, 255); */
+  left: 250px;
+  top: 24px;
 }
 
-.sidebar-list-support {
-  display: flex;
-  flex-direction: column;
-  width: 159px;
+.sidebar-swiper-list {
+  /* width: 159px; */
   height: 292px;
-  min-width: 0;
-  position: relative;
+  overflow: hidden;
+  /* overflow-y: scroll;
+  overflow-x: hidden; */
+  margin-top: 42px;
 }
 
 .sidebar-company-img-box {
-  position: relative;
-  margin-left: 28px;
-  margin-top: 50px;
-  margin-bottom: 34px;
+  margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
 
-.sidebar-company-number {
+.sidebar-company-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-left: 38px;
+}
+
+/* .sidebar-company-number {
   position: absolute;
   flex-direction: row;
   justify-content: center;
@@ -262,35 +377,29 @@ body.dark-mode .sidebar-favorite:focus {
   line-height: 18px;
   letter-spacing: 0.04em;
   text-align: left;
-}
-
-.sidebar-company-img {
-  margin-left: 14px;
-  height: 32px;
-}
-
-/* .sidebar-company-link {
-  background-color: black;
-  color: #000;
-  fill: #000;
-}
-
-.sidebar-img {
-  background-color: black;
-  color: #000;
-  fill: #000;
 } */
 
-/* .swiper-button-next {
-  position: absolute;
+/* .sidebar-img {
+  height: 32px;
+  fill: #fff;
+  color: #ffffff;
+} */
+
+.support-arrow {
   border-radius: 50px;
   background-color: rgb(255, 255, 255);
   width: 38px;
   height: 38px;
-  right: 159px;
-  top: 412px;
-  transform: rotate(90deg);
-} */
+  margin-top: 24px;
+  margin-left: 159px;
+  border: 1px solid rgba(0,0,0,0);
+}
+
+/* .sidebar-img {
+  background-color: black;
+  color: #000;
+  fill: #000;
+}  */
 
 /* .sidebar-swiper-arrowe {
   margin-top: 12px;
@@ -321,16 +430,12 @@ body.dark-mode .sidebar-favorite:focus {
   min-width: 0;
 } */
 
-.slider-container {
+/* .slider-container {
   width: 159px;
   height: 292px;
-  /* overflow: hidden; */
+  overflow: hidden;
 }
 .swiper-container {
   width: 159px;
   height: 292px;
-}
-.swiper-wrapper {
-  width: 159px;
-  height: 292px;
-}
+} */

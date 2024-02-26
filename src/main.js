@@ -7,3 +7,4 @@ import './js/api.js';
 import './js/slider.js';
 import './js/scroll-up.js';
 import './js/refs.js';
+import './js/scrollup-button.js';
