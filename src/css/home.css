@@ -149,6 +149,9 @@
   /* margin: 32px 0px; */
   width: 356px;
 }
+.sidebar-list-support {
+  height: 490px;
+}
 
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
