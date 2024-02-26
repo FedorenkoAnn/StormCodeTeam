@@ -2,7 +2,7 @@ import { getByCategoryBooks } from './api.js';
 
 const allCategoriesList = document.querySelector('.js-list');
 const categoriesItem = document.querySelectorAll('.js-category');
-const hardcoverBooksList = document.querySelector('.books-list');
+export const hardcoverBooksList = document.querySelector('.books-list');
 
 // document.addEventListener('DOMContentLoaded', () => {
 //     const isButtonHidden = localStorage.getItem('isButtonHidden');
