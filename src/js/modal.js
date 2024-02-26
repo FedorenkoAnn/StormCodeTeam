@@ -72,7 +72,8 @@ function markupBook(book) {
           </li>
         </div>
       </ul>
-    </div>`;
+    </div>
+     `;
 }
 function addMarkup(el, markup) {
   el.innerHTML = markup;
