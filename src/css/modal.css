@@ -220,6 +220,7 @@ body.dark-mode .list-descr {
 }
 
 .add-to-shopping-list-btn {
+  position: absolute;
   margin-top: 40px;
   width: 499px;
   height: 64px;

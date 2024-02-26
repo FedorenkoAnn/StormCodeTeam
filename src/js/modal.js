@@ -1,4 +1,8 @@
 import { getBookById } from './api';
+import amazon1x from '../img/amazon@1x.png';
+// import amazon2x from '../img/amazon@2x.png';
+import app_books1x from '../img/app_books@1x.png';
+// import app_books2x from '../img/app_books@2x.png';
 const modalBodyEl = document.querySelector('.modal-body');
 const backdrop = document.querySelector('.backdrop');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
@@ -65,10 +69,10 @@ function markupBook(book) {
         <li class="list-descr">${description}</li>
         <div class="list-links">
           <li class="list-amazon">
-            <img src="./img/amazon.png" alt="amazon" />
+            <img src="../img/amazon@1x.png", "../img/amazon@2x.png" alt="amazon" />
           </li>
           <li class="list-google">
-            <img src="./img/google.png" alt="google" />
+            <img src="../img/app_books@1x.png", "../img/app_books@2x.png" alt="app_books" />
           </li>
         </div>
       </ul>
