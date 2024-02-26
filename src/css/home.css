@@ -38,6 +38,11 @@
 
   }
 
+  .sidebar-list-support{
+    height: 352px;
+    overflow: hidden;
+  }
+
   .sidebar-box-support {
     width: 100%;
     height: 352px;
@@ -80,6 +85,11 @@
   .sidebar-favorite:hover {
     font-size: 14px;
 
+  }
+
+  .sidebar-list-support{
+    height: 352px;
+    overflow: hidden;
   }
 
   .sidebar-box-support {
@@ -166,6 +176,10 @@
 
   }
 
+  .sidebar-list-support {
+    height: 490px;
+  }
+
   .sidebar-box-support {
         margin-top: 86px;
   }
@@ -214,7 +228,7 @@
   width: 356px;
 }
 .sidebar-list-support {
-  height: 490px;
+  /* height: 490px; */
 }
 
 .sidebar-favorite {
