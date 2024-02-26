@@ -1,9 +1,12 @@
-import {getTopBooks} from "./api.js"
-import{createGalleryTopBooks} from "./markup.js"
-import {bookList} from "./variables.js"
+import { getTopBooks } from "./api.js"
+import { createGalleryTopBooks } from "./markup.js"
+// import {bookList} from "./variables.js"
+import { hardcoverBooksList } from "./hardcover.js"
 
 async function getRandomTopBooks() {
-  const topBooks = await getTopBooks().then(data => {
+  try {
+    const response = await getTopBooks();
+    const data = response.data;
     const arrTopBooks = [];
     let i = 0;
     for (const el of data) {
@@ -15,16 +18,9 @@ async function getRandomTopBooks() {
         arrTopBooks.push(data[i])
       }
     }
-    return arrTopBooks;
-  })
-    .catch(err => console.log(err))
-
-    bookList.innerHTML = createGalleryTopBooks(topBooks)
+    hardcoverBooksList.innerHTML = createGalleryTopBooks(arrTopBooks);
+  } catch (err) {
+    console.log(err);
+  }
 }
-
-
-
 getRandomTopBooks()
-
-
-
