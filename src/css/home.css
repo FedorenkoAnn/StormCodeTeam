@@ -58,6 +58,11 @@
     display: flex;
   }
 
+  .support-arrow {
+    margin-bottom: 15px;
+   
+  }
+
 }
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
@@ -97,6 +102,9 @@
     height: 352px;
     display: block;
     position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+  }
+  .support-arrow {
+    margin-bottom: 15px;
   }
 }
 
