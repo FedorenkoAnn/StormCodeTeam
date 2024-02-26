@@ -1,10 +1,68 @@
 /* Mobile */
 
 @media (max-width: 375px) {
+
+  .sidebar-section {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+
   .home-section .sidebar-container {
     width: 100%;
     max-width: calc(335px - 40px);
+    
   }
+  .sidebar-box-categories {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+    height: auto;
+  }
+  .sidebar-list-categories {
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+
+  .sidebar-favorite {
+    width: 100%;
+    letter-spacing: -.02em;
+    color: rgba(17,17,17,.6);
+    font-size: 14px;
+    line-height: 1.12px;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-favorite:hover {
+    font-size: 14px;
+
+  }
+
+  .sidebar-list-support{
+    height: 352px;
+    overflow: hidden;
+  }
+
+  .sidebar-box-support {
+    width: 100%;
+    height: 352px;
+    display: block;
+    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+    margin-top: 40px;
+  }
+
+  .sidebar-title {
+    color: #fff;
+    align-items: center;
+    /* margin-bottom: 40px; */
+    display: flex;
+  }
+
+  .support-arrow {
+    margin-bottom: 15px;
+   
+  }
+
 }
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
@@ -12,14 +70,77 @@
     width: 100%;
     padding-top: 40px;
   }
+  .sidebar-box-categories {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .sidebar-list-categories {
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+
+  .sidebar-favorite {
+    font-size: 14px;
+    line-height: 1.12px;
+    letter-spacing: -.02em;
+    margin-bottom: 24px;
+  }
+
+  .sidebar-favorite:hover {
+    font-size: 14px;
+
+  }
+
+  .sidebar-list-support{
+    height: 352px;
+    overflow: hidden;
+  }
+
+  .sidebar-box-support {
+    width: 356px;
+    height: 352px;
+    display: block;
+    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+  }
+  .support-arrow {
+    margin-bottom: 15px;
+  }
 }
 
 /* Tablet */
 
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .sidebar-container {
+    padding-top: 40px;
     padding-bottom: 100px;
     display: flex;
+    gap: 32px;
+  }
+
+  .sidebar-box-categories {
+    padding-bottom: 100px;
+    display: flex;
+  }
+
+  .sidebar-list-categories {
+    max-height: 472px;
+  }
+
+  .sidebar-favorite {
+    font-size: 16px;
+    line-height: 1.33px;
+    margin-bottom: 32px;
+  }
+
+  .sidebar-favorite:hover {
+    font-size: 16px;
+
+  }
+
+  .sidebar-box-support {
+    height: 472px;
+    width: 335px;
   }
 }
 
@@ -32,14 +153,11 @@
     gap: 0;
     row-gap: 0px;
     column-gap: 0px;
+      width: 100%;
+      padding-top: 40px;
+  
   }
-}
-/* .home-section {
-  display: flex;
-  flex-direction: column;
-} */
 
-@media screen and (min-width: 1440px) {
   .home-section {
     display: flex;
     flex-wrap: nowrap;
@@ -48,7 +166,38 @@
   .sidebar-section {
     max-width: 356px;
   }
+
+  .sidebar-list-categories {
+    max-height: 472px;
+
+  }
+
+  .sidebar-favorite {
+    margin-bottom: 32px;
+    font-weight: 18px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(17,17,17,.6);
+  }
+  .sidebar-favorite:hover {
+    font-size: 18px;
+
+  }
+
+  .sidebar-list-support {
+    height: 490px;
+  }
+
+  .sidebar-box-support {
+        margin-top: 86px;
+  }
+  
 }
+/* .home-section {
+  display: flex;
+  flex-direction: column;
+} */
+
 
 .sidebar-section {
   width: 100%;
@@ -58,68 +207,10 @@
   width: ;
 } */
 
-@media screen and (min-width: 300px) {
-  .sidebar-box-categories {
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .sidebar-box-categories {
-    gap: 32px;
-    padding-bottom: 100px;
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-list-categories {
-    max-height: 228px;
-    overflow-y: scroll;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .sidebar-list-categories {
-    max-height: 472px;
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-favorite {
-    font-size: 14px;
-    line-height: 1.12px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-favorite {
-    font-size: 16px;
-    line-height: 1.33px;
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-box-support {
-    width: 100%;
-    height: 352px;
-    display: block;
-    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .sidebar-box-support {
-    height: 472px;
-    width: 335px;
-  }
-}
-
-.home-section {
+/* .home-section {
   display: flex;
   flex-direction: column;
-}
+} */
 
 .sidebar-section {
   width: 100%;
@@ -127,7 +218,6 @@
 
 .sidebar-box-categories {
   width: 356px;
-  height: 472px;
   display: flex;
   /* overflow-y: scroll; */
   flex-direction: row;
@@ -146,23 +236,26 @@
   /* margin: 32px 0px; */
   width: 356px;
 }
+.sidebar-list-support {
+  /* height: 490px; */
+}
 
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
   font-family: sans-serif, 'DM Sans';
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 400;
   line-height: 24px;
-  letter-spacing: 0.02em;
+  /* letter-spacing: 0.02em; */
   text-align: left;
-  margin-bottom: 32px;
+  /* margin-bottom: 32px; */
 }
 
 .sidebar-favorite:hover,
 .sidebar-favorite:focus {
   color: rgb(79, 46, 232);
   font-family: sans-serif, 'DM Sans';
-  font-size: 18px;
+  /* font-size: 18px; */
   font-weight: 700;
   line-height: 24px;
   letter-spacing: 0.02em;
@@ -197,8 +290,8 @@ body.dark-mode .sidebar-favorite:focus {
 
 .sidebar-box-support {
   position: relative;
-  width: 356px;
-  height: 474px;
+  /* width: 356px; */
+  /* height: 474px; */
   border-radius: 16px;
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
   background: radial-gradient(
@@ -207,7 +300,7 @@ body.dark-mode .sidebar-favorite:focus {
     rgb(255, 255, 255) 100%
   );
   /* overflow: scroll; */
-  margin-top: 86px;
+  /* margin-top: 86px; */
 }
 
 .sidebar-list-support {
@@ -321,6 +414,7 @@ body.dark-mode .sidebar-favorite:focus {
   height: 38px;
   margin-top: 24px;
   margin-left: 159px;
+  border: 1px solid rgba(0,0,0,0);
 }
 
 .support-arrow:hover {

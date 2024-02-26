@@ -8,6 +8,7 @@
         font-size: 30px;
         font-weight: 700;
         line-height: 1.2;
+        letter-spacing: -.04em;
     }
     
     .hardcover-wrapper {
@@ -41,13 +42,25 @@
     }
     
     .hardcover-title {
+        letter-spacing: -.04em;
+        text-transform: uppercase;
+        margin-top: 14px;
+        margin-bottom: 4px;
+        margin-left: 5px;
         font-size: 16px;
+        font-weight: 700;
+        line-height: 1.125;
     }
     
     .hardcover-text {
+        letter-spacing: -.04em;
+        color: var(--dark-header-secondary-color);
+        margin-bottom: 4px;
+        margin-left: 5px;
         font-size: 12px;
         font-style: italic;
-        color: var(--light-header-secondary-color);
+        font-weight: 400;
+        line-height: 1.16667;
     }
     
     .book-categories-span {
@@ -101,13 +114,26 @@
     }
     
     .hardcover-title {
+        letter-spacing: -.04em;
+        text-transform: uppercase;
+        color: var(--dark-header-bg-color);
+        margin-top: 14px;
+        margin-bottom: 4px;
+        margin-left: 5px;
         font-size: 16px;
+        font-weight: 700;
+        line-height: 1.125;
     }
     
     .hardcover-text {
+         letter-spacing: -.04em;
+        color: var(--dark-header-secondary-color);
+        margin-bottom: 4px;
+        margin-left: 5px;
         font-size: 12px;
         font-style: italic;
-        color: var(--light-header-secondary-color);
+        font-weight: 400;
+        line-height: 1.16667;
     }
     
     /* .hardcover-category-title {
@@ -135,7 +161,7 @@
         font-size: 48px;
         font-weight: 700;
         line-height: 52px;
-        letter-spacing: -4%;
+        letter-spacing: -.04em;
     }
     
     .hardcover-list {
@@ -160,14 +186,25 @@
     }
     
     .hardcover-title {
+        letter-spacing: -.04em;
+        text-transform: uppercase;
+        margin-top: 14px;
+        margin-bottom: 4px;
+        margin-left: 5px;
         font-size: 16px;
-        letter-spacing: -0.02em;
+        font-weight: 700;
+        line-height: 1.125;
     }
     
     .hardcover-text {
+          letter-spacing: -.04em;
+        color: var(--dark-header-secondary-color);
+        margin-bottom: 4px;
+        margin-left: 5px;
         font-size: 12px;
         font-style: italic;
-        color: var(--light-header-secondary-color);
+        font-weight: 400;
+        line-height: 1.16667;
     }
     .book-categories-span {
         color: var(--light-accent-color);
@@ -186,6 +223,7 @@
         .hardcover-category-title {
             padding: 40px 40px 75px;
             font-size: 48px;
+             letter-spacing: .03em;
         }
         
         .hardcover-list {
@@ -208,18 +246,28 @@
         }
     
         .hardcover-image {
-            max-height: 256px;
+            height: 256px;
         }
         
         .hardcover-title {
             font-size: 16px;
-            letter-spacing: -0.02em;
+            letter-spacing: -.04em;
+            line-height: 1.125;
+            text-transform: uppercase;
+            margin-top: 14px;
+            margin-bottom: 4px;
+            margin-left: 5px;
         }
         
         .hardcover-text {
+            letter-spacing: -.04em;
+            color: var(--dark-header-secondary-color);
+            margin-bottom: 4px;
+            margin-left: 5px;
             font-size: 12px;
             font-style: italic;
-            color: var(--light-header-secondary-color);
+            font-weight: 400;
+            line-height: 1.16667;
         }
         .book-categories-span {
             color: var(--light-accent-color);
