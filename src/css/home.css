@@ -1,7 +1,6 @@
 /* Mobile */
 
 @media (max-width: 375px) {
-
   .sidebar-section {
     width: 100%;
     padding-top: 40px;
@@ -11,7 +10,6 @@
   .home-section .sidebar-container {
     width: 100%;
     max-width: calc(335px - 40px);
-    
   }
   .sidebar-box-categories {
     width: 100%;
@@ -26,8 +24,8 @@
 
   .sidebar-favorite {
     width: 100%;
-    letter-spacing: -.02em;
-    color: rgba(17,17,17,.6);
+    letter-spacing: -0.02em;
+    color: rgba(17, 17, 17, 0.6);
     font-size: 14px;
     line-height: 1.12px;
     margin-bottom: 24px;
@@ -35,10 +33,9 @@
 
   .sidebar-favorite:hover {
     font-size: 14px;
-
   }
 
-  .sidebar-list-support{
+  .sidebar-list-support {
     height: 352px;
     overflow: hidden;
   }
@@ -60,9 +57,7 @@
 
   .support-arrow {
     margin-bottom: 15px;
-   
   }
-
 }
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
@@ -83,16 +78,15 @@
   .sidebar-favorite {
     font-size: 14px;
     line-height: 1.12px;
-    letter-spacing: -.02em;
+    letter-spacing: -0.02em;
     margin-bottom: 24px;
   }
 
   .sidebar-favorite:hover {
     font-size: 14px;
-
   }
 
-  .sidebar-list-support{
+  .sidebar-list-support {
     height: 352px;
     overflow: hidden;
   }
@@ -135,7 +129,6 @@
 
   .sidebar-favorite:hover {
     font-size: 16px;
-
   }
 
   .sidebar-box-support {
@@ -153,9 +146,8 @@
     gap: 0;
     row-gap: 0px;
     column-gap: 0px;
-      width: 100%;
-      padding-top: 40px;
-  
+    width: 100%;
+    padding-top: 40px;
   }
 
   .home-section {
@@ -169,7 +161,6 @@
 
   .sidebar-list-categories {
     max-height: 472px;
-
   }
 
   .sidebar-favorite {
@@ -177,11 +168,10 @@
     font-weight: 18px;
     line-height: 24px;
     font-weight: 400;
-    color: rgba(17,17,17,.6);
+    color: rgba(17, 17, 17, 0.6);
   }
   .sidebar-favorite:hover {
     font-size: 18px;
-
   }
 
   .sidebar-list-support {
@@ -189,15 +179,13 @@
   }
 
   .sidebar-box-support {
-        margin-top: 86px;
+    margin-top: 86px;
   }
-  
 }
 /* .home-section {
   display: flex;
   flex-direction: column;
 } */
-
 
 .sidebar-section {
   width: 100%;
@@ -414,7 +402,7 @@ body.dark-mode .sidebar-favorite:focus {
   height: 38px;
   margin-top: 24px;
   margin-left: 159px;
-  border: 1px solid rgba(0,0,0,0);
+  border: 1px solid rgba(0, 0, 0, 0);
 }
 
 .support-arrow:hover {
