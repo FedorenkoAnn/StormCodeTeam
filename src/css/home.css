@@ -77,7 +77,6 @@
 @media screen and (min-width: 300px) {
   .sidebar-list-categories {
     max-height: 228px;
-    overflow-y: scroll;
   }
 }
 
