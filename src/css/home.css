@@ -183,6 +183,7 @@
   .sidebar-box-support {
         margin-top: 86px;
   }
+  
 }
 /* .home-section {
   display: flex;
@@ -383,6 +384,7 @@ body.dark-mode .sidebar-favorite:focus {
   height: 38px;
   margin-top: 24px;
   margin-left: 159px;
+  border: 1px solid rgba(0,0,0,0);
 }
 
 /* .sidebar-img {
