@@ -5,12 +5,54 @@
     width: 100%;
     max-width: calc(335px - 40px);
   }
+  .sidebar-box-categories {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .sidebar-list-categories {
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+
+  .sidebar-favorite {
+    font-size: 14px;
+    line-height: 1.12px;
+  }
+
+  .sidebar-box-support {
+    width: 100%;
+    height: 352px;
+    display: block;
+    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .sidebar-container {
     width: 100%;
     padding-top: 40px;
+  }
+  .sidebar-box-categories {
+    width: 100%;
+    padding-top: 40px;
+    padding-bottom: 40px;
+  }
+  .sidebar-list-categories {
+    max-height: 228px;
+    overflow-y: scroll;
+  }
+
+  .sidebar-favorite {
+    font-size: 14px;
+    line-height: 1.12px;
+  }
+
+  .sidebar-box-support {
+    width: 100%;
+    height: 352px;
+    display: block;
+    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
   }
 }
 
@@ -20,6 +62,26 @@
   .sidebar-container {
     padding-bottom: 100px;
     display: flex;
+  }
+
+  .sidebar-box-categories {
+    gap: 32px;
+    padding-bottom: 100px;
+    display: flex;
+  }
+
+  .sidebar-list-categories {
+    max-height: 472px;
+  }
+
+  .sidebar-favorite {
+    font-size: 16px;
+    line-height: 1.33px;
+  }
+
+  .sidebar-box-support {
+    height: 472px;
+    width: 335px;
   }
 }
 
@@ -33,13 +95,7 @@
     row-gap: 0px;
     column-gap: 0px;
   }
-}
-/* .home-section {
-  display: flex;
-  flex-direction: column;
-} */
 
-@media screen and (min-width: 1440px) {
   .home-section {
     display: flex;
     flex-wrap: nowrap;
@@ -49,6 +105,11 @@
     max-width: 356px;
   }
 }
+/* .home-section {
+  display: flex;
+  flex-direction: column;
+} */
+
 
 .sidebar-section {
   width: 100%;
@@ -57,63 +118,6 @@
 /* .sidebar-container {
   width: ;
 } */
-
-@media screen and (min-width: 300px) {
-  .sidebar-box-categories {
-    width: 100%;
-    padding-top: 40px;
-    padding-bottom: 40px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .sidebar-box-categories {
-    gap: 32px;
-    padding-bottom: 100px;
-    display: flex;
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-list-categories {
-    max-height: 228px;
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .sidebar-list-categories {
-    max-height: 472px;
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-favorite {
-    font-size: 14px;
-    line-height: 1.12px;
-  }
-}
-@media screen and (min-width: 768px) {
-  .sidebar-favorite {
-    font-size: 16px;
-    line-height: 1.33px;
-  }
-}
-
-@media screen and (min-width: 300px) {
-  .sidebar-box-support {
-    width: 100%;
-    height: 352px;
-    display: block;
-    position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
-  }
-}
-
-@media screen and (min-width: 768px) {
-  .sidebar-box-support {
-    height: 472px;
-    width: 335px;
-  }
-}
 
 /* .home-section {
   display: flex;
