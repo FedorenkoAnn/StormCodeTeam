@@ -1,0 +1,1 @@
+export const bookList = document.querySelector(".js-booklist")

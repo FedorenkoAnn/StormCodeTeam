@@ -1,5 +1,6 @@
 import {getTopBooks} from "./api.js"
 import{createGalleryTopBooks} from "./markup.js"
+import {bookList} from "./variables.js"
 
 async function getRandomTopBooks() {
   const topBooks = await getTopBooks().then(data => {
@@ -18,7 +19,7 @@ async function getRandomTopBooks() {
   })
     .catch(err => console.log(err))
 
-  cardList.innerHTML = createGalleryTopBooks(topBooks)
+    bookList.innerHTML = createGalleryTopBooks(topBooks)
 }
 
 
