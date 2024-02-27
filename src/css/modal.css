@@ -24,12 +24,16 @@
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .modal-content {
   position: absolute;
   top: 50%;
   left: 50%;
   width: 579px;
-  height: 500px;
+  height: 540px;
   padding: 40px;
   background-color: #fefefe;
   border-radius: 1px solid #888;
@@ -62,23 +66,15 @@ body.dark-mode .modal-content {
 
 @media screen and (max-width: 375px) {
   .image-container img {
-    /* width: 100%;
-    height: 408px; */
-    /* margin-bottom: 14px; */
     width: 192px;
     height: 281px;
-    /* margin-right: 0; */
   }
 }
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .image-container img {
-    /* width: 100%;
-    height: 408px; */
-    /* margin-bottom: 14px; */
     width: 192px;
     height: 281px;
-    /* margin-right: 0; */
   }
 }
 
@@ -123,8 +119,6 @@ img {
 }
 
 .modal-title {
-  /* width: 192px; */
-  /* height: 28px; */
   color: rgb(17, 17, 17);
   font-family: sans-serif, 'DM Sans';
   font-size: 24px;
@@ -132,7 +126,6 @@ img {
   line-height: 28px;
   letter-spacing: 0.004em;
   text-align: left;
-  /* margin-bottom: 8px; */
 }
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .modal-title {
@@ -184,8 +177,6 @@ body.dark-mode .title {
 }
 
 .list-name {
-  /* width: 92px;
-  height: 18px; */
   margin-bottom: 20px;
   color: rgb(180, 175, 175);
   font-family: sans-serif, 'DM Sans';
@@ -293,6 +284,7 @@ body.dark-mode .list-descr {
   order: 0;
   flex-grow: 0;
 }
+
 .list-google {
   position: static;
   width: 33px;
@@ -302,11 +294,13 @@ body.dark-mode .list-descr {
   flex-grow: 0;
   margin: -5px 20px 0px;
 }
+
 @media screen and (max-width: 375px) {
   .list-google {
     margin-bottom: 44px;
   }
 }
+
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .list-google {
     margin-bottom: 44px;
@@ -325,6 +319,7 @@ body.dark-mode .list-descr {
   font-size: 28px;
   font-weight: bold;
 }
+
 @media screen and (max-width: 375px) {
   .modal-close-btn {
     top: 12px;
@@ -345,9 +340,14 @@ body.dark-mode .list-descr {
   cursor: pointer;
 }
 .modal-close-btn-icon {
+  stroke: black;
   position: relative;
   top: -7px;
   right: 1px;
+}
+
+body.dark-mode .modal-close-btn-icon {
+  stroke: white;
 }
 
 .modal-body {
@@ -376,14 +376,20 @@ body.dark-mode .list-descr {
   box-sizing: border-box;
   border: 2px solid rgb(79, 46, 232);
   border-radius: 40px;
+  background-color: white;
   color: rgb(17, 17, 17);
   font-family: 'DM Sans';
   font-size: 18px;
   font-weight: 700;
   line-height: 24px;
-  letter-spacing: -1%;
+  letter-spacing: -0.01em;
   text-align: center;
   text-transform: uppercase;
+}
+
+body.dark-mode .add-to-shopping-list-btn {
+  background-color: rgb(17, 17, 17);
+  color: white;
 }
 
 .add-to-shopping-list-btn:hover:focus {
@@ -441,7 +447,7 @@ body.dark-mode .list-descr {
   font-size: 12px;
   font-weight: 400;
   line-height: 14px;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   text-align: center;
 }
 
@@ -452,7 +458,6 @@ body.dark-mode .list-descr {
     height: 36px;
     left: 47px;
     right: 46px;
-
     bottom: 40px;
     width: 242px;
     height: 36px;
@@ -471,7 +476,46 @@ body.dark-mode .list-descr {
     height: 36px;
     left: 47px;
     right: 46px;
+    bottom: 40px;
+    width: 242px;
+    height: 36px;
+    color: rgba(17, 17, 17, 0.5);
+    font-family: DM Sans;
+    font-size: 10px;
+    font-weight: 400;
+    line-height: 12px;
+    text-align: center;
+  }
+}
 
+.modal-bottom-text {
+  margin-top: 8px;
+  position: absolute;
+  width: 350px;
+  height: 28px;
+  left: 128px;
+  right: 127px;
+  bottom: 40px;
+  color: rgba(17, 17, 17, 0.5);
+  font-family: DM Sans;
+  font-size: 12px;
+  font-weight: 400;
+  line-height: 14px;
+  letter-spacing: -4%;
+  text-align: center;
+}
+
+body.dark-mode .modal-bottom-text {
+  color: white;
+}
+
+@media screen and (max-width: 375px) {
+  .modal-bottom-text {
+    position: absolute;
+    width: 242px;
+    height: 36px;
+    left: 47px;
+    right: 46px;
     bottom: 40px;
     width: 242px;
     height: 36px;
