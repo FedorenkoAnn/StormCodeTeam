@@ -11,8 +11,9 @@
     />
     
     <script type="module" crossorigin src="/StormCodeTeam/commonHelpers.js"></script>
+    <link rel="modulepreload" crossorigin href="/StormCodeTeam/assets/header-f05e16ca.js">
     <link rel="modulepreload" crossorigin href="/StormCodeTeam/assets/vendor-da6d1e6a.js">
-    <link rel="stylesheet" href="/StormCodeTeam/assets/index-799cb371.css">
+    <link rel="stylesheet" href="/StormCodeTeam/assets/header-e5c087ca.css">
   </head>
   <body>
     <header class="header">
@@ -31,9 +32,9 @@
 
       <div class="navigation">
         <ul class="nav-list">
-          <li class="nav-link"><a id="link-menu" href="">HOME</a></li>
+          <li class="nav-link"><a id="link-menu" href="../index.html">HOME</a></li>
           <li class="nav-link js-shopping-list">
-            <a id="link-menu" href=""
+            <a id="link-menu" href="../shopping-list-page.html"
               >SHOPPING LIST  
               <svg id="link-menu" class="icon-shopping" width="20" height="20">
             <use href="../img/sprite.svg#icon-uil_cart-1"></use>
@@ -69,9 +70,9 @@
 
   <div class="mobile-content">
     <ul class="mobile-nav-list">
-      <li class="mobile-nav-link"><a id="link-menu" href="">HOME</a></li>
+      <li class="mobile-nav-link"><a id="link-menu" href="../index.html">HOME</a></li>
       <li class="mobile-nav-link js-shopping-list">
-        <a id="link-menu" href="">SHOPPING LIST <svg class="icon-shopping-mob" id="link-menu" width="20" height="20">
+        <a id="link-menu" href="../shopping-list-page.html">SHOPPING LIST <svg class="icon-shopping-mob" id="link-menu" width="20" height="20">
             <use href="../img/sprite.svg#icon-uil_cart-1"></use>
           </svg></a>
       </li>
@@ -350,47 +351,108 @@
 </div>
 
 
-    <!DOCTYPE html>
-<html lang="uk">
+    <!-- <!DOCTYPE html>
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="./img/bolt-svgrepo-com.svg" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping-list</title>
-    <link rel="stylesheet" href="../css/styles.css" />
-    <link rel="stylesheet" href="../css/shopping-list.css" />
+    <title>Shopping list</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
+    />
+    <link rel="stylesheet" href="./css/styles.css" />
   </head>
-  <body class="margin-top">
-    
-    <include src="../partials/header.html"></include>
+  <main>
+  <body>
+    <header class="header">
+  <div class="container">
+    <nav class="nav-header">
+      <div class="nav-logo">
+        <a class="logo" href="">
+          <svg class="icon-logo" width="24" height="24">
+            <use href="../img/sprite.svg#icon-logo"></use>
+          </svg>
+          <svg class="icon-logo-book" width="77" height="14">
+            <use href="../img/sprite.svg#icon-Bookshelf-2"></use>
+          </svg></a
+        >
+      </div>
 
-    <main>
-        <div class="container shopping-list-page">
-            <h1 class="shopping-main-title">
-              Shopping
-              <span class="shopping-list-color">List</span>
-            </h1>
-        
-              <p class="empty-list-text">
-                This page is empty, add some books and proceed to order.
-              </p>
-              <picture class="empty-list-img">
-                <source
-                  srcset=""
-                  media="(min-width: )"
-                />
-                <source
-                  srcset=""
-                  media="(max-width:)"
-                />
-                <img
-                  src=""
-                  alt="Books"
-                />
-              </picture>
-            </div>
-            <ul class="shopping-list-js"></ul>
-    </main>
+      <div class="navigation">
+        <ul class="nav-list">
+          <li class="nav-link"><a id="link-menu" href="../index.html">HOME</a></li>
+          <li class="nav-link js-shopping-list">
+            <a id="link-menu" href="../shopping-list-page.html"
+              >SHOPPING LIST  
+              <svg id="link-menu" class="icon-shopping" width="20" height="20">
+            <use href="../img/sprite.svg#icon-uil_cart-1"></use>
+          </svg></a>
+            
+          </li>
+        </ul>
+      </div>
 
+      <div class="nav-switch">
+        <label class="switch">
+          <input type="checkbox" /><span class="slider"></span
+        ></label>
+      </div>
+    </nav>
+  </div>
+<div class="mobile-window">
+  <div>
+    <button class="burger-btn">
+      <svg class="icon-burger" width="28" height="28">
+            <use href="../img/sprite.svg#icon-align-left"></use>
+          </svg>
+    </button>
+    <button class="close-btn">
+      <svg class="icon-close" width="28" height="28">
+            <use href="../img/sprite.svg#icon-x-close"></use>
+          </svg>
+    </button>
+  </div>
+
+</header>
+
+
+  <div class="mobile-content">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-link"><a id="link-menu" href="../index.html">HOME</a></li>
+      <li class="mobile-nav-link js-shopping-list">
+        <a id="link-menu" href="../shopping-list-page.html">SHOPPING LIST <svg class="icon-shopping-mob" id="link-menu" width="20" height="20">
+            <use href="../img/sprite.svg#icon-uil_cart-1"></use>
+          </svg></a>
+      </li>
+   </ul>
+    <div class="mobile-image"></div>
+  </div>
+</div>
+<div class="container">
+    <div class="book-card"> 
+      <img src="book.jpg" alt="Book" class="book-cover"> 
+      <div class="book-info"> 
+        <h2 class="book-title">I will find you</h2> 
+        <p class="book-category">Hardcover fiction</p> 
+        <p class="book-description">David Burroughs was once a devoted father to his three-year-old son Matthew, living a dream life just a short drive away from the working-class suburb where he and his wife, Cheryl, first fell in love--until one fateful night when David woke suddenly to discover Matthew had been murdered while David was asleep just down the hall. 
+        </p> 
+        <p class="book-author">Harlan Coben</p> 
+          <div class="book-links"> 
+              <a href="#" class="shopping-amazon-link" width="20" heigth="20">amazon</a> 
+              <a href="#" class="shopping-book-link" width="20" heigth="20">apple</a> 
+          </div> 
+      </div> 
+      <button class="delete-button">Delete</button> 
+    </div>
+  </div>
+</main>
+    <script type="module" src="./main-shopping.js"></script>
+
+  </body>
+</html>
+ -->
     <div class="support-container"></div>
 <div class="scroll-up-container back-to-top">
   <span class="scroll-up">
