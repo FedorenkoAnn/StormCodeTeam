@@ -112,3 +112,14 @@ arrowUp.addEventListener('click', function () {
   arrowUp.classList.add('visually-hidden');
   arrowDown.classList.remove('visually-hidden');
 });
+
+//Получаем список категорий
+const categoryList = document.querySelector('.js-list');
+//Добавляем класс для стилизации прокрутки
+categoryList.classList.add('scrollable');
+
+// const categoryList = document.querySelector('.js-list');
+// Проверяем, нужна ли прокрутка
+// if (categoryList.scrollHeight > categoryList.clientHeight) {
+//   categoryList.parentElement.style.overflowY = 'scroll';
+// }

@@ -37,7 +37,7 @@
   border: 2px solid rgb(17, 17, 17);
   border-radius: 18px;
   background: rgb(255, 255, 255);
-  transform: translate(-50%,-50%)scale(1);
+  transform: translate(-50%, -50%) scale(1);
 }
 body.dark-mode .modal-content {
   background-color: black;
@@ -48,7 +48,6 @@ body.dark-mode .modal-content {
     height: 806px;
     max-width: 335px;
     padding: 40px 65px;
-    
   }
 }
 
@@ -105,16 +104,13 @@ img {
   }
 }
 
-
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
-
   .list-container {
     width: 287px;
     margin-left: 0;
   }
 }
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
-
   .list-detailes {
     margin-left: 0;
   }
@@ -146,21 +142,21 @@ img {
     font-weight: 700;
     font-size: 16px;
     line-height: 18px;
-    letter-spacing: -.04em;
+    letter-spacing: -0.04em;
     color: var(--black);
-}
   }
+}
 
-  @media screen and (max-width: 374.98px)  {
-    .modal-title {
-      margin-bottom: 4px;
-      font-family: DM Sans;
-      font-style: normal;
-      font-weight: 700;
-      font-size: 16px;
-      line-height: 18px;
-      letter-spacing: -.04em;
-      color: var(--black);
+@media screen and (max-width: 374.98px) {
+  .modal-title {
+    margin-bottom: 4px;
+    font-family: DM Sans;
+    font-style: normal;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 18px;
+    letter-spacing: -0.04em;
+    color: var(--black);
   }
 }
 
@@ -209,7 +205,6 @@ body.dark-mode .list-name {
   }
 }
 
-
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .list-name {
     margin-bottom: 18px;
@@ -240,12 +235,10 @@ body.dark-mode .list-descr {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: -.04em;
+    letter-spacing: -0.04em;
     color: var(--black);
-
   }
 }
-
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .list-descr {
@@ -256,9 +249,9 @@ body.dark-mode .list-descr {
     font-weight: 400;
     font-size: 14px;
     line-height: 18px;
-    letter-spacing: -.04em;
+    letter-spacing: -0.04em;
     color: var(--black);
-}
+  }
 }
 
 .list-links {
@@ -278,10 +271,18 @@ body.dark-mode .list-descr {
   margin-top: 204px;
 }
 
+.icon-amazon:hover {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
+}
+
 .icon-apple {
   width: 33px;
   height: 32px;
   margin-top: 204px;
+}
+
+.icon-apple:hover {
+  box-shadow: 0px 3px 3px 0px rgba(0, 0, 0, 0.15);
 }
 
 .list-amazon {
@@ -306,7 +307,7 @@ body.dark-mode .list-descr {
     margin-bottom: 44px;
   }
 }
-@media screen and (min-width: 375px) and (max-width: 767.98px)  {
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
   .list-google {
     margin-bottom: 44px;
   }
@@ -461,7 +462,7 @@ body.dark-mode .list-descr {
     font-weight: 400;
     line-height: 12px;
     text-align: center;
-}
+  }
 }
 @media screen and (max-width: 375px) {
   .modal-bottom-text {

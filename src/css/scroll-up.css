@@ -1,41 +1,43 @@
 .is-hidden {
-    opacity: 0;
-    pointer-events: none;
-    visibility: hidden;
-  }
-  
+  opacity: 0;
+  pointer-events: none;
+  visibility: hidden;
+}
+
+.scroll-up {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  transition: opacity 250ms linear, visibility 250ms linear,
+    background-color 250ms linear;
+  width: 64px;
+  height: 64px;
+  border-radius: 50%;
+  border: 5px solid rgba(80, 46, 232, 0.47);
+  cursor: pointer;
+  box-shadow: inset 0.2rem 0.2rem 0.5rem rgb(255, 255, 255),
+    inset -0.2rem -0.2rem 0.5rem #2f2bff62;
+  opacity: 1;
+  animation: waves 4s linear infinite;
+  transition: all 0.2s linear;
+  z-index: 1;
+  transform: rotate(180deg);
+}
+
+.scroll-up:hover {
+  background-color: #8468ff6f;
+}
+
+@media screen and (min-width: 768px) {
   .scroll-up {
-  
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  
-    position: fixed;
-    bottom: 20px;
-    right: 20px;
-    width: 54px;
-    height: 54px;
-    border-radius: 50%;
-    background-color: #4F2EE8;
-    border: 5px solid  rgba(255, 255, 255, 0.5);
-    transition: opacity 250ms linear, visibility 250ms linear,background-color 250ms linear;
-  
-    cursor: pointer;
+    bottom: 140px;
   }
-  .scroll-up:hover {
-  background-color: #37209d;
-  }
-  .icon-scroll-up {
-    flex-shrink: 0;
-    fill: #fff;
-  }
-  @media screen and (min-width: 768px) {
+}
+@media screen and (min-width: 1440px) {
   .scroll-up {
-      bottom: 140px;
+    bottom: 150px;
   }
-  }
-  @media screen and (min-width: 1440px) {
-  .scroll-up {
-      bottom: 150px;
-  }
-  }
+}
