@@ -21,7 +21,7 @@ export const createGalleryTopBooks = (arr) => {
       }
       </ul>
         <div class="btn_more">
-    <button class="btn_see-more">See more</button>
+    <button class="btn_see-more" data-category="${item.list_name}">See more</button>
     </div>`
     return markup
   })
