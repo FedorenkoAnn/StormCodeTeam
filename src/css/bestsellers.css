@@ -5,7 +5,6 @@
   font-size: 32px;
   line-height: 1.2;
   letter-spacing: -.04em;
-  color: var(--dark-header-bg-color);
 
   @media screen and (min-width: 768px){
     margin-top: 98px;
@@ -95,7 +94,6 @@
   white-space: nowrap;
   text-overflow: ellipsis;
   overflow: hidden; 
-  color: var(--dark-header-bg-color);
 
   @media screen and (min-width: 768px) {
     max-width: 218px;
@@ -128,7 +126,6 @@
   line-height: 1.29;
   letter-spasing: -0.01em;
   text-transform: uppercase;
-  color: var(--dark-header-bg-color);
   background-color: inherit;
   border: 2px solid;
   border-radius: 40px;
