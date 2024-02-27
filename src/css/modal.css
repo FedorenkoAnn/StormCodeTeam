@@ -58,10 +58,12 @@ body.dark-mode .modal-content {
 
 @media screen and (max-width: 375px) {
   .image-container img {
-    width: 100%;
-    height: 408px;
-    margin-bottom: 14px;
-    margin-right: 0;
+    /* width: 100%;
+    height: 408px; */
+    /* margin-bottom: 14px; */
+    width: 192px;
+    height: 281px;
+    /* margin-right: 0; */
   }
 }
 
@@ -87,16 +89,23 @@ img {
   }
 }
 
-.title {
+.image-container {
   width: 192px;
-  height: 28px;
+  height: 281px;
+  margin-bottom: 40px;
+}
+
+.modal-title {
+  /* width: 192px; */
+  /* height: 28px; */
   color: rgb(17, 17, 17);
-  font-family: 'DM Sans';
+  font-family: sans-serif, 'DM Sans';
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  letter-spacing: 0.004em;
   text-align: left;
-  margin-bottom: 8px;
+  /* margin-bottom: 8px; */
 }
 body.dark-mode .title {
   color: white;
@@ -108,16 +117,24 @@ body.dark-mode .title {
 }
 .list-details {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
+  row-gap: 8px;
+  align-items: flex-start;
+  justify-content: flex-start;
 }
 
 .list-name {
+  /* width: 92px;
+  height: 18px; */
   margin-bottom: 20px;
   color: rgb(180, 175, 175);
-  font-family: 'DM Sans';
+  font-family: sans-serif, 'DM Sans';
   font-style: italic;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  letter-spacing: 0.04em;
   text-align: left;
 }
 body.dark-mode .list-name {
@@ -129,21 +146,18 @@ body.dark-mode .list-name {
   }
 }
 .list-descr {
-  width: 279px;
-  height: 70px;
-  left: 256px;
-  right: 44px;
-  top: 114px;
-  bottom: 281px;
+  width: 192px;
+  height: 54px;
   color: rgb(17, 17, 17);
-  font-family: DM Sans;
+  font-family: sans-serif, 'DM Sans';
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: -4%;
+  letter-spacing: 0.04em;
   text-align: left;
-  margin-bottom: 26px;
+  margin-bottom: 20px;
 }
+
 body.dark-mode .list-descr {
   color: white;
 }
@@ -154,8 +168,26 @@ body.dark-mode .list-descr {
 }
 
 .list-links {
+  margin-top: 20px;
   display: flex;
+  width: 115px;
+  height: 32px;
+  flex-direction: row;
+  align-content: center;
+  align-items: center;
 }
+
+.icon-amazon {
+  width: 62px;
+  height: 19px;
+  margin-right: 20px;
+}
+
+.icon-apple {
+  width: 33px;
+  height: 32px;
+}
+
 .list-amazon {
   position: static;
   width: 62px;

@@ -63,19 +63,16 @@ function markupBook(book) {
       <img src="${book_image}" alt="${list_name}" />
     </div>
     <div class="list-container">
-      <ul class="list-details">
-        <li class="title">${title}</li>
-        <li class="list-name">${author}</li>
-        <li class="list-descr">${description}</li>
+      <div class="list-details">
+        <h2 class="modal-title">${title}</h2>
+        <p class="list-name">${author}</p>
+      </div>
+        <p class="list-descr">${description}</p>
         <div class="list-links">
-          <li class="list-amazon">
-            <img src="../img/amazon@1x.png", "../img/amazon@2x.png" alt="amazon" />
-          </li>
-          <li class="list-google">
-            <img src="../img/app_books@1x.png", "../img/app_books@2x.png" alt="app_books" />
-          </li>
+            <img class="icon-amazon" src="../img/amazon@1x.png", "../img/amazon@2x.png" alt="amazon" />
+            <img class="icon-apple" src="../img/app_books@1x.png", "../img/app_books@2x.png" alt="app_books" />
         </div>
-      </ul>
+      </div>
     </div>
      `;
 }
