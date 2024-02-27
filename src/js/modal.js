@@ -15,7 +15,7 @@ if (savedShoppingList) {
 modalCloseBtn.addEventListener('click', closeModal);
 document.addEventListener('click', async event => {
   try {
-    const hardcoverItem = event.target.closest('.hardcover-item');
+    const hardcoverItem = event.target.closest('.hardcover-item') || event.target.closest('.js-card');
     if (hardcoverItem) {
       const id = hardcoverItem.id;
       const response = await getBookById(id);
