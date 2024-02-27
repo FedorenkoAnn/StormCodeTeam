@@ -1,7 +1,6 @@
 .books_galerry-title{
-  display: inline-block;
-  padding-top: 40px;
-  padding-bottom: 40px;
+  margin-top: 40px;
+  margin-bottom: 40px;
   font-weight: 700;
   font-size: 32px;
   line-height: 1.2;
@@ -9,8 +8,13 @@
   color: var(--dark-header-bg-color);
 
   @media screen and (min-width: 768px){
+    margin-top: 98px;
     font-size: 48px;
     line-height: 1.1;
+  }
+  @media screen and (min-width: 1440px){
+    margin-top: 40px;
+    margin-left: 40px;
   }
 }
 .books_galerry-title-subject{
@@ -25,46 +29,96 @@
   letter-spacing: .03em;
   color: var(--light-header-secondary-color);
   text-transform: uppercase; 
+
+  @media screen and (min-width: 768px) {
+    line-height: 1.7;
+  }
+  @media screen and (min-width: 1440px){
+    margin-left: 40px;
+  }
 }
 .book_card-list{
   width: 100%;
+  max-height: 535px;
   margin-bottom: 8px;
+  margin-right: 0;
 
   @media screen and (min-width: 768px) {
     display: flex;
     flex-wrap: wrap;
+    justify-content: space-between;
+    height: 366px;
+    margin-bottom: 20px;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 996px;
+    height: 306px;
+    margin-bottom: 32px; 
+    margin-left: 40px; 
   }
 }
 .book_card-item{
- 
+  width: 100%;
+
+  @media screen and (min-width: 768px) {
+    width: 218px;
+    height: 100%;
+  }
+  @media screen and (min-width: 1440px) {
+    width: 180px;
+    height: 100%;
+  }
 }
 .book_card_photo{
- margin-bottom: 14px;
- object-fit: cover;
- object-position: center;
- border-radius: 8px;
+  max-height: 485px;
+  margin-bottom: 14px;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 8px;
+
+  @media screen and (min-width: 768px) {
+    height: 316px;
+  }
+  @media screen and (min-width: 1440px) {
+    height: 256px;
+  }
+
 }
 .book_card-title{
+  max-width: 335px;
   margin-bottom: 4px;
   font-weight: 700;
   font-size: 16px;
   line-height: 1.13;
   letter-spasing: -0.04em;
   text-transform: uppercase;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+  overflow: hidden; 
+  color: var(--dark-header-bg-color);
+
+  @media screen and (min-width: 768px) {
+    max-width: 218px;
+  }
+  @media screen and (min-width: 1440px) {
+    max-width: 180px;;
+  }
+
 }
 .book_card_author{
   font-style: italic;
-  font-weight: 400;
   font-size: 12px;
-  line-height: 1.67;
+  line-height: 1.17;
   letter-spasing: -0.04em;
   color: var(--light-header-secondary-color);
 }
 .btn_more{
-  display: flex;
-  justify-content: flex-end;
+  margin-left: auto;
   width: 129px;
   height: 46px;
+}
+.btn_more:not(:last-child){
+  margin-bottom: 40px;
 }
 .btn_see-more{
   display: inline-block;

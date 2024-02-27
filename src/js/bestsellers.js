@@ -1,7 +1,13 @@
 import { getTopBooks } from "./api.js"
 import { createGalleryTopBooks } from "./markup.js"
-// import {bookList} from "./variables.js"
-import { hardcoverBooksList } from "./hardcover.js"
+import {booksList, topBooks} from "./variables.js"
+
+getRandomTopBooks();
+
+topBooks.addEventListener("click", onTopBooks)
+function onTopBooks(evt){
+  getRandomTopBooks();
+}
 
 async function getRandomTopBooks() {
   try {
@@ -18,9 +24,9 @@ async function getRandomTopBooks() {
         arrTopBooks.push(data[i])
       }
     }
-    hardcoverBooksList.innerHTML = createGalleryTopBooks(arrTopBooks);
+    booksList.innerHTML = createGalleryTopBooks(arrTopBooks);
   } catch (err) {
     console.log(err);
   }
 }
-getRandomTopBooks()
+
