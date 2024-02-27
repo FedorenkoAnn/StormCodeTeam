@@ -12,26 +12,33 @@
     
     <script type="module" crossorigin src="/StormCodeTeam/commonHelpers.js"></script>
     <link rel="modulepreload" crossorigin href="/StormCodeTeam/assets/vendor-da6d1e6a.js">
-    <link rel="stylesheet" href="/StormCodeTeam/assets/index-2c6a5078.css">
+    <link rel="stylesheet" href="/StormCodeTeam/assets/index-799cb371.css">
   </head>
   <body>
     <header class="header">
   <div class="container">
     <nav class="nav-header">
       <div class="nav-logo">
-        <a class="logo" href="/src/index.html">
+        <a class="logo" href="">
           <svg class="icon-logo" width="24" height="24">
-            <use href=""></use>
+            <use href="../img/sprite.svg#icon-logo"></use>
           </svg>
-          Bookshelf</a
+          <svg class="icon-logo-book" width="77" height="14">
+            <use href="../img/sprite.svg#icon-Bookshelf-2"></use>
+          </svg></a
         >
       </div>
 
       <div class="navigation">
         <ul class="nav-list">
-          <li class="nav-link"><a href="">HOME</a></li>
+          <li class="nav-link"><a id="link-menu" href="">HOME</a></li>
           <li class="nav-link js-shopping-list">
-            <a href="">SHOPPING LIST</a>
+            <a id="link-menu" href=""
+              >SHOPPING LIST  
+              <svg id="link-menu" class="icon-shopping" width="20" height="20">
+            <use href="../img/sprite.svg#icon-uil_cart-1"></use>
+          </svg></a>
+            
           </li>
         </ul>
       </div>
@@ -43,8 +50,35 @@
       </div>
     </nav>
   </div>
+<div class="mobile-window">
+  <div>
+    <button class="burger-btn">
+      <svg class="icon-burger" width="28" height="28">
+            <use href="../img/sprite.svg#icon-align-left"></use>
+          </svg>
+    </button>
+    <button class="close-btn">
+      <svg class="icon-close" width="28" height="28">
+            <use href="../img/sprite.svg#icon-x-close"></use>
+          </svg>
+    </button>
+  </div>
+
 </header>
 
+
+  <div class="mobile-content">
+    <ul class="mobile-nav-list">
+      <li class="mobile-nav-link"><a id="link-menu" href="">HOME</a></li>
+      <li class="mobile-nav-link js-shopping-list">
+        <a id="link-menu" href="">SHOPPING LIST <svg class="icon-shopping-mob" id="link-menu" width="20" height="20">
+            <use href="../img/sprite.svg#icon-uil_cart-1"></use>
+          </svg></a>
+      </li>
+   </ul>
+    <div class="mobile-image"></div>
+  </div>
+</div>
     <div class="container home-section">
   <section class="sidebar-section">
     <aside class="sidebar-container">
