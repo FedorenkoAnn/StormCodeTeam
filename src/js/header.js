@@ -42,25 +42,25 @@ function toggleModal(action) {
   }
 }
 
-document.querySelector('.burger-btn').addEventListener('click', function () {
-  toggleModal('open');
-});
+// document.querySelector('.burger-btn').addEventListener('click', function () {
+//   toggleModal('open');
+// });
 
-document.querySelector('.close-btn').addEventListener('click', function () {
-  toggleModal('close');
-});
+// document.querySelector('.close-btn').addEventListener('click', function () {
+//   toggleModal('close');
+// });
 
-document.addEventListener('DOMContentLoaded', function () {
-  const homeLink = document.querySelector('.nav-list a[href="../index.html"]');
-  const shoppingListLink = document.querySelector('.js-shopping-list a');
+// document.addEventListener('DOMContentLoaded', function () {
+//   const homeLink = document.querySelector('.nav-list a[href="../index.html"]');
+//   const shoppingListLink = document.querySelector('.js-shopping-list a');
 
-  homeLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    window.location.href = this.getAttribute('href');
-  });
+//   homeLink.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     window.location.href = this.getAttribute('href');
+//   });
 
-  shoppingListLink.addEventListener('click', function (event) {
-    event.preventDefault();
-    window.location.href = this.getAttribute('href');
-  });
-});
+//   shoppingListLink.addEventListener('click', function (event) {
+//     event.preventDefault();
+//     window.location.href = this.getAttribute('href');
+//   });
+// });
