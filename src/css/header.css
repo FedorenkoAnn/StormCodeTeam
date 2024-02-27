@@ -7,7 +7,9 @@
   display: flex;
   background-color: #ffffff;
   position: relative;
-  min-width: 378px;
+  width: 320px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .navigation {
@@ -15,7 +17,6 @@
   left: 209px;
   top: 27px;
 }
-
 
 .is-active {
   border-radius: 36px;
@@ -25,16 +26,15 @@
   color: #111111;
   cursor: pointer;
   transition: none;
-
 }
 
 .is-active .link-menu {
   fill: #111111;
 }
+
 body.dark-mode .is-active .link-menu {
     fill: #111111;
   }
-
 
 .nav-logo {
   position: absolute;
@@ -58,7 +58,11 @@ body.dark-mode .is-active .link-menu {
   height: 20px;
   top: 4px;
   box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(180.00deg, rgb(79, 46, 232), rgb(220, 220, 220) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(79, 46, 232),
+    rgb(220, 220, 220) 100%
+  );
   border-radius: 30px;
 }
 
@@ -70,7 +74,11 @@ body.dark-mode .is-active .link-menu {
 
 body.dark-mode .switch {
   box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(180.00deg, rgb(79, 46, 232), rgb(104, 104, 104) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(79, 46, 232),
+    rgb(104, 104, 104) 100%
+  );
 }
 
 .slider {
@@ -81,15 +89,19 @@ body.dark-mode .switch {
   right: 1px;
   top: 1px;
   bottom: 1px;
-  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1), 0px 2px 2px 0px rgba(0, 0, 0, 0.1), 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(180.00deg, rgb(255, 255, 255), rgb(247, 247, 247) 100%);
-  transition: .4s;
+  box-shadow: 1px 2px 4px 0px rgba(0, 0, 0, 0.1),
+    0px 2px 2px 0px rgba(0, 0, 0, 0.1), 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
+  background: linear-gradient(
+    180deg,
+    rgb(255, 255, 255),
+    rgb(247, 247, 247) 100%
+  );
+  transition: 0.4s;
   border-radius: 34px;
   transform: translateX(0);
 }
 
-
-.switch input:checked+.slider {
+.switch input:checked + .slider {
   transform: translateX(20px);
 }
 
@@ -103,16 +115,19 @@ body.dark-mode .header {
   border: 1.5px solid #ffffff;
 }
 
-
 .mobile-content {
   box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
-  background: linear-gradient(180.00deg, rgb(79, 46, 232), rgb(220, 220, 220) 100%);
+  background: linear-gradient(
+    180deg,
+    rgb(79, 46, 232),
+    rgb(220, 220, 220) 100%
+  );
   width: 375px;
   height: 748px;
   display: none;
   position: relative;
   overflow: hidden;
-  }
+}
 
 .mobile-nav-list {
   position: absolute;
@@ -153,8 +168,6 @@ body.dark-mode .icon-logo-book {
   fill: #ffffff;
 }
 
-
-
 .close-btn {
   border: none;
   background: none;
@@ -189,33 +202,44 @@ body.dark-mode .icon-logo-book {
   position: relative;
 }
 
-
-@media screen and (min-width: 450px) {
-
-.mobile-content {
-    display: none;
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
+  .header {
+    padding: 18px 0;
+    border: 1.5px solid #111111;
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    height: 64px;
+    display: flex;
+    background-color: #ffffff;
+    position: relative;
+    width: 378px;
+    margin-left: auto;
+    margin-right: auto;
   }
-
- .mobile-window {
-   display: none;
- }
-
-  .mobile-nav-list {
-   display: none;
-    }
-
 }
 
-
-
-
-@media screen and (min-width: 768px) {
-
+@media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .header {
     padding: 19px 0;
     height: 72px;
     display: flex;
     align-items: center;
+    width: 768px;
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .mobile-content {
+    display: none;
+  }
+
+  .mobile-window {
+    display: none;
+  }
+
+  .mobile-nav-list {
+    display: none;
   }
 
   .nav-switch {
@@ -228,12 +252,11 @@ body.dark-mode .icon-logo-book {
     line-height: 18px;
     font-weight: 500;
   }
- 
-  
+
   body.dark-mode .icon-shopping {
-  fill: #ffffff;
-  position: relative;
-  top: 3px;
+    fill: #ffffff;
+    position: relative;
+    top: 3px;
   }
 
   .nav-list {
@@ -248,8 +271,6 @@ body.dark-mode .icon-logo-book {
     bottom: 5px;
   }
 
-
-
   .nav-logo {
     bottom: 21px;
   }
@@ -257,26 +278,49 @@ body.dark-mode .icon-logo-book {
   .switch {
     margin-bottom: 8px;
   }
-  
+
   .icon-shopping {
     fill: #111111;
     top: 3px;
     position: relative;
   }
-
-
-
 }
 
 @media screen and (min-width: 1440px) {
-
   .header {
-    padding: 24px 22px;
-
+    padding: 18px 0;
+    border: 1.5px solid #111111;
+    border-radius: 0 0 8px 8px;
+    box-sizing: border-box;
+    height: 64px;
+    display: flex;
+    background-color: #ffffff;
+    position: relative;
+    width: 1440px;
+    height: 72px;
+    margin-left: auto;
+    margin-right: auto;
   }
 
-  .switch {}
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    gap: 24px;
+    margin-bottom: 1px;
+  }
 
+  .mobile-content {
+    display: none;
+  }
 
+  .mobile-window {
+    display: none;
+  }
+
+  .mobile-nav-list {
+    display: none;
+  }
+
+  /* .switch {
+  } */
 }
-

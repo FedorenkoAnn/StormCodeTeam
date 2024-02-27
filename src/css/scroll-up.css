@@ -9,7 +9,7 @@
   align-items: center;
   justify-content: center;
   position: fixed;
-  bottom: 20px;
+  bottom: 50px;
   right: 20px;
   transition: opacity 250ms linear, visibility 250ms linear,
     background-color 250ms linear;
