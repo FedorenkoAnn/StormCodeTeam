@@ -50,17 +50,17 @@ function toggleModal(action) {
 //   toggleModal('close');
 // });
 
-// document.addEventListener('DOMContentLoaded', function () {
+// document.addEventListener("DOMContentLoaded", function() {
 //   const homeLink = document.querySelector('.nav-list a[href="../index.html"]');
 //   const shoppingListLink = document.querySelector('.js-shopping-list a');
 
-//   homeLink.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     window.location.href = this.getAttribute('href');
+//   homeLink.addEventListener('click', function(event) {
+//       event.preventDefault();
+//       window.location.href = this.getAttribute('href');
 //   });
 
-//   shoppingListLink.addEventListener('click', function (event) {
-//     event.preventDefault();
-//     window.location.href = this.getAttribute('href');
+//   shoppingListLink.addEventListener('click', function(event) {
+//       event.preventDefault();
+//       window.location.href = this.getAttribute('href');
 //   });
 // });
