@@ -21,8 +21,8 @@ body {
   line-height: 24px;
   font-weight: 400;
 
-  color: #242424;
-  background-color: rgba(255, 255, 255, 0.87);
+  color: #111111;
+background-color: #f6f6f6;
 
   font-synthesis: none;
   text-rendering: optimizeLegibility;
