@@ -215,24 +215,12 @@
     margin-top: 86px;
   }
 }
-.home-section {
-  display: flex;
-  flex-direction: column;
-}
 
 .sidebar-section {
   width: 100%;
   margin-right: 40px;
 }
 
-/* .sidebar-container {
-  width: ;
-} */
-
-.home-section {
-  display: flex;
-  flex-direction: column;
-}
 
 .sidebar-section {
   width: 100%;
@@ -281,9 +269,7 @@ body.dark-mode .sidebar-box-categories {
   width: 356px;
 }
 
-/* .sidebar-list-support {
-  height: 490px;
-} */
+
 
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
