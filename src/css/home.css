@@ -62,14 +62,18 @@
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .sidebar-container {
-    width: 100%;
+    width: 335px;
+    /* width: 100%; */
     padding-top: 40px;
+    margin-left: auto;
+    margin-right: auto;
   }
   .sidebar-box-categories {
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
   }
+
   .sidebar-list-categories {
     max-height: 228px;
     overflow-y: scroll;
@@ -87,18 +91,47 @@
   }
 
   .sidebar-list-support {
-    height: 352px;
+    width: 335px;
+    height: 460px;
     overflow: hidden;
+    margin-bottom: 40px;
+  }
+
+  .sidebar-swiper-list {
+    width: 159px;
+    height: 306px;
+    overflow: hidden;
+    margin-top: 42px;
   }
 
   .sidebar-box-support {
-    width: 356px;
-    height: 352px;
+    width: 335px;
+    height: 460px;
     display: block;
     position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
   }
+
+  .sidebar-title {
+    color: rgb(255, 255, 255);
+    font-family: sans-serif, 'DM Sans';
+    /* width: 161px; */
+    height: 24px;
+    font-size: 22px;
+    font-weight: 700;
+    line-height: 24px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
   .support-arrow {
-    margin-bottom: 15px;
+    border: none;
+    border-radius: 50%;
+    background-color: rgb(255, 255, 255);
+    width: 32px;
+    height: 32px;
+    margin-top: 20px;
+    margin-left: 152px;
+    margin-bottom: 20px;
   }
 }
 
@@ -182,10 +215,10 @@
     margin-top: 86px;
   }
 }
-/* .home-section {
+.home-section {
   display: flex;
   flex-direction: column;
-} */
+}
 
 .sidebar-section {
   width: 100%;
@@ -196,10 +229,10 @@
   width: ;
 } */
 
-/* .home-section {
+.home-section {
   display: flex;
   flex-direction: column;
-} */
+}
 
 .sidebar-section {
   width: 100%;
@@ -209,14 +242,33 @@
   width: 356px;
   display: flex;
   overflow-y: scroll;
-  /* overflow-x: hidden; */
+  overflow-x: hidden;
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px;
   margin-bottom: 68px;
-  scrollbar-width: thin; /* Применение стиля скроллбара (необходимо для Firefox) */
-  scrollbar-color: rgb(251, 11, 11);
+  scrollbar-color: rgb(224, 224, 224) transparent;
+  scrollbar-width: thin;
+}
+
+body.dark-mode .sidebar-box-categories {
+  scrollbar-color: rgba(17, 17, 17, 0.6) transparent;
+  scrollbar-width: thin;
+}
+
+.sidebar-list-categories ul::-webkit-scrollbar {
+  width: 8px; /* Ширина ползунка скроллбара */
+}
+
+.sidebar-list-categories ul::-webkit-scrollbar-thumb {
+  border-radius: 12px; /* Скругление углов ползунка */
+  background: #e0e0e0; /* Цвет ползунка */
+}
+
+.sidebar-list-categories ul::-webkit-scrollbar-track-piece {
+  background: transparent; /* Прозрачный фон трека скроллбара */
+  margin-bottom: 100px; /* Дополнительное расстояние снизу */
 }
 
 .sidebar-list-categories {
@@ -228,9 +280,10 @@
   /* margin: 32px 0px; */
   width: 356px;
 }
-.sidebar-list-support {
-  /* height: 490px; */
-}
+
+/* .sidebar-list-support {
+  height: 490px;
+} */
 
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
@@ -332,7 +385,7 @@ body.dark-mode .sidebar-favorite:focus {
 }
 
 .sidebar-swiper-list {
-  /* width: 159px; */
+  width: 159px;
   height: 292px;
   overflow: hidden;
   /* overflow-y: scroll;
@@ -367,19 +420,7 @@ body.dark-mode .sidebar-favorite:focus {
 } */
 
 .sidebar-company-number {
-  /* flex-direction: row;
-  justify-content: center;
-  align-items: flex-end;
-  padding: 0px;
-  width: 14px;
-  height: 18px; */
   color: rgb(255, 255, 255);
-  /* font-family: 'DM Sans';
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: 0.04em;
-  text-align: left; */
 }
 
 .sidebar-img {
@@ -432,42 +473,3 @@ body.dark-mode .sidebar-favorite:focus {
   color: #000;
   fill: #000;
 }  */
-
-/* .sidebar-swiper-arrowe {
-  margin-top: 12px;
-  margin-left: 15px;
-  width: 6.58px;
-  height: 12.83px;
-  left: 17.42px;
-  top: 14.38px;
-  transform: rotate(-90deg);
-  background-color: rgb(79, 46, 232);
-} */
-
-/* .swiper-wrapper {
-  width: 159px;
-  height: 292px;
-  position: relative;
-  width: 100%;
-  height: 100%;
-  z-index: 1;
-  display: flex;
-  flex-direction: column;
-  transition-property: transform;
-  transition-timing-function: var(
-    --swiper-wrapper-transition-timing-function,
-    initial
-  );
-  box-sizing: content-box;
-  min-width: 0;
-} */
-
-/* .slider-container {
-  width: 159px;
-  height: 292px;
-  overflow: hidden;
-}
-.swiper-container {
-  width: 159px;
-  height: 292px;
-} */
