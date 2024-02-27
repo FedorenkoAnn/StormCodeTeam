@@ -11,6 +11,10 @@
   overflow: hidden;
 }
 
+.hidden {
+  display: none;
+}
+
 .backdrop {
   display: flex;
   position: fixed;
@@ -26,10 +30,11 @@
 
 .modal-content {
   position: absolute;
-  top: 30%;
-  left: 30%;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
   width: 579px;
-  height: 500px;
+  height: 540px;
   padding: 40px;
   background-color: #fefefe;
   border-radius: 1px solid #888;
@@ -38,9 +43,11 @@
   border-radius: 18px;
   background: rgb(255, 255, 255);
 }
+
 body.dark-mode .modal-content {
   background-color: black;
 }
+
 @media screen and (max-width: 768px) {
   .modal-content {
     bottom: 200px;
@@ -75,12 +82,14 @@ img {
   flex: 1;
   margin-left: 24px;
 }
+
 @media screen and (max-width: 375px) {
   .list-container {
     width: 287px;
     margin-left: 0;
   }
 }
+
 @media screen and (max-width: 375px) {
   .list-detailes {
     margin-left: 0;
@@ -88,26 +97,31 @@ img {
 }
 
 .title {
-  width: 192px;
-  height: 28px;
+  width: 100%;
   color: rgb(17, 17, 17);
   font-family: 'DM Sans';
   font-size: 24px;
   font-weight: 700;
   line-height: 28px;
+  letter-spacing: -0.04em;
   text-align: left;
   margin-bottom: 8px;
 }
+
 body.dark-mode .title {
   color: white;
 }
+
 @media screen and (max-width: 375px) {
   .title {
     margin-bottom: 4px;
   }
 }
+
 .list-details {
   list-style-type: none;
+  display: flex;
+  flex-direction: column;
 }
 
 .list-name {
@@ -118,16 +132,20 @@ body.dark-mode .title {
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
+  letter-spacing: -0.04em;
   text-align: left;
 }
+
 body.dark-mode .list-name {
   color: white;
 }
+
 @media screen and (max-width: 375px) {
   .list-name {
     margin-bottom: 18px;
   }
 }
+
 .list-descr {
   width: 279px;
   height: 70px;
@@ -136,17 +154,19 @@ body.dark-mode .list-name {
   top: 114px;
   bottom: 281px;
   color: rgb(17, 17, 17);
-  font-family: DM Sans;
+  font-family: DM San;
   font-size: 14px;
   font-weight: 400;
   line-height: 18px;
-  letter-spacing: -4%;
+  letter-spacing: -0.04em;
   text-align: left;
   margin-bottom: 26px;
 }
+
 body.dark-mode .list-descr {
   color: white;
 }
+
 @media screen and (max-width: 375px) {
   .list-descr {
     margin-bottom: 20px;
@@ -156,6 +176,7 @@ body.dark-mode .list-descr {
 .list-links {
   display: flex;
 }
+
 .list-amazon {
   position: static;
   width: 62px;
@@ -164,6 +185,7 @@ body.dark-mode .list-descr {
   order: 0;
   flex-grow: 0;
 }
+
 .list-google {
   position: static;
   width: 33px;
@@ -173,6 +195,7 @@ body.dark-mode .list-descr {
   flex-grow: 0;
   margin: -5px 20px 0px;
 }
+
 @media screen and (max-width: 375px) {
   .list-google {
     margin-bottom: 44px;
@@ -191,6 +214,7 @@ body.dark-mode .list-descr {
   font-size: 28px;
   font-weight: bold;
 }
+
 @media screen and (max-width: 375px) {
   .modal-close-btn {
     top: 12px;
@@ -203,6 +227,7 @@ body.dark-mode .list-descr {
   color: rgb(79, 46, 232);
   cursor: pointer;
 }
+
 .modal-close-btn-icon {
   position: relative;
   top: -7px;
@@ -212,6 +237,7 @@ body.dark-mode .list-descr {
 .modal-body {
   display: flex;
 }
+
 @media screen and (max-width: 375px) {
   .modal-body {
     display: flex;
@@ -244,6 +270,7 @@ body.dark-mode .list-descr {
   color: white;
   background-color: rgb(79, 46, 232);
 }
+
 @media screen and (max-width: 375px) {
   .add-to-shopping-list-btn {
     position: absolute;
@@ -270,7 +297,7 @@ body.dark-mode .list-descr {
   height: 28px;
   left: 128px;
   right: 127px;
-
+  bottom: 40px;
   color: rgba(17, 17, 17, 0.5);
   font-family: DM Sans;
   font-size: 12px;
@@ -279,6 +306,7 @@ body.dark-mode .list-descr {
   letter-spacing: -4%;
   text-align: center;
 }
+
 @media screen and (max-width: 375px) {
   .modal-bottom-text {
     position: absolute;
@@ -286,7 +314,6 @@ body.dark-mode .list-descr {
     height: 36px;
     left: 47px;
     right: 46px;
-
     bottom: 40px;
     width: 242px;
     height: 36px;

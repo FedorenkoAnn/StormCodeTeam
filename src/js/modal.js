@@ -1,8 +1,8 @@
 import { getBookById } from './api';
 import amazon1x from '../img/amazon@1x.png';
-// import amazon2x from '../img/amazon@2x.png';
+import amazon2x from '../img/amazon@2x.png';
 import app_books1x from '../img/app_books@1x.png';
-// import app_books2x from '../img/app_books@2x.png';
+import app_books2x from '../img/app_books@2x.png';
 const modalBodyEl = document.querySelector('.modal-body');
 const backdrop = document.querySelector('.backdrop');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
@@ -23,24 +23,42 @@ document.addEventListener('click', async event => {
       const markup = markupBook(bookData);
       openModal();
       addMarkup(modalBodyEl, markup);
+
+      const modalBottomText = document.createElement('p');
+      modalBottomText.textContent = `Congratulations! You have added the book to the shopping list. To delete, press the button “Remove from the shopping list”.`;
+      modalBottomText.classList.add('modal-bottom-text', 'hidden');
+
+      modalBodyEl.appendChild(modalBottomText);
+
       if (addToShoppingListBtn && addToShoppingListBtn.parentNode) {
         addToShoppingListBtn.parentNode.removeChild(addToShoppingListBtn);
       }
       addToShoppingListBtn = document.createElement('button');
       addToShoppingListBtn.textContent = 'Add to Shopping List';
       addToShoppingListBtn.classList.add('add-to-shopping-list-btn');
+
       if (shoppingList.includes(id)) {
         addToShoppingListBtn.textContent = 'Remove from Shopping List';
       }
       addToShoppingListBtn.addEventListener('click', () => {
         toggleShoppingList(id);
+        toggleModalBottomText();
       });
+
       modalBodyEl.appendChild(addToShoppingListBtn);
     }
   } catch (error) {
     console.error(error);
   }
 });
+
+function toggleModalBottomText() {
+  const modalBottomText = document.querySelector('.modal-bottom-text');
+  if (modalBottomText) {
+    modalBottomText.classList.toggle('hidden');
+  }
+}
+
 backdrop.addEventListener('click', event => {
   if (event.target === backdrop) {
     closeModal();
@@ -57,6 +75,7 @@ function openModal() {
 function closeModal() {
   backdrop.style.display = 'none';
 }
+
 function markupBook(book) {
   const { book_image, list_name, title, author, description } = book;
   return `<div class="image-container">
