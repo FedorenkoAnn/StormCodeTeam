@@ -28,10 +28,10 @@
 
 }
 
-.is-active #link-menu {
+.is-active .link-menu {
   fill: #111111;
 }
-body.dark-mode .is-active #link-menu {
+body.dark-mode .is-active .link-menu {
     fill: #111111;
   }
 
