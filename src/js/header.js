@@ -1,6 +1,6 @@
 
  document.addEventListener('DOMContentLoaded', function () {
-    var toggleSwitch = document.querySelector('.switch input');
+    const toggleSwitch = document.querySelector('.switch input');
 
     toggleSwitch.addEventListener('change', function () {
       if (toggleSwitch.checked) {
@@ -14,7 +14,7 @@
 
 
   document.addEventListener("DOMContentLoaded", function() {
-       var navLinks = document.querySelectorAll('#link-menu');
+       const navLinks = document.querySelectorAll('#link-menu');
 
        navLinks.forEach(function(link) {
       link.addEventListener('click', function(event) {
@@ -32,9 +32,9 @@
 
 
 function toggleModal(action) {
-  var mobileContent = document.querySelector('.mobile-content');
-  var burgerBtn = document.querySelector('.burger-btn');
-  var closeBtn = document.querySelector('.close-btn');
+  const mobileContent = document.querySelector('.mobile-content');
+  const burgerBtn = document.querySelector('.burger-btn');
+  const closeBtn = document.querySelector('.close-btn');
 
   if (action === 'open') {
     mobileContent.style.display = 'block';
@@ -53,4 +53,19 @@ document.querySelector('.burger-btn').addEventListener('click', function() {
 
 document.querySelector('.close-btn').addEventListener('click', function() {
   toggleModal('close');
+});
+
+document.addEventListener("DOMContentLoaded", function() {
+  const homeLink = document.querySelector('.nav-list a[href="../index.html"]');
+  const shoppingListLink = document.querySelector('.js-shopping-list a');
+
+  homeLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.location.href = this.getAttribute('href');
+  });
+
+  shoppingListLink.addEventListener('click', function(event) {
+      event.preventDefault();
+      window.location.href = this.getAttribute('href');
+  });
 });
