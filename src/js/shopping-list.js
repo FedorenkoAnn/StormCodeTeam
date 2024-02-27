@@ -31,7 +31,7 @@ showLocalStorageBtn.addEventListener('click', function () {
     createEmpty();
   }
 });
-debugger;
+
 function deleteCard(e) {
   const target = e.target.closest('.btn-shop');
   if (target) {
