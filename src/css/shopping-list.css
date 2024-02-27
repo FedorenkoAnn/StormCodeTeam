@@ -1,49 +1,196 @@
-.shopping-list-page {
-    width: 100%;
-    padding: 0;
-    padding-top: 40px;
-    margin-bottom: 72px;
-    display: block;
+@media screen and (max-width: 375px) {
+  .sidebar-box-support {
+    display: none;
+  }
+
+  .shopping-list-box {
+    min-width: 320px;
+    max-width: 375px;
+  }
 }
-    @media screen and (min-width: 1440px) {
-        .shopping-list-page{
-           padding-left: 40px;
-        }
+
+/* Mobile */
+
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
+  .sidebar-box-support {
+    display: none;
   }
-  .shopping-main-title {
-    font-weight: 700;
+
+  .shopping-list-title {
+    margin-top: 40px;
+    width: 193px;
+    height: 38px;
+    font-family: sans-serif, 'DM Sans';
     font-size: 32px;
-    line-height: 1.19;
-    display: block;
-    margin-bottom: 40px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0.04em;
+    text-align: left;
   }
 
-    @media screen and (min-width: 768px) {
-        .shopping-main-title {
-            font-size: 48px;
-            line-height: 1.08;
-        }
-      
-    
+  .shopping-list-span {
+    color: rgb(79, 46, 232);
+    font-family: sans-serif, 'DM Sans';
+    font-size: 32px;
+    font-weight: 700;
+    line-height: 38px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    padding-left: 3px;
   }
-  
-  .shopping-list-color {
-    color: var(--light-accent-color);
+
+  .shopping-list-img-book {
+    margin-top: 120px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
   }
-  
-  .empty-list-text {
-    text-align: center;
-    max-width: 244px;
-    margin-bottom: 14px;
+
+  .shopping-list-paragraf {
+    width: 250px;
+    height: 36px;
+    margin: 14px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'DM Sans';
     font-size: 14px;
-    line-height: 1.33;
-
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.02em;
+    text-align: center;
   }
 
-  @media screen and (min-width: 768px) {
-    .empty-list-text {
-        max-width: 349px;
-        margin-bottom: 20px;
-        font-size: 18px;
-    }
+  .shopping-list-img {
+    width: 265px;
+    height: 198px;
   }
+}
+
+/* Tablet */
+
+@media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
+  .sidebar-box-support {
+    display: none;
+  }
+
+  .shopping-list-title {
+    margin-top: 40px;
+    width: 292px;
+    height: 52px;
+    font-family: sans-serif, 'DM Sans';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
+  .shopping-list-span {
+    color: rgb(79, 46, 232);
+    font-family: sans-serif, 'DM Sans';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: -4%;
+    text-align: left;
+  }
+
+  .shopping-list-img-book {
+    margin-top: 140px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shopping-list-paragraf {
+    width: 355px;
+    height: 48px;
+    margin: 14px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  .shopping-list-img {
+    width: 322px;
+    height: 241px;
+  }
+}
+
+@media screen and (min-width: 1440px) {
+  .shopping-list {
+    margin-top: 40px;
+  }
+
+  .shopping-list-support {
+    display: flex;
+    flex-direction: row;
+  }
+
+  .shopping-list-title {
+    margin-top: 40px;
+    margin-left: 40px;
+    width: 292px;
+    height: 52px;
+    font-family: sans-serif, 'DM Sans';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
+  .shopping-list-span {
+    color: rgb(79, 46, 232);
+    font-family: sans-serif, 'DM Sans';
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 52px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
+  .shopping-list-img-book {
+    margin-top: 140px;
+    margin-left: 355px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .shopping-list-paragraf {
+    width: 355px;
+    height: 48px;
+    margin: 14px 0px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0px;
+    color: rgba(0, 0, 0, 0.6);
+    font-family: 'DM Sans';
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0.02em;
+    text-align: center;
+  }
+
+  .shopping-list-img {
+    width: 322px;
+    height: 241px;
+  }
+}

@@ -1,4 +1,4 @@
-.book-card {
+/* .book-card {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
@@ -10,7 +10,7 @@
   max-width: 996px;
   max-height: 213px;
 }
-.book-cover{
+.book-cover {
   max-width: 116px;
   max-height: 165px;
 }
@@ -27,7 +27,7 @@
   text-align: left;
   text-transform: uppercase;
 }
-.book-category{
+.book-category {
   color: rgb(180, 175, 175);
   font-family: DM Sans;
   font-size: 12px;
@@ -36,7 +36,7 @@
   letter-spacing: 3%;
   text-align: left;
 }
-.book-description{
+.book-description {
   color: rgb(17, 17, 17);
   font-family: DM Sans;
   font-size: 14px;
@@ -45,7 +45,7 @@
   letter-spacing: -4%;
   text-align: left;
 }
-.book-author{
+.book-author {
   color: rgb(180, 175, 175);
   font-family: DM Sans;
   font-style: italic;
@@ -66,10 +66,9 @@
   position: absolute;
   top: 10px;
   right: 10px;
-  background-color: #4F2EE8;
+  background-color: #4f2ee8;
   border: none;
   padding: 8px 16px;
-  border-radius: 50%; 
+  border-radius: 50%;
   cursor: pointer;
-
-}
+} */
