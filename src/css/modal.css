@@ -386,8 +386,7 @@ body.dark-mode .list-descr {
   text-transform: uppercase;
 }
 
-.add-to-shopping-list-btn:hover,
-:focus {
+.add-to-shopping-list-btn:hover:focus {
   color: white;
   background-color: rgb(79, 46, 232);
 }
