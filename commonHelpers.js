@@ -1,4 +1,4 @@
-import"./assets/header-668655a5.js";import{a as g,t as $}from"./assets/vendor-da6d1e6a.js";async function C(){return await g.get("https://books-backend.p.goit.global/books/top-books")}async function E(o){return await g.get(`https://books-backend.p.goit.global/books/category?category=${o}`)}async function _(o){return await g.get(`https://books-backend.p.goit.global/books/${o}`)}const y=document.querySelector(".modal-body"),l=document.querySelector(".backdrop"),q=document.querySelector(".modal-close-btn");let s,a=[];const v=localStorage.getItem("shoppingList");v&&(a=JSON.parse(v));q.addEventListener("click",k);document.addEventListener("click",async o=>{try{const t=o.target.closest(".hardcover-item")||o.target.closest(".js-card");if(t){const e=t.id,c=(await _(e)).data,r=x(c);T(),M(y,r),s&&s.parentNode&&s.parentNode.removeChild(s),s=document.createElement("button"),s.textContent="Add to Shopping List",s.classList.add("add-to-shopping-list-btn"),a.includes(e)&&(s.textContent="Remove from Shopping List"),s.addEventListener("click",()=>{j(e)}),y.appendChild(s)}}catch(t){console.error(t)}});l.addEventListener("click",o=>{o.target===l&&k()});document.addEventListener("keydown",o=>{o.key==="Escape"&&k()});function T(){l.style.display="block"}function k(){l.style.display="none"}function x(o){const{book_image:t,list_name:e,title:n,author:c,description:r}=o;return`<div class="image-container">
+import"./assets/header-74df1eaf.js";import{a as g,t as $}from"./assets/vendor-da6d1e6a.js";async function C(){return await g.get("https://books-backend.p.goit.global/books/top-books")}async function E(o){return await g.get(`https://books-backend.p.goit.global/books/category?category=${o}`)}async function _(o){return await g.get(`https://books-backend.p.goit.global/books/${o}`)}const y=document.querySelector(".modal-body"),l=document.querySelector(".backdrop"),q=document.querySelector(".modal-close-btn");let s,a=[];const v=localStorage.getItem("shoppingList");v&&(a=JSON.parse(v));q.addEventListener("click",k);document.addEventListener("click",async o=>{try{const t=o.target.closest(".hardcover-item")||o.target.closest(".js-card");if(t){const e=t.id,c=(await _(e)).data,r=x(c);T(),M(y,r),s&&s.parentNode&&s.parentNode.removeChild(s),s=document.createElement("button"),s.textContent="Add to Shopping List",s.classList.add("add-to-shopping-list-btn"),a.includes(e)&&(s.textContent="Remove from Shopping List"),s.addEventListener("click",()=>{j(e)}),y.appendChild(s)}}catch(t){console.error(t)}});l.addEventListener("click",o=>{o.target===l&&k()});document.addEventListener("keydown",o=>{o.key==="Escape"&&k()});function T(){l.style.display="block"}function k(){l.style.display="none"}function x(o){const{book_image:t,list_name:e,title:n,author:c,description:r}=o;return`<div class="image-container">
       <img src="${t}" alt="${e}" />
     </div>
     <div class="list-container">
@@ -18,11 +18,13 @@ import"./assets/header-668655a5.js";import{a as g,t as $}from"./assets/vendor-da
     <h2 class="books_card-heading js-heading">${t.list_name}</h2>
     <ul class="book_card-list" >
         ${t.books.slice(0,H()).map(({_id:n,book_image:c,title:r,author:d})=>`<li class="book_card-item js-card" id=${n}>
+                      <div class="overlay-wrapper">
                        <img
                          class="book_card_photo"
                          src=${c}
                          alt= book cover photo ${r}
                        />
+                      </div>
                         <h3 class="book_card-title">${r}</h3>
                         <h4 class="book_card_author">${d}</h4>
                      </li>`)}
