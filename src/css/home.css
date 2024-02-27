@@ -209,7 +209,7 @@
   width: 356px;
   display: flex;
   overflow-y: scroll;
-  overflow-x: hidden;
+  /* overflow-x: hidden; */
   flex-direction: row;
   justify-content: flex-start;
   align-items: flex-start;
