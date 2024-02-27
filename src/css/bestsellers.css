@@ -141,7 +141,7 @@
   background-color: inherit;
   border: 2px solid;
   border-radius: 40px;
-  color:var(--dark-border-n-text-color);
+  color:black var(--dark-border-n-text-color);
   border-color: rgba(79, 46, 232, 1);
 }
 .overlay-wrapper::after{
