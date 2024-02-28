@@ -3,7 +3,7 @@ import amazon from './img/amazon@1x.png';
 import amazon2x from './img/amazon@2x.png';
 import applebooks from './img/app_books@1x.png';
 import applebooks2x from './img/app_books@2x.png';
-import logo from './img/against_hunger@2x.png';
+import logo from './img/sprite.svg';
 import emptyDesk1 from './img/against_hunger@2x.png';
 import emptyDesk2 from './img/against_hunger@1x.png';
 import emptyMob1 from './img/amazon_color@2x.png';
@@ -12,37 +12,84 @@ import './js/header.js';
 import './shopping-list.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const shoppingListContainer = document.querySelector(
-    '.shopping-list-container'
-  );
+  const shoppingListContainer = document.querySelector('.shopping-list-container');
   // Отримуємо збережений список з локального сховища
   const savedShoppingList = localStorage.getItem('shoppingList');
   if (savedShoppingList) {
     const shoppingList = JSON.parse(savedShoppingList);
-    // Викликаємо функцію для відображення елементів на сторінці
-    renderShoppingList(shoppingList, shoppingListContainer);
+    if (shoppingList.length > 0) {
+      // Викликаємо функцію для відображення елементів на сторінці, якщо список не порожній
+      renderShoppingList(shoppingList, shoppingListContainer);
+    } else {
+      // Якщо список порожній, відображаємо заглушку
+      displayPlaceholder(shoppingListContainer);
+    }
+  } else {
+    // Якщо локальне сховище пусте, відображаємо заглушку
+    displayPlaceholder(shoppingListContainer);
   }
 });
+
+function displayPlaceholder(container) {
+  const placeholderImageSrc = './img/shopping_books_desk@2x.png'; // Шлях до фото-заглушки
+  const placeholderMarkup = `
+    <div class="placeholder-content">
+    <h1 shop-titlle>Shopping <span class="shop-span">List</span></h1>
+    <p clas="shop-text">This page is empty, add some books and proceed to order.</p>
+      <img class="shop-pic-zaglushka" src="${placeholderImageSrc}" alt="Placeholder Image">
+    </div>
+  `;
+  container.innerHTML = placeholderMarkup;
+}
+
 function renderShoppingList(shoppingList, container) {
   // Перебираємо елементи shoppingList і відображаємо їх
-  shoppingList.forEach(book => {
-    const bookElement = createBookElement(book);
+  shoppingList.forEach((book, index) => {
+    const bookElement = createBookElement(book, index); // Передаємо індекс у функцію
     container.appendChild(bookElement);
   });
 }
-function createBookElement(book) {
-  const { _id, book_image, title, author, description } = book;
+
+function createBookElement(book, index) {
+  const { _id, book_image, title, author, description, amazonLinks, appleLinks, list_name } = book; // Add amazonLinks and appleLinks to destructuring
   const bookElement = document.createElement('div');
   bookElement.classList.add('book-item');
   bookElement.innerHTML = `
-    <img src="${book_image}" alt="${title}" />
-    <h3>${title}</h3>
-    <p>${author}</p>
-    <p>${description}</p>
-    <button onclick="removeBook('${_id}')">Remove from Shopping List</button>
+    <img class="shopping-list-card-img" src="${book_image}" alt="${title}" />
+    <div class="shopping-description-wrap">
+      <div class="shopping-text-wrap">
+        <h3>${title}</h3>
+      <p class="shopping-list-category">${list_name}</p>
+
+      </div>
+      ${description ? `<p>${description}</p>` : `<p>There is no description for this book</p>`}
+      <div class="shopping-list-card-container-img">
+        <a href="${amazonLinks}" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
+          <img class="shopping-list-card-icon-amazon" srcset="${amazon2x} 2x, ${amazon} 1x" src="${amazon}" alt="Amazon" loading="lazy" width="20" height ="20">
+        </a>
+        <a href="${appleLinks}" class="shopping-book-link" rel="noopener noreferrer nofollow" target="_blank">
+          <img class="shopping-list-card-icon-book" srcset="${applebooks2x} 2x, ${applebooks} 1x" src="${applebooks}" alt="Apple books" loading="lazy">
+        </a>
+      </div>
+      <p>${author}</p>
+
+    </div>
+    <button class="btn-shop shopping-list-card-container-trash" id="${index}">
+      <svg class="shopping-list-card-icon-trash" width="24px" height="24px">
+        <use href="${logo}#icon-dump"></use>
+      </svg>
+    </button>
   `;
+
+  // Додаємо обробник подій для кнопки "Видалити зі списку покупок"
+  const removeButton = bookElement.querySelector('.btn-shop');
+  removeButton.addEventListener('click', () => {
+    removeBook(_id); // Викликаємо функцію removeBook() з потрібним ідентифікатором
+  });
+
   return bookElement;
 }
+
 function removeBook(bookId) {
   const savedShoppingList = localStorage.getItem('shoppingList');
   if (savedShoppingList) {
