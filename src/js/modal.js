@@ -1,12 +1,17 @@
 import { getBookById } from './api';
 import amazon1x from '../img/amazon@1x.png';
 import app_books1x from '../img/app_books@1x.png';
+
 const modalBodyEl = document.querySelector('.modal-body');
 const backdrop = document.querySelector('.backdrop');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
+const modalBottomText = document.querySelector('.modal-bottom-text');
+
 let addToShoppingListBtn;
 let shoppingList = [];
+
 // Використовуйте константу для ключа у локальному сховищі
+
 const BOOKS_STORAGE_KEY = 'shoppingList';
 const savedShoppingList = localStorage.getItem(BOOKS_STORAGE_KEY);
 if (savedShoppingList) {
@@ -34,6 +39,7 @@ document.addEventListener('click', async event => {
       const markup = markupBook(truncatedBookData);
       openModal();
       addMarkup(modalBodyEl, markup);
+
       if (addToShoppingListBtn && addToShoppingListBtn.parentNode) {
         addToShoppingListBtn.parentNode.removeChild(addToShoppingListBtn);
       }
@@ -48,13 +54,16 @@ document.addEventListener('click', async event => {
         toggleShoppingList(truncatedBookData);
       });
       modalBodyEl.appendChild(addToShoppingListBtn);
+
       // Зберігаємо інформацію про книгу в local storage
+
       localStorage.setItem(BOOKS_STORAGE_KEY, JSON.stringify(shoppingList));
     }
   } catch (error) {
     console.error(error);
   }
 });
+
 backdrop.addEventListener('click', event => {
   if (event.target === backdrop) {
     closeModal();
@@ -83,11 +92,17 @@ function markupBook(book) {
       </div>
         <p class="list-descr">${description}</p>
         <div class="list-links">
+         <a href="${book.buy_links[0].url}" rel="noopener noreferrer nofollow" target="_blank"> 
             <img class="icon-amazon" src="${amazon1x}" alt="amazon" />
-            <img class="icon-apple" src="${app_books1x}" alt="app_books" />
+         </a>
+         <a href="${book.buy_links[1].url}" rel="noopener noreferrer nofollow" target="_blank"> 
+            <img class="icon-apple" src="${app_books1x}" alt="amazon" />
+          </a>
         </div>
+       
       </div>
-    </div>
+     
+    
      `;
 }
 function addMarkup(el, markup) {
@@ -101,8 +116,10 @@ function toggleShoppingList(book) {
   const index = shoppingList.findIndex(item => item._id === book._id);
   if (index === -1) {
     shoppingList.push(book);
+    modalBottomText.style.display = 'block';
   } else {
     shoppingList.splice(index, 1);
+    modalBottomText.style.display = 'none';
   }
   localStorage.setItem(BOOKS_STORAGE_KEY, JSON.stringify(shoppingList));
   if (addToShoppingListBtn) {
