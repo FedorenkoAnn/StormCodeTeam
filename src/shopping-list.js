@@ -54,8 +54,7 @@ function createBookElement(book, index) {
     appleLinks,
     list_name,
   } = book; // Add amazonLinks and appleLinks to destructuring
-  // const bookElementText = document.createElement('h1');
-  // bookElement.classList.add('shopping-list-title');
+  console.log(book);
   const bookElement = document.createElement('div');
   bookElement.classList.add('shopping-list-card-box');
   bookElement.innerHTML = `
@@ -71,10 +70,14 @@ function createBookElement(book, index) {
           : `<p class="shopping-list-card-paragraf">There is no description for this book</p>`
       }
       <div class="shopping-list-card-container-img">
-        <a href="${amazonLinks}" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
+        <a href="${
+          book.buy_links[0].url
+        }" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
           <img class="shopping-list-card-icon-amazon" srcset="${amazon2x} 2x, ${amazon} 1x" src="${amazon}" alt="Amazon" loading="lazy" width="20" height ="20">
         </a>
-        <a href="${appleLinks}" class="shopping-book-link" rel="noopener noreferrer nofollow" target="_blank">
+        <a href="${
+          book.buy_links[1].url
+        }" class="shopping-book-link" rel="noopener noreferrer nofollow" target="_blank">
           <img class="shopping-list-card-icon-book" srcset="${applebooks2x} 2x, ${applebooks} 1x" src="${applebooks}" alt="Apple books" loading="lazy" width="20" height ="20">
         </a>
       </div>
