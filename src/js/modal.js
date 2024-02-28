@@ -1,6 +1,6 @@
 import { getBookById } from './api';
-import amazon1x from '../img/amazon@1x.png';
-import app_books1x from '../img/app_books@1x.png';
+import amazon1x from './img/amazon@1x.png';
+import app_books1x from './img/app_books@1x.png';
 const modalBodyEl = document.querySelector('.modal-body');
 const backdrop = document.querySelector('.backdrop');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
