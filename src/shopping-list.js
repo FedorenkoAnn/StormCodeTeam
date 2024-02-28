@@ -1,18 +1,13 @@
-import { getBookById } from './js/api';
 import amazon from './img/amazon@1x.png';
 import amazon2x from './img/amazon@2x.png';
 import applebooks from './img/app_books@1x.png';
 import applebooks2x from './img/app_books@2x.png';
 import logo from './img/sprite.svg';
-import emptyDesk1 from './img/against_hunger@2x.png';
-import emptyDesk2 from './img/against_hunger@1x.png';
-import emptyMob1 from './img/amazon_color@2x.png';
-import './js/api.js';
-import './js/header.js';
-import './shopping-list.js';
 
 document.addEventListener('DOMContentLoaded', () => {
-  const shoppingListContainer = document.querySelector('.shopping-list-container');
+  const shoppingListContainer = document.querySelector(
+    '.shopping-list-container'
+  );
   // Отримуємо збережений список з локального сховища
   const savedShoppingList = localStorage.getItem('shoppingList');
   if (savedShoppingList) {
@@ -51,7 +46,16 @@ function renderShoppingList(shoppingList, container) {
 }
 
 function createBookElement(book, index) {
-  const { _id, book_image, title, author, description, amazonLinks, appleLinks, list_name } = book; // Add amazonLinks and appleLinks to destructuring
+  const {
+    _id,
+    book_image,
+    title,
+    author,
+    description,
+    amazonLinks,
+    appleLinks,
+    list_name,
+  } = book; // Add amazonLinks and appleLinks to destructuring
   const bookElement = document.createElement('div');
   bookElement.classList.add('book-item');
   bookElement.innerHTML = `
@@ -62,7 +66,11 @@ function createBookElement(book, index) {
       <p class="shopping-list-category">${list_name}</p>
 
       </div>
-      ${description ? `<p>${description}</p>` : `<p>There is no description for this book</p>`}
+      ${
+        description
+          ? `<p>${description}</p>`
+          : `<p>There is no description for this book</p>`
+      }
       <div class="shopping-list-card-container-img">
         <a href="${amazonLinks}" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
           <img class="shopping-list-card-icon-amazon" srcset="${amazon2x} 2x, ${amazon} 1x" src="${amazon}" alt="Amazon" loading="lazy" width="20" height ="20">
