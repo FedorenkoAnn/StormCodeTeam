@@ -1,15 +1,64 @@
-/* .book-card {
+.shopping-description-wrap {
+  display: flex;
+    max-width: 808px;
+    flex-wrap: wrap;
+    margin-left: 24px;
+}
+
+.book-item {
   border: 1px solid #ccc;
   border-radius: 10px;
   padding: 20px;
   margin: 10px;
   display: flex;
-  justify-content: space-between;
+  flex-wrap: wrap;
+  /* justify-content: space-between; */
   align-items: center;
   position: relative;
   max-width: 996px;
-  max-height: 213px;
+  margin-left: 24px;
+  /* max-height: 213px; */
 }
+
+.shopping-list-card-img {
+  width: 116px;
+  height: 160px;
+}
+
+.shopping-text-wrap {
+  width: 100%;
+}
+
+.shopping-list-card-container-img {
+  position: absolute;
+  bottom: 24px;
+  right: 24px;
+  display: flex;
+  align-items: center;
+}
+
+.shopping-list-card-container-trash {
+  display: contents;
+}
+
+.shopping-list-card-icon-trash {
+  position: absolute;
+  right: 24px;
+  top: 24px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
 .book-cover {
   max-width: 116px;
   max-height: 165px;
@@ -71,4 +120,4 @@
   padding: 8px 16px;
   border-radius: 50%;
   cursor: pointer;
-} */
+}
