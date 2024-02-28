@@ -11,7 +11,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('.link-menu');
+  const navLinks = document.querySelectorAll('#link-menu');
 
   navLinks.forEach(function (link) {
     link.addEventListener('click', function (event) {

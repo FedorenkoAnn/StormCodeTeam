@@ -321,8 +321,8 @@ body.dark-mode .sidebar-favorite:focus {
 
 .sidebar-box-support {
   position: relative;
-  /* width: 356px; */
-  /* height: 474px; */
+  width: 356px;
+  height: 474px;
   border-radius: 16px;
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
   background: radial-gradient(
