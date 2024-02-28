@@ -15,7 +15,7 @@
 .navigation {
   position: absolute;
   left: 209px;
-  top: 27px;
+  top: 25px;
 }
 
 .is-active {
@@ -245,7 +245,9 @@ body.dark-mode .icon-logo-book {
   .nav-switch {
     margin-right: -20px;
   }
-
+  .navigation {
+    top: 27px;
+  }
   .nav-link {
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -268,7 +270,7 @@ body.dark-mode .icon-logo-book {
 
   .js-shopping-list {
     position: relative;
-    bottom: 5px;
+    bottom: 6px;
   }
 
   .nav-logo {
@@ -306,7 +308,16 @@ body.dark-mode .icon-logo-book {
     display: flex;
     flex-direction: row;
     gap: 24px;
-    margin-bottom: 1px;
+    /* align-items: baseline; */
+  }
+
+  .js-shopping-list {
+    position: relative;
+    bottom: 6px;
+  }
+
+  .nav-link {
+    bottom: 3px;
   }
 
   .mobile-content {
