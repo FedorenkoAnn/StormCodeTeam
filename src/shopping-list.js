@@ -7,21 +7,35 @@ import logo from './img/against_hunger@2x.png';
 import emptyDesk1 from './img/against_hunger@2x.png';
 import emptyDesk2 from './img/against_hunger@1x.png';
 import emptyMob1 from './img/amazon_color@2x.png';
+
 const KEY_LOCAL_STORAGE = 'shoppingList';
-const KEY_LOCAL_STORAGE_ID = 'shoppingList';
 const showLocalStorageBtn = document.querySelector('.js-shopping-list');
-const bookPlace = document.querySelector('.shopping-list-js');
+const bookPlace = document.querySelector('.js-container');
 const descEmpty = 'Description is not available.';
-let shopListCard = parseStorage(KEY_LOCAL_STORAGE) || [];
-let shopListItem = parseStorage(KEY_LOCAL_STORAGE_ID) || [];
-if (shopListCard && shopListCard.length > 0) {
-  bookPlace.innerHTML = '';
-  bookPlace.insertAdjacentHTML('afterbegin', bookTemplate(shopListCard));
-  bookPlace.addEventListener('click', deleteCard);
-} else {
-  createEmpty();
+
+// Отримуємо дані з локального сховища
+function parseStorage(key) {
+  try {
+    const parsedData = localStorage.getItem(key);
+    console.log(parsedData);
+    return parsedData === null ? [] : JSON.parse(parsedData);
+  } catch (error) {
+    console.error('Error getting state: ', error.message);
+    return [];
+  }
 }
-showLocalStorageBtn.addEventListener('click', function () {
+
+// Функція для збереження даних в localStorage
+function setStorage(key, data) {
+  try {
+    localStorage.setItem(key, JSON.stringify(data));
+  } catch (error) {
+    console.error('Error saving state: ', error.message);
+  }
+}
+
+// Функція для рендерінгу списку книг з localStorage
+function renderBooks() {
   const shopListCard = parseStorage(KEY_LOCAL_STORAGE);
   if (shopListCard && shopListCard.length > 0) {
     bookPlace.innerHTML = '';
@@ -30,40 +44,19 @@ showLocalStorageBtn.addEventListener('click', function () {
   } else {
     createEmpty();
   }
-});
-
-function deleteCard(e) {
-  const target = e.target.closest('.btn-shop');
-  if (target) {
-    bookPlace.innerHTML = '';
-    shopListCard.splice(target.id, 1);
-    shopListItem.splice(target.id, 1);
-    localStorage.removeItem(KEY_LOCAL_STORAGE);
-    localStorage.removeItem(KEY_LOCAL_STORAGE_ID);
-    setStorage(KEY_LOCAL_STORAGE, shopListCard);
-    setStorage(KEY_LOCAL_STORAGE_ID, shopListItem);
-    if (shopListCard.length > 0) {
-      bookPlace.insertAdjacentHTML(
-        'afterbegin',
-        bookTemplate(parseStorage(KEY_LOCAL_STORAGE))
-      );
-    } else {
-      createEmpty();
-    }
-  }
 }
 
+// Відображення списку при завантаженні сторінки
+renderBooks();
+
+// Функція для рендерінгу шаблону списку книг з localStorage
 function bookTemplate(shopListCard) {
   return shopListCard
-    .map(
-      (
-        { book_image, title, author, description, amazonLinks, appleLinks },
-        index
-      ) => {
-        if (!description) {
-          description = descEmpty;
-        }
-        return `<li class="shopping-list-item">
+    .map(({ book_image, title, author, description, buy_links }, index) => {
+      if (!description) {
+        description = descEmpty;
+      }
+      return `<li class="shopping-list-item">
       <img class="shopping-list-card-img" src="${book_image}" alt="${title}">
       <div class="shopping-list-card-container">
         <h2 class="shopping-list-card-title">${title}</h2>
@@ -72,27 +65,28 @@ function bookTemplate(shopListCard) {
         <div class="shopping-list-card-bottom-container">
           <p class="shopping-list-card-author">${author}</p>
           <div class="shopping-list-card-container-img">
-            <a href="${amazonLinks}" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
-              <img class="shopping-list-card-icon-amazon" srcset="${amazon2x} 2x, ${amazon} 1x" src="${amazon}" alt="Amazon" loading="lazy" width="20" height ="20">
-            </a>
-            <a href="${appleLinks}" class="shopping-book-link" rel="noopener noreferrer nofollow" target="_blank">
-              <img class="shopping-list-card-icon-book" srcset="${applebooks2x} 2x, ${applebooks} 1x" src="${applebooks}" alt="Apple books" loading="lazy">
+            // <a href="${buy_links[0]}" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
+            //   <img class="shopping-list-card-icon-amazon" srcset="${amazon2x} 2x, ${amazon} 1x" src="${amazon}" alt="Amazon" loading="lazy" width="20" height="20">
+            // </a>
+            // <a href="${buy_links[1]}" class="shopping-book-link" rel="noopener noreferrer nofollow" target="_blank">
+            //   <img class="shopping-list-card-icon-book" srcset="${applebooks2x} 2x, ${applebooks} 1x" src="${applebooks}" alt="Apple books" loading="lazy">
             </a>
           </div>
         </div>
         <div>
-          <button class="btn-shop shopping-list-card-container-trash" id="${index}">
-            <svg class="shopping-list-card-icon-trash" width="18px" height="18px">
-              <use href="${logo}#icon-del"></use>
-            </svg>
-          </button>
+          // <button class="btn-shop shopping-list-card-container-trash" data-index="${index}">
+          //   <svg class="shopping-list-card-icon-trash" width="18px" height="18px">
+          //     <use href="${logo}#icon-del"></use>
+          //   </svg>
+          // </button>
         </div>
       </div>
     </li>`;
-      }
-    )
+    })
     .join('');
 }
+
+// Функція для створення пустого повідомлення
 function createEmpty() {
   bookPlace.innerHTML = `
     <p class="shopping-list-text">
@@ -107,20 +101,16 @@ function createEmpty() {
       height="198"
     />`;
 }
-function setStorage(key, shopListCard) {
-  try {
-    const stringData = JSON.stringify(shopListCard);
-    localStorage.setItem(key, stringData);
-  } catch (error) {
-    console.error('Error setting state: ', error.message);
-  }
-}
-function parseStorage(key) {
-  try {
-    const parsedData = localStorage.getItem(key);
-    return parsedData === null ? [] : JSON.parse(parsedData);
-  } catch (error) {
-    console.error('Error getting state: ', error.message);
-    return [];
+
+// Функція для видалення книги зі списку
+function deleteCard(e) {
+  e.preventDefault(); // Prevent the default action of the event
+  const target = e.target.closest('.btn-shop');
+  if (target) {
+    const index = target.dataset.index;
+    const shopListCard = parseStorage(KEY_LOCAL_STORAGE);
+    shopListCard.splice(index, 1);
+    setStorage(KEY_LOCAL_STORAGE, shopListCard);
+    renderBooks();
   }
 }
