@@ -30,8 +30,7 @@ body.theme-loaded {
   top: 25px;
 }
 
-.header-menu a.active,
-.header-menu a.active svg {
+.header-menu a.active {
   border-radius: 36px;
   background-color: rgb(234, 198, 69);
   padding: 8px 16px 8px 16px;
@@ -192,7 +191,6 @@ body.dark-mode .icon-logo-book {
   height: 493px;
   left: -35px;
   top: 404px;
-  /* transform: rotate(-15.00deg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -355,7 +353,7 @@ body.dark-mode .icon-logo-book {
    top: 3px;
  }
  .header-menu svg.active {
-  fill: #111111;
+  stroke: #111111;
  }
 
 }
