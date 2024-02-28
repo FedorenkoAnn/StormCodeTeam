@@ -319,6 +319,48 @@ body.dark-mode .sidebar-favorite:focus {
   cursor: pointer;
 }
 
+@media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
+  body.dark-mode .sidebar-favorite {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
+
+body.dark-mode .sidebar-favorite:hover,
+body.dark-mode .sidebar-favorite:focus  {
+  font-size: 16px;
+  margin-bottom: 32px;
+}
+}
+
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
+  body.dark-mode .sidebar-favorite  {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  body.dark-mode .sidebar-favorite:hover,
+  body.dark-mode .sidebar-favorite:focus {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+
+}
+
+@media screen and (max-width: 375px) {
+  body.dark-mode .sidebar-favorite  {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+  body.dark-mode .sidebar-favorite:hover,
+  body.dark-mode .sidebar-favorite:focus {
+    font-size: 14px;
+    letter-spacing: -0.02em;
+    margin-bottom: 24px;
+  }
+}
+
 .sidebar-box-support {
   position: relative;
   width: 356px;
