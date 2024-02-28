@@ -28,10 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 function displayPlaceholder(container) {
   const placeholderImageSrc = './img/shopping_books_desk@2x.png'; // Шлях до фото-заглушки
   const placeholderMarkup = `
-    <div class="placeholder-content">
-    <h1 shop-titlle>Shopping <span class="shop-span">List</span></h1>
-    <p clas="shop-text">This page is empty, add some books and proceed to order.</p>
-      <img class="shop-pic-zaglushka" src="${placeholderImageSrc}" alt="Placeholder Image">
+    <div class="shopping-list">
+    <h1 class="shopping-list-title">Shopping<span class="shopping-list-span">List</span></h1>
+    <div class="shopping-list-img-book">
+    <p class="shopping-list-paragraf">This page is empty, add some books and proceed to order.</p>
+      <img class="shopping-list-img" src="${placeholderImageSrc}" alt="Placeholder Image">
+      </div>
     </div>
   `;
   container.innerHTML = placeholderMarkup;
