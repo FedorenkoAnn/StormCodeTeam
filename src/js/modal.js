@@ -1,18 +1,17 @@
 import { getBookById } from './api';
 import amazon1x from '../img/amazon@1x.png';
-// import amazon2x from '../img/amazon@2x.png';
 import app_books1x from '../img/app_books@1x.png';
-// import app_books2x from '../img/app_books@2x.png';
 const modalBodyEl = document.querySelector('.modal-body');
 const backdrop = document.querySelector('.backdrop');
 const modalCloseBtn = document.querySelector('.modal-close-btn');
 let addToShoppingListBtn;
 let shoppingList = [];
-const savedShoppingList = localStorage.getItem('shoppingList');
+// Використовуйте константу для ключа у локальному сховищі
+const BOOKS_STORAGE_KEY = 'shoppingList';
+const savedShoppingList = localStorage.getItem(BOOKS_STORAGE_KEY);
 if (savedShoppingList) {
   shoppingList = JSON.parse(savedShoppingList);
 }
-
 modalCloseBtn.addEventListener('click', closeModal);
 document.addEventListener('click', async event => {
   try {
@@ -39,43 +38,39 @@ document.addEventListener('click', async event => {
         addToShoppingListBtn.parentNode.removeChild(addToShoppingListBtn);
       }
       addToShoppingListBtn = document.createElement('button');
-      addToShoppingListBtn.textContent = shoppingList.includes(id)
+      addToShoppingListBtn.textContent = shoppingList.some(
+        book => book._id === id
+      )
         ? 'Remove from Shopping List'
         : 'Add to Shopping List';
       addToShoppingListBtn.classList.add('add-to-shopping-list-btn');
       addToShoppingListBtn.addEventListener('click', () => {
-        toggleShoppingList(id);
+        toggleShoppingList(truncatedBookData);
       });
       modalBodyEl.appendChild(addToShoppingListBtn);
-
       // Зберігаємо інформацію про книгу в local storage
-      localStorage.setItem(id, JSON.stringify(truncatedBookData));
+      localStorage.setItem(BOOKS_STORAGE_KEY, JSON.stringify(shoppingList));
     }
   } catch (error) {
     console.error(error);
   }
 });
-
 backdrop.addEventListener('click', event => {
   if (event.target === backdrop) {
     closeModal();
   }
 });
-
 document.addEventListener('keydown', event => {
   if (event.key === 'Escape') {
     closeModal();
   }
 });
-
 function openModal() {
   backdrop.style.display = 'block';
 }
-
 function closeModal() {
   backdrop.style.display = 'none';
 }
-
 function markupBook(book) {
   const { book_image, list_name, title, author, description } = book;
   return `<div class="image-container">
@@ -88,8 +83,8 @@ function markupBook(book) {
       </div>
         <p class="list-descr">${description}</p>
         <div class="list-links">
-            <img class="icon-amazon" src="../img/amazon@1x.png", "../img/amazon@2x.png" alt="amazon" />
-            <img class="icon-apple" src="../img/app_books@1x.png", "../img/app_books@2x.png" alt="app_books" />
+            <img class="icon-amazon" src="${amazon1x}" alt="amazon" />
+            <img class="icon-apple" src="${app_books1x}" alt="app_books" />
         </div>
       </div>
     </div>
@@ -98,24 +93,22 @@ function markupBook(book) {
 function addMarkup(el, markup) {
   el.innerHTML = markup;
 }
-
-function toggleShoppingList(bookId) {
-  if (!bookId) {
-    console.error('Invalid bookId:', bookId);
+function toggleShoppingList(book) {
+  if (!book || !book._id) {
+    console.error('Invalid book:', book);
     return;
   }
-  const index = shoppingList.indexOf(bookId);
+  const index = shoppingList.findIndex(item => item._id === book._id);
   if (index === -1) {
-    shoppingList.push(bookId);
+    shoppingList.push(book);
   } else {
     shoppingList.splice(index, 1);
-    // Видаляємо дані про книгу з локального сховища
-    localStorage.removeItem(bookId);
   }
-  localStorage.setItem('shoppingList', JSON.stringify(shoppingList));
-  // Оновлюємо текст кнопки
+  localStorage.setItem(BOOKS_STORAGE_KEY, JSON.stringify(shoppingList));
   if (addToShoppingListBtn) {
-    addToShoppingListBtn.textContent = shoppingList.includes(bookId)
+    addToShoppingListBtn.textContent = shoppingList.some(
+      item => item._id === book._id
+    )
       ? 'Remove from Shopping List'
       : 'Add to Shopping List';
   }
