@@ -4,12 +4,32 @@ const allCategoriesList = document.querySelector('.js-list');
 const categoriesItem = document.querySelectorAll('.js-category');
 const hardcoverBooksList = document.querySelector('.books-list');
 
-allCategoriesList.addEventListener('click', handleCategoryClick);
+let booksPerPage;
 
-document.addEventListener('DOMContentLoaded', () => {
-    const bookCardListSeeMore = document.querySelector('.js-bookslist');
-    bookCardListSeeMore.addEventListener('click', handleSeeMoreClick);
-});
+function renderBooks(category, booksByCategory) {
+    const markup = createHardcoverMarkup(category, booksByCategory.slice(0, booksPerPage));
+    hardcoverBooksList.innerHTML = markup;
+}
+
+function createHardcoverMarkup(category, booksByCategory) {
+    const categoryTitle = `<h2 class="hardcover-category-title">${category.replace(/(\w+)\s*$/, '<span class="book-categories-span">$1</span>')}</h2>`;
+    const booksByCategoryMarkup = booksByCategory.map(({ _id, book_image, title, author }) =>
+        `<li class="hardcover-item" id=${_id}>         
+            <div class="hardcover-container">
+                <div class="hardcover-wrapper">
+                <div class ="overlay-wrapper">
+                    <img class="hardcover-image" src="${book_image}"/>
+                    </div>
+                    <div class="hardcover-text-container">
+                        <h2 class="hardcover-title">${title}</h2>
+                        <p class="hardcover-text">${author}</p>
+                    </div>
+                </div>
+            </div>
+        </li>`
+    ).join('');
+    return categoryTitle + '<ul class="hardcover-list">' + booksByCategoryMarkup + '</ul>';
+}
 
 async function handleCategoryClick(event) {
     try {
@@ -45,25 +65,23 @@ async function fetchBooksByCategory(category) {
     }));
 }
 
-function renderBooks(category, booksByCategory) {
-    const markup = createHardcoverMarkup(category, booksByCategory);
-    hardcoverBooksList.innerHTML = markup;
-}
+window.addEventListener('resize', () => {
+    if (window.innerWidth <= 768) {
+        booksPerPage = 7;
+    } else {
+        booksPerPage = 15;
+    }
+});
 
-function createHardcoverMarkup(category, booksByCategory) {
-    const categoryTitle = `<h2 class="hardcover-category-title">${category.replace(/(\w+)\s*$/, '<span class="book-categories-span">$1</span>')}</h2>`;
-    const booksByCategoryMarkup = booksByCategory.map(({ _id, book_image, title, author }) =>
-        `<li class="hardcover-item" id=${_id}>         
-            <div class="hardcover-container">
-                <div class="hardcover-wrapper">
-                    <img class="hardcover-image" src="${book_image}"/>
-                    <div class="hardcover-text-container">
-                        <h2 class="hardcover-title">${title}</h2>
-                        <p class="hardcover-text">${author}</p>
-                    </div>
-                </div>
-            </div>
-        </li>`
-    ).join('');
-    return categoryTitle + '<ul class="hardcover-list">' + booksByCategoryMarkup + '</ul>';
-}
+document.addEventListener('DOMContentLoaded', () => {
+    if (window.innerWidth <= 768) {
+        booksPerPage = 7;
+    } else {
+        booksPerPage = 15;
+    }
+
+    const bookCardListSeeMore = document.querySelector('.js-bookslist');
+    bookCardListSeeMore.addEventListener('click', handleSeeMoreClick);
+
+    allCategoriesList.addEventListener('click', handleCategoryClick);
+});
