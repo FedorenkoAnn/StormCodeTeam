@@ -2,7 +2,7 @@
 
 import {bookCount} from "./functions.js";
 export const createGalleryTopBooks = (arr) => {
-  return `<h1 class="books_galerry-title">Best Sellers <span class="books_galerry-title-subject">Books</span></h1>
+  return `<div/><h1 class="books_galerry-title">Best Sellers <span class="books_galerry-title-subject">Books</span></h1>
   ${arr.map(item => {
     const markup = `
     <h2 class="books_card-heading js-heading">${item.list_name}</h2>
@@ -19,14 +19,15 @@ export const createGalleryTopBooks = (arr) => {
                         <h3 class="book_card-title">${title}</h3>
                         <h4 class="book_card_author">${author}</h4>
                      </li>`
-        })
+        }).join('')
       }
       </ul>
         <div class="btn_more">
     <button class="btn_see-more" data-category="${item.list_name}">See more</button>
     </div>`
     return markup
-  })
+  }).join('')
     }
+    </div>
 `
 }
