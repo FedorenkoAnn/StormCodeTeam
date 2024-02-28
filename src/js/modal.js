@@ -38,7 +38,9 @@ document.addEventListener('click', async event => {
         addToShoppingListBtn.parentNode.removeChild(addToShoppingListBtn);
       }
       addToShoppingListBtn = document.createElement('button');
-      addToShoppingListBtn.textContent = shoppingList.some(book => book._id === id)
+      addToShoppingListBtn.textContent = shoppingList.some(
+        book => book._id === id
+      )
         ? 'Remove from Shopping List'
         : 'Add to Shopping List';
       addToShoppingListBtn.classList.add('add-to-shopping-list-btn');
@@ -104,7 +106,9 @@ function toggleShoppingList(book) {
   }
   localStorage.setItem(BOOKS_STORAGE_KEY, JSON.stringify(shoppingList));
   if (addToShoppingListBtn) {
-    addToShoppingListBtn.textContent = shoppingList.some(item => item._id === book._id)
+    addToShoppingListBtn.textContent = shoppingList.some(
+      item => item._id === book._id
+    )
       ? 'Remove from Shopping List'
       : 'Add to Shopping List';
   }
