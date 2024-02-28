@@ -102,7 +102,7 @@
   font-weight: 700;
   font-size: 16px;
   line-height: 1.13;
-  letter-spasing: -0.04em;
+  letter-spacing: -0.04em;
   text-transform: uppercase;
   white-space: nowrap;
   text-overflow: ellipsis;
@@ -112,14 +112,14 @@
     max-width: 218px;
   }
   @media screen and (min-width: 1440px) {
-    max-width: 180px;;
+    max-width: 180px;
   }
 }
 .book_card_author{
   font-style: italic;
   font-size: 12px;
   line-height: 1.17;
-  letter-spasing: -0.04em;
+  letter-spacing: -0.04em;
   color: var(--light-header-secondary-color);
 }
 .btn_more{
@@ -136,11 +136,12 @@
   font-weight: 700;
   font-size: 14px;
   line-height: 1.29;
-  letter-spasing: -0.01em;
+  letter-spacing: -0.01em;
   text-transform: uppercase;
   background-color: inherit;
   border: 2px solid;
   border-radius: 40px;
+  color:black var(--dark-border-n-text-color);
   border-color: rgba(79, 46, 232, 1);
 }
 .overlay-wrapper::after{
