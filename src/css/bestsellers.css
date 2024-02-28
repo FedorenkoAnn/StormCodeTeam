@@ -5,6 +5,7 @@
   font-size: 32px;
   line-height: 1.2;
   letter-spacing: -.04em;
+  padding-left: 20px;
 
   @media screen and (min-width: 768px){
     margin-top: 98px;
@@ -28,6 +29,7 @@
   letter-spacing: .03em;
   color: var(--light-header-secondary-color);
   text-transform: uppercase; 
+  padding-left: 30px;
 
   @media screen and (min-width: 768px) {
     line-height: 1.7;
@@ -41,6 +43,7 @@
   max-height: 535px;
   margin-bottom: 8px;
   margin-right: 0;
+  padding-left: 20px;
 
   @media screen and (min-width: 768px) {
     display: flex;

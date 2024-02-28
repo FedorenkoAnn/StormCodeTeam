@@ -1,123 +1,544 @@
-.shopping-description-wrap {
-  display: flex;
-    max-width: 808px;
-    flex-wrap: wrap;
-    margin-left: 24px;
-}
-
-.book-item {
-  border: 1px solid #ccc;
-  border-radius: 10px;
-  padding: 20px;
-  margin: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  /* justify-content: space-between; */
-  align-items: center;
-  position: relative;
-  max-width: 996px;
-  margin-left: 24px;
-  /* max-height: 213px; */
-}
-
-.shopping-list-card-img {
-  width: 116px;
-  height: 160px;
-}
-
-.shopping-text-wrap {
+.shopping-list-card-box {
   width: 100%;
 }
 
-.shopping-list-card-container-img {
-  position: absolute;
-  bottom: 24px;
-  right: 24px;
-  display: flex;
-  align-items: center;
+/* Mobile */
+
+@media screen and (min-width: 375px) and (max-width: 767.98px) {
+  .shopping-list-card-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border: 2px solid rgba(79, 46, 232, 0.4);
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    width: 335px;
+    height: 170px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .shopping-list-card-img {
+    width: 100px;
+    height: 142px;
+    margin-left: 14px;
+    margin-top: 14px;
+    border-radius: 8px;
+  }
+
+  .shopping-description-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 14px;
+    padding-top: 14px;
+  }
+
+  .shopping-text-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .shopping-list-card-title {
+    width: 144px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    color: rgb(17, 17, 17);
+    font-family: sans-serif, 'DM Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .shopping-list-category {
+    width: 165px;
+    height: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(180, 175, 175);
+    font-family: 'DM Sans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .shopping-list-card-paragraf {
+    width: 193px;
+    height: 68px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(17, 17, 17);
+    font-family: 'DM Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .shopping-list-card-container-img {
+    position: absolute;
+    bottom: 14px;
+    right: 14px;
+    display: flex;
+    align-items: center;
+    width: 56px;
+    height: 16px;
+  }
+
+  .shopping-amazon-link {
+    width: 32px;
+    height: 11px;
+    margin-right: 8px;
+    margin-top: 2px;
+    /* background-image: url(../img/amazon@2x.png);
+    filter: grayscale(100%);
+    background-size: cover; */
+  }
+
+  .shopping-book-link {
+    width: 16px;
+    height: 16px;
+  }
+
+  .shopping-list-card-img-paragraf {
+    height: 14px;
+    display: flex;
+    margin-top: 24px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    color: rgb(180, 175, 175);
+    font-family: sans-serif, 'DM Sans';
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
+  .shopping-list-card-container-trash {
+    display: contents;
+  }
+
+  .shopping-list-card-icon-trash {
+    position: absolute;
+    width: 28px;
+    height: 28px;
+    left: 293px;
+    top: 14px;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    position: absolute;
+    top: 14px;
+    right: 293px;
+    background-color: #4f2ee8;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
-.shopping-list-card-container-trash {
-  display: contents;
+/* Tablet */
+
+@media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
+  .shopping-list-card-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border: 2px solid rgba(79, 46, 232, 0.4);
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    width: 704px;
+    height: 213px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+  }
+
+  .shopping-list-card-img {
+    width: 116px;
+    height: 165px;
+    margin-left: 24px;
+    margin-top: 24px;
+    border-radius: 8px;
+  }
+
+  .shopping-description-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 24px;
+    padding-top: 24px;
+    flex-direction: column;
+  }
+
+  .shopping-text-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+  }
+
+  .shopping-list-card-title {
+    width: 166px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    color: rgb(17, 17, 17);
+    font-family: sans-serif, 'DM Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  .shopping-list-category {
+    width: 211px;
+    height: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(180, 175, 175);
+    font-family: 'DM Sans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .shopping-list-card-paragraf {
+    width: 508px;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(17, 17, 17);
+    font-family: sans-serif, 'DM Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
+  .shopping-list-card-container-img {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    width: 92px;
+    height: 27px;
+  }
+
+  .shopping-amazon-link {
+    width: 48px;
+    height: 15px;
+    margin-right: 16px;
+    margin-top: 2px;
+    /* background-image: url(../img/amazon@2x.png);
+    filter: grayscale(100%);
+    background-size: cover; */
+  }
+
+  .shopping-book-link {
+    width: 28px;
+    height: 27px;
+  }
+
+  .shopping-list-card-img-paragraf {
+    height: 14px;
+    display: flex;
+    margin-top: 60px;
+    margin-right: 450px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    color: rgb(180, 175, 175);
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
+
+  .shopping-list-card-container-trash {
+    display: contents;
+  }
+
+  .shopping-list-card-icon-trash {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 646px;
+    top: 24px;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    position: absolute;
+    top: 24px;
+    right: 646px;
+    background-color: #4f2ee8;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }
 
-.shopping-list-card-icon-trash {
-  position: absolute;
-  right: 24px;
-  top: 24px;
-}
+/* Desctop */
 
+@media screen and (min-width: 1440px) {
+  .shopping-list-card-box {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    box-sizing: border-box;
+    border: 2px solid rgba(79, 46, 232, 0.4);
+    border-radius: 16px;
+    background-color: rgb(255, 255, 255);
+    width: 996px;
+    height: 213px;
+    margin-left: 40px;
+    margin-right: auto;
+    margin-top: 20px;
+    position: relative;
+  }
 
+  .shopping-list-card-img {
+    width: 116px;
+    height: 165px;
+    margin-left: 24px;
+    margin-top: 24px;
+    border-radius: 8px;
+  }
 
+  .shopping-description-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    padding-left: 24px;
+    padding-top: 24px;
+    flex-direction: column;
+  }
 
+  .shopping-text-wrap {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-content: flex-start;
+    align-items: flex-start;
+    gap: 4px;
+  }
 
+  .shopping-list-card-title {
+    width: 166px;
+    height: 18px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding: 0px;
+    color: rgb(17, 17, 17);
+    font-family: sans-serif, 'DM Sans';
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: 18px;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    letter-spacing: 0.04em;
+    text-align: left;
+    text-transform: uppercase;
+  }
 
+  .shopping-list-category {
+    width: 211px;
+    height: 14px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(180, 175, 175);
+    font-family: 'DM Sans';
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.03em;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
+  .shopping-list-card-paragraf {
+    width: 808px;
+    height: 53px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: flex-start;
+    color: rgb(17, 17, 17);
+    font-family: 'DM Sans';
+    font-size: 14px;
+    font-weight: 400;
+    line-height: 18px;
+    letter-spacing: 0.04em;
+    text-align: left;
+    display: -webkit-box;
+    -webkit-line-clamp: 1;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
 
+  .shopping-list-card-container-img {
+    position: absolute;
+    bottom: 24px;
+    right: 24px;
+    display: flex;
+    align-items: center;
+    width: 92px;
+    height: 27px;
+  }
 
+  .shopping-amazon-link {
+    width: 48px;
+    height: 15px;
+    margin-right: 16px;
+    margin-top: 2px;
+    /* background-image: url(../img/amazon@2x.png);
+    filter: grayscale(100%);
+    background-size: cover; */
+  }
 
+  .shopping-book-link {
+    width: 28px;
+    height: 27px;
+  }
 
+  .shopping-list-card-img-paragraf {
+    height: 14px;
+    display: flex;
+    margin-top: 60px;
+    margin-right: 745px;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    padding: 0px;
+    flex: none;
+    color: rgb(180, 175, 175);
+    font-family: 'DM Sans';
+    font-style: italic;
+    font-size: 12px;
+    font-weight: 400;
+    line-height: 14px;
+    letter-spacing: 0.04em;
+    text-align: left;
+  }
 
+  .shopping-list-card-container-trash {
+    display: contents;
+  }
 
-.book-cover {
-  max-width: 116px;
-  max-height: 165px;
-}
-.book-info {
-  flex: 1;
-}
-.book-title {
-  color: rgb(17, 17, 17);
-  font-family: DM Sans;
-  font-size: 16px;
-  font-weight: 700;
-  line-height: 18px;
-  letter-spacing: -4%;
-  text-align: left;
-  text-transform: uppercase;
-}
-.book-category {
-  color: rgb(180, 175, 175);
-  font-family: DM Sans;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: 3%;
-  text-align: left;
-}
-.book-description {
-  color: rgb(17, 17, 17);
-  font-family: DM Sans;
-  font-size: 14px;
-  font-weight: 400;
-  line-height: 18px;
-  letter-spacing: -4%;
-  text-align: left;
-}
-.book-author {
-  color: rgb(180, 175, 175);
-  font-family: DM Sans;
-  font-style: italic;
-  font-size: 12px;
-  font-weight: 400;
-  line-height: 14px;
-  letter-spacing: -4%;
-  text-align: left;
-}
-.book-links {
-  margin-top: 10px;
-}
-.book-link {
-  display: block;
-  margin-bottom: 5px;
-}
-.delete-button {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  background-color: #4f2ee8;
-  border: none;
-  padding: 8px 16px;
-  border-radius: 50%;
-  cursor: pointer;
+  .shopping-list-card-icon-trash {
+    position: absolute;
+    width: 34px;
+    height: 34px;
+    left: 938px;
+    top: 24px;
+    cursor: pointer;
+  }
+
+  .delete-button {
+    position: absolute;
+    top: 24px;
+    right: 938px;
+    background-color: #4f2ee8;
+    border: none;
+    padding: 8px 14px;
+    border-radius: 50%;
+    cursor: pointer;
+  }
 }

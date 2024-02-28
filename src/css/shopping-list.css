@@ -73,7 +73,7 @@
 /* Tablet */
 
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
-  .sidebar-box-support.shopping-list{
+  .sidebar-box-support.shopping-list {
     display: none;
   }
 
@@ -130,10 +130,11 @@
   }
 }
 
+/* Desctop */
+
 @media screen and (min-width: 1440px) {
   .shopping-list {
     margin-top: 40px;
-    display: none;
   }
 
   .shopping-list-support {

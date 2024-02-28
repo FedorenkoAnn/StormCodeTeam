@@ -140,14 +140,12 @@
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .sidebar-container {
     padding-top: 40px;
-    padding-bottom: 100px;
     display: flex;
     gap: 32px;
     padding-left: 20px;
   }
 
   .sidebar-box-categories {
-    padding-bottom: 100px;
     display: flex;
   }
 
@@ -216,14 +214,12 @@
   .sidebar-box-support {
     margin-top: 86px;
   }
-  
 }
 
 .sidebar-section {
   width: 100%;
   margin-right: 40px;
 }
-
 
 .sidebar-section {
   width: 100%;
@@ -238,7 +234,6 @@
   justify-content: flex-start;
   align-items: flex-start;
   padding: 0px;
-  margin-bottom: 68px;
   scrollbar-color: rgb(224, 224, 224) transparent;
   scrollbar-width: thin;
 }
@@ -271,8 +266,6 @@ body.dark-mode .sidebar-box-categories {
   /* margin: 32px 0px; */
   width: 356px;
 }
-
-
 
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
@@ -328,15 +321,15 @@ body.dark-mode .sidebar-favorite:focus {
     margin-bottom: 32px;
   }
 
-body.dark-mode .sidebar-favorite:hover,
-body.dark-mode .sidebar-favorite:focus  {
-  font-size: 16px;
-  margin-bottom: 32px;
-}
+  body.dark-mode .sidebar-favorite:hover,
+  body.dark-mode .sidebar-favorite:focus {
+    font-size: 16px;
+    margin-bottom: 32px;
+  }
 }
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
-  body.dark-mode .sidebar-favorite  {
+  body.dark-mode .sidebar-favorite {
     font-size: 14px;
     letter-spacing: -0.02em;
     margin-bottom: 24px;
@@ -347,11 +340,10 @@ body.dark-mode .sidebar-favorite:focus  {
     letter-spacing: -0.02em;
     margin-bottom: 24px;
   }
-
 }
 
 @media screen and (max-width: 375px) {
-  body.dark-mode .sidebar-favorite  {
+  body.dark-mode .sidebar-favorite {
     font-size: 14px;
     letter-spacing: -0.02em;
     margin-bottom: 24px;
