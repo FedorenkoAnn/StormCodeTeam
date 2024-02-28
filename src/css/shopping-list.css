@@ -18,6 +18,7 @@
 
   .shopping-list-title {
     margin-top: 40px;
+    margin-bottom: 40px;
     width: 193px;
     height: 38px;
     font-family: sans-serif, 'DM Sans';
@@ -79,6 +80,7 @@
 
   .shopping-list-title {
     margin-top: 40px;
+    margin-bottom: 40px;
     width: 292px;
     height: 52px;
     font-family: sans-serif, 'DM Sans';
@@ -145,6 +147,7 @@
   .shopping-list-title {
     margin-top: 40px;
     margin-left: 40px;
+    margin-bottom: 40px;
     width: 292px;
     height: 52px;
     font-family: sans-serif, 'DM Sans';
