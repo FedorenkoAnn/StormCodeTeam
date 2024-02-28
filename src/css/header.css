@@ -318,6 +318,19 @@ body.dark-mode .icon-logo-book {
 
   .nav-link {
     bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .icon-shopping {
+    bottom: 6px;
   }
 
   .mobile-content {

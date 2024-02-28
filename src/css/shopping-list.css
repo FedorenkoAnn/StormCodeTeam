@@ -1,7 +1,7 @@
 @media screen and (max-width: 375px) {
-  .sidebar-box-support {
+  /* .sidebar-box-support {
     display: none;
-  }
+  } */
 
   .shopping-list-box {
     min-width: 320px;
@@ -12,9 +12,9 @@
 /* Mobile */
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
-  .sidebar-box-support {
+  /* .sidebar-box-support {
     display: none;
-  }
+  } */
 
   .shopping-list-title {
     margin-top: 40px;
@@ -73,9 +73,9 @@
 /* Tablet */
 
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
-  .sidebar-box-support {
+  /* .sidebar-box-support {
     display: none;
-  }
+  } */
 
   .shopping-list-title {
     margin-top: 40px;
