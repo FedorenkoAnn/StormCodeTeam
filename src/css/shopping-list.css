@@ -1,5 +1,5 @@
 @media screen and (max-width: 375px) {
-  .sidebar-box-support {
+  .sidebar-box-support.shopping-list {
     display: none;
   }
 
@@ -12,7 +12,7 @@
 /* Mobile */
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
-  .sidebar-box-support {
+  .sidebar-box-support.shopping-list {
     display: none;
   }
 
@@ -73,7 +73,7 @@
 /* Tablet */
 
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
-  .sidebar-box-support {
+  .sidebar-box-support.shopping-list{
     display: none;
   }
 
@@ -133,6 +133,7 @@
 @media screen and (min-width: 1440px) {
   .shopping-list {
     margin-top: 40px;
+    display: none;
   }
 
   .shopping-list-support {

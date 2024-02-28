@@ -8,6 +8,8 @@ body {
     font-size: 18px;
     overflow-x: hidden;
     transition: background-color 1000ms cubic-bezier(0.075, 0.82, 0.165, 1);
+    color: #111111;
+    background-color: #f6f6f6;
   }
   
   main {

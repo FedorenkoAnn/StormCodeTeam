@@ -16,7 +16,7 @@
 .navigation {
   position: absolute;
   left: 209px;
-  top: 27px;
+  top: 25px;
 }
 
 .header-menu a.active {
@@ -244,7 +244,9 @@ body.dark-mode .icon-logo-book {
   .nav-switch {
     margin-right: -20px;
   }
-
+  .navigation {
+    top: 27px;
+  }
   .nav-link {
     font-size: 14px;
     letter-spacing: 0.02em;
@@ -303,6 +305,29 @@ body.dark-mode .icon-logo-book {
     align-items: flex-end;
     gap: 24px;
     margin-top: -4px;
+    
+  }
+
+  .js-shopping-list {
+    position: relative;
+    bottom: 6px;
+  }
+
+  .nav-link {
+    bottom: 3px;
+    font-size: 14px;
+    font-weight: 500;
+    
+  }
+
+  .nav-link:hover,
+  .nav-link:focus {
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .icon-shopping {
+    bottom: 6px;
   }
 
   .mobile-content {
