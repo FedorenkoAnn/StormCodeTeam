@@ -1,36 +1,3 @@
-// document.addEventListener('DOMContentLoaded', function () {
-//   const toggleSwitch = document.querySelector('.switch input');
-  
-//   // Получаем текущее состояние из localStorage
-//   const isDarkMode = localStorage.getItem('darkMode') === 'true';
-
-//   // Устанавливаем состояние переключателя в соответствии с сохраненным значением
-//   toggleSwitch.checked = isDarkMode;
-
-//   // Устанавливаем тему в соответствии с сохраненным значением
-//   if (isDarkMode) {
-//     document.body.classList.add('dark-mode');
-//   }
-
-//   toggleSwitch.addEventListener('change', function () {
-//     // Сохраняем состояние в localStorage при изменении
-//     localStorage.setItem('darkMode', toggleSwitch.checked);
-
-//     if (toggleSwitch.checked) {
-//       document.body.classList.add('dark-mode');
-//     } else {
-//       document.body.classList.remove('dark-mode');
-//     }
-//   });
-// });
-
-// function navigateToPage(page) {
-//   // Переключение страницы
-//   window.location.href = page;
-// }
-
-
-
 function toggleModal(action) {
   const mobileContent = document.querySelector('.mobile-content');
   const burgerBtn = document.querySelector('.burger-btn');
@@ -61,16 +28,23 @@ document.addEventListener('DOMContentLoaded', function() {
   const switchElement = document.querySelector('.switch input');
   const bodyElement = document.body;
 
-  // Проверяем, сохранена ли тема в локальном хранилище
+  // Предварительно прячем содержимое
+  bodyElement.style.opacity = '0';
+  bodyElement.style.visibility = 'hidden';
+
   const savedTheme = localStorage.getItem('theme');
   if (savedTheme) {
     bodyElement.classList.toggle('dark-mode', savedTheme === 'dark');
     switchElement.checked = savedTheme === 'dark';
   }
 
-  // Слушаем изменения в переключателе темы
+  // Отображаем содержимое после загрузки стилей
+  window.requestAnimationFrame(() => {
+    bodyElement.style.opacity = '1';
+    bodyElement.style.visibility = 'visible';
+  });
+
   switchElement.addEventListener('change', function() {
-    // Изменяем класс тела и сохраняем выбор в локальном хранилище
     bodyElement.classList.toggle('dark-mode', switchElement.checked);
     localStorage.setItem('theme', switchElement.checked ? 'dark' : 'light');
   });
@@ -81,9 +55,13 @@ document.addEventListener('DOMContentLoaded', function() {
   const navLinks = document.querySelectorAll('.header-menu a, .header-menu svg');
 
   navLinks.forEach(function(link) {
-    // Проверяем, является ли текущая ссылка активной
     if (link.href === window.location.href) {
       link.classList.add('active');
+      // Проверяем, является ли текущий элемент иконкой icon-shopping
+      if (link.classList.contains('icon-shopping')) {
+        // Если да, то добавляем класс active также к иконке
+        link.querySelector('svg').classList.add('active');
+      }
     }
   });
 });
