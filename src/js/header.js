@@ -1,31 +1,3 @@
-document.addEventListener('DOMContentLoaded', function () {
-  const toggleSwitch = document.querySelector('.switch input');
-
-  toggleSwitch.addEventListener('change', function () {
-    if (toggleSwitch.checked) {
-      document.body.classList.add('dark-mode');
-    } else {
-      document.body.classList.remove('dark-mode');
-    }
-  });
-});
-
-document.addEventListener('DOMContentLoaded', function () {
-  const navLinks = document.querySelectorAll('#link-menu');
-
-  navLinks.forEach(function (link) {
-    link.addEventListener('click', function (event) {
-      event.preventDefault();
-
-      navLinks.forEach(function (link) {
-        link.classList.remove('is-active');
-      });
-
-      link.classList.add('is-active');
-    });
-  });
-});
-
 function toggleModal(action) {
   const mobileContent = document.querySelector('.mobile-content');
   const burgerBtn = document.querySelector('.burger-btn');
@@ -50,3 +22,38 @@ document.querySelector('.close-btn').addEventListener('click', function () {
   toggleModal('close');
 });
 
+
+document.addEventListener('DOMContentLoaded', function() {
+  const switchElement = document.querySelector('.switch input');
+  const bodyElement = document.body;
+
+  bodyElement.style.opacity = '0';
+  bodyElement.style.visibility = 'hidden';
+
+  const savedTheme = localStorage.getItem('theme');
+  if (savedTheme) {
+    bodyElement.classList.toggle('dark-mode', savedTheme === 'dark');
+    switchElement.checked = savedTheme === 'dark';
+  }
+
+  window.requestAnimationFrame(() => {
+    bodyElement.style.opacity = '1';
+    bodyElement.style.visibility = 'visible';
+  });
+
+  switchElement.addEventListener('change', function() {
+    bodyElement.classList.toggle('dark-mode', switchElement.checked);
+    localStorage.setItem('theme', switchElement.checked ? 'dark' : 'light');
+  });
+});
+
+document.addEventListener('DOMContentLoaded', function() {
+  const currentPath = window.location.pathname;
+  const navLinks = document.querySelectorAll('.header-menu a, .header-menu svg');
+
+  navLinks.forEach(function(link) {
+      if (link.href === window.location.href) {
+      link.classList.add('active');
+    }
+  });
+});

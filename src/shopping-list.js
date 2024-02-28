@@ -3,7 +3,6 @@ import amazon2x from './img/amazon@2x.png';
 import applebooks from './img/app_books@1x.png';
 import applebooks2x from './img/app_books@2x.png';
 import logo from './img/sprite.svg';
-
 document.addEventListener('DOMContentLoaded', () => {
   const shoppingListContainer = document.querySelector(
     '.shopping-list-container'
@@ -24,7 +23,6 @@ document.addEventListener('DOMContentLoaded', () => {
     displayPlaceholder(shoppingListContainer);
   }
 });
-
 function displayPlaceholder(container) {
   const placeholderImageSrc = './img/shopping_books_desk@2x.png'; // Шлях до фото-заглушки
   const placeholderMarkup = `
@@ -38,7 +36,6 @@ function displayPlaceholder(container) {
   `;
   container.innerHTML = placeholderMarkup;
 }
-
 function renderShoppingList(shoppingList, container) {
   // Перебираємо елементи shoppingList і відображаємо їх
   shoppingList.forEach((book, index) => {
@@ -46,7 +43,6 @@ function renderShoppingList(shoppingList, container) {
     container.appendChild(bookElement);
   });
 }
-
 function createBookElement(book, index) {
   const {
     _id,
@@ -90,16 +86,13 @@ function createBookElement(book, index) {
       </svg>
     </button>
   `;
-
   // Додаємо обробник подій для кнопки "Видалити зі списку покупок"
   const removeButton = bookElement.querySelector('.btn-shop');
   removeButton.addEventListener('click', () => {
     removeBook(_id); // Викликаємо функцію removeBook() з потрібним ідентифікатором
   });
-
   return bookElement;
 }
-
 function removeBook(bookId) {
   const savedShoppingList = localStorage.getItem('shoppingList');
   if (savedShoppingList) {

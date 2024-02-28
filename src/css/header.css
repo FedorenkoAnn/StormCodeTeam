@@ -1,3 +1,14 @@
+body:not(.theme-loaded) {
+  opacity: 0;
+  visibility: hidden;
+  transition: opacity 0.1s ease, visibility 0.1s ease;
+}
+
+body.theme-loaded {
+  opacity: 1;
+  visibility: visible;
+}
+
 .header {
   padding: 18px 0;
   border: 1.5px solid #111111;
@@ -10,6 +21,7 @@
   width: 320px;
   margin-left: auto;
   margin-right: auto;
+ 
 }
 
 .navigation {
@@ -18,23 +30,15 @@
   top: 25px;
 }
 
-.is-active {
+.header-menu a.active {
   border-radius: 36px;
   background-color: rgb(234, 198, 69);
   padding: 8px 16px 8px 16px;
   font-weight: 700;
   color: #111111;
   cursor: pointer;
-  transition: none;
 }
 
-.is-active .link-menu {
-  fill: #111111;
-}
-
-body.dark-mode .is-active .link-menu {
-    fill: #111111;
-  }
 
 .nav-logo {
   position: absolute;
@@ -127,6 +131,8 @@ body.dark-mode .header {
   display: none;
   position: relative;
   overflow: hidden;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 .mobile-nav-list {
@@ -185,7 +191,6 @@ body.dark-mode .icon-logo-book {
   height: 493px;
   left: -35px;
   top: 404px;
-  /* transform: rotate(-15.00deg); */
   background-size: cover;
   background-repeat: no-repeat;
   background-position: center;
@@ -255,22 +260,18 @@ body.dark-mode .icon-logo-book {
     font-weight: 500;
   }
 
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 24px;
+    margin-top: -4px;
+  }
+
   body.dark-mode .icon-shopping {
     fill: #ffffff;
     position: relative;
     top: 3px;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: row;
-    gap: 24px;
-    margin-bottom: 1px;
-  }
-
-  .js-shopping-list {
-    position: relative;
-    bottom: 6px;
   }
 
   .nav-logo {
@@ -307,13 +308,9 @@ body.dark-mode .icon-logo-book {
   .nav-list {
     display: flex;
     flex-direction: row;
+    align-items: flex-end;
     gap: 24px;
-    /* align-items: baseline; */
-  }
-
-  .js-shopping-list {
-    position: relative;
-    bottom: 6px;
+    margin-top: -4px;
   }
 
   .nav-link {
@@ -345,6 +342,18 @@ body.dark-mode .icon-logo-book {
     display: none;
   }
 
-  /* .switch {
-  } */
+  .icon-shopping {
+    fill: #111111;
+    top: 4px;
+    position: relative;
+  }
+  body.dark-mode .icon-shopping {
+   fill: #ffffff;
+   position: relative;
+   top: 3px;
+ }
+ .header-menu svg.active {
+  stroke: #111111;
+ }
+
 }
