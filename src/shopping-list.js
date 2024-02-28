@@ -30,7 +30,7 @@ function displayPlaceholder(container) {
     <h1 class="shopping-list-title">Shopping<span class="shopping-list-span">List</span></h1>
     <div class="shopping-list-img-book">
     <p class="shopping-list-paragraf">This page is empty, add some books and proceed to order.</p>
-      <img class="shopping-list-img" src="${placeholderImageSrc}" alt="Placeholder Image">
+      <img class="shopping-list-img" src="${placeholderImageSrc}" srcset="${placeholderImageSrc} 2x, ${placeholderImageSrc} 1x" alt="Placeholder Image">
       </div>
     </div>
   `;
