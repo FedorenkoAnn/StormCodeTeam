@@ -130,6 +130,8 @@
   }
 }
 
+/* Desctop */
+
 @media screen and (min-width: 1440px) {
   .shopping-list {
     margin-top: 40px;

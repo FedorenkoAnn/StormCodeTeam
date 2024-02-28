@@ -54,8 +54,10 @@ function createBookElement(book, index) {
     appleLinks,
     list_name,
   } = book; // Add amazonLinks and appleLinks to destructuring
+  // const bookElementText = document.createElement('h1');
+  // bookElement.classList.add('shopping-list-title');
   const bookElement = document.createElement('div');
-  bookElement.classList.add('book-item');
+  bookElement.classList.add('shopping-list-card-box');
   bookElement.innerHTML = `
     <img class="shopping-list-card-img" src="${book_image}" alt="${title}" />
     <div class="shopping-description-wrap">
