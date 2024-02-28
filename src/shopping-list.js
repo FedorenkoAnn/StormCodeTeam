@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
     renderShoppingList(shoppingList, shoppingListContainer);
   }
 });
+
 function renderShoppingList(shoppingList, container) {
   // Перебираємо елементи shoppingList і відображаємо їх
   shoppingList.forEach(book => {
