@@ -352,7 +352,9 @@ body.dark-mode .icon-logo-book {
    position: relative;
    top: 3px;
  }
- 
+.header-menu svg.icon-shopping.cart-book {
+  fill: #111111;
+}
  body.dark-mode .active.cart-book {
    stroke: #111111;
  }
