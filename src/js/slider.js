@@ -116,7 +116,7 @@ arrowUp.addEventListener('click', function () {
 //Получаем список категорий
 const categoryList = document.querySelector('.js-list');
 //Добавляем класс для стилизации прокрутки
-categoryList.classList.add('scrollable');
+// categoryList.classList.add('scrollable');
 
 // const categoryList = document.querySelector('.js-list');
 // Проверяем, нужна ли прокрутка
