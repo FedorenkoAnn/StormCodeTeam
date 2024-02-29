@@ -221,6 +221,58 @@ body.dark-mode .icon-logo-book {
     margin-left: auto;
     margin-right: auto;
   }
+  .mobile-content {
+    display: none;
+  }
+
+  .mobile-window {
+    display: none;
+  }
+
+  .mobile-nav-list {
+    display: none;
+  }
+
+  .nav-switch {
+    margin-right: -20px;
+  }
+  .navigation {
+    top: 27px;
+  }
+  .nav-link {
+    font-size: 14px;
+    letter-spacing: 0.02em;
+    line-height: 18px;
+    font-weight: 500;
+  }
+
+  .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    gap: 24px;
+    margin-top: -4px;
+  }
+
+  body.dark-mode .icon-shopping {
+    fill: currentColor;;
+    position: relative;
+    top: 4px;
+  }
+
+  .nav-logo {
+    bottom: 21px;
+  }
+
+  .switch {
+    margin-bottom: 8px;
+  }
+
+  .icon-shopping {
+    fill: #111111;
+    top: 3px;
+    position: relative;
+  }
 }
 
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
