@@ -3,12 +3,10 @@ body:not(.theme-loaded) {
   visibility: hidden;
   transition: opacity 0.1s ease, visibility 0.1s ease;
 }
-
 body.theme-loaded {
   opacity: 1;
   visibility: visible;
 }
-
 .header {
   padding: 18px 0;
   border: 1.5px solid #111111;
@@ -16,20 +14,17 @@ body.theme-loaded {
   box-sizing: border-box;
   height: 64px;
   display: flex;
-  background-color: #ffffff;
+  background-color: #FFFFFF;
   position: relative;
   width: 320px;
   margin-left: auto;
   margin-right: auto;
- 
 }
-
 .navigation {
   position: absolute;
   left: 209px;
   top: 25px;
 }
-
 .header-menu a.active {
   border-radius: 36px;
   background-color: rgb(234, 198, 69);
@@ -38,25 +33,19 @@ body.theme-loaded {
   color: #111111;
   cursor: pointer;
 }
-
-
 .nav-logo {
   position: absolute;
   left: 20px;
 }
-
 .nav-list {
   display: none;
 }
-
 .nav-switch {
   margin-left: 10px;
   display: flex;
   justify-content: flex-end;
 }
-
 .switch {
-  cursor: pointer;
   position: relative;
   display: inline-block;
   width: 40px;
@@ -70,13 +59,11 @@ body.theme-loaded {
   );
   border-radius: 30px;
 }
-
 .switch input {
   opacity: 0;
   width: 0;
   height: 0;
 }
-
 body.dark-mode .switch {
   box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
   background: linear-gradient(
@@ -85,7 +72,6 @@ body.dark-mode .switch {
     rgb(104, 104, 104) 100%
   );
 }
-
 .slider {
   position: absolute;
   width: 18px;
@@ -105,21 +91,17 @@ body.dark-mode .switch {
   border-radius: 34px;
   transform: translateX(0);
 }
-
 .switch input:checked + .slider {
   transform: translateX(20px);
 }
-
 body.dark-mode {
   background-color: #202024;
-  color: #ffffff;
+  color: #FFFFFF;
 }
-
 body.dark-mode .header {
   background-color: #111111;
-  border: 1.5px solid #ffffff;
+  border: 1.5px solid #FFFFFF;
 }
-
 .mobile-content {
   box-shadow: inset 1px 1px 2px 0px rgba(0, 0, 0, 0.1);
   background: linear-gradient(
@@ -135,7 +117,6 @@ body.dark-mode .header {
   margin-left: auto;
   margin-right: auto;
 }
-
 .mobile-nav-list {
   position: absolute;
   display: flex;
@@ -143,13 +124,12 @@ body.dark-mode .header {
   gap: 10px;
   left: 129px;
   top: 245px;
-  color: #ffffff;
+  color: #FFFFFF;
   font-size: 14px;
   letter-spacing: 0.02em;
   line-height: 18px;
   font-weight: 500;
 }
-
 .burger-btn {
   border: none;
   background: none;
@@ -159,22 +139,18 @@ body.dark-mode .header {
   height: 28px;
   display: block;
 }
-
 .icon-burger,
 .icon-close {
   stroke: #111111;
   top: 2px;
 }
-
 body.dark-mode .icon-burger,
 body.dark-mode .icon-close {
-  stroke: #ffffff;
+  stroke: #FFFFFF;
 }
-
 body.dark-mode .icon-logo-book {
-  fill: #ffffff;
+  fill: #FFFFFF;
 }
-
 .close-btn {
   border: none;
   background: none;
@@ -184,7 +160,6 @@ body.dark-mode .icon-logo-book {
   height: 28px;
   display: none;
 }
-
 .mobile-image {
   background-image: url(../img/books_mob@1x.png);
   position: absolute;
@@ -196,18 +171,15 @@ body.dark-mode .icon-logo-book {
   background-repeat: no-repeat;
   background-position: center;
 }
-
 .icon-shopping-mob {
   top: 3px;
   fill: currentColor;
   position: relative;
 }
-
 .icon-logo {
   top: 7px;
   position: relative;
 }
-
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .header {
     padding: 18px 0;
@@ -216,66 +188,13 @@ body.dark-mode .icon-logo-book {
     box-sizing: border-box;
     height: 64px;
     display: flex;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     position: relative;
     width: 378px;
     margin-left: auto;
     margin-right: auto;
   }
-  .mobile-content {
-    display: none;
-  }
-
-  .mobile-window {
-    display: none;
-  }
-
-  .mobile-nav-list {
-    display: none;
-  }
-
-  .nav-switch {
-    margin-right: -20px;
-  }
-  .navigation {
-    top: 27px;
-  }
-  .nav-link {
-    font-size: 14px;
-    letter-spacing: 0.02em;
-    line-height: 18px;
-    font-weight: 500;
-  }
-
-  .nav-list {
-    display: flex;
-    flex-direction: row;
-    align-items: flex-end;
-    gap: 24px;
-    margin-top: -4px;
-  }
-
-  body.dark-mode .icon-shopping {
-    fill: currentColor;;
-    position: relative;
-    top: 4px;
-  }
-
-  .nav-logo {
-    bottom: 21px;
-  }
-
-  .switch {
-    margin-bottom: 8px;
-  }
-
-  .icon-shopping {
-    fill: #111111;
-    top: 3px;
-    position: relative;
-  }
 }
-
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .header {
     padding: 19px 0;
@@ -287,19 +206,15 @@ body.dark-mode .icon-logo-book {
     margin-left: auto;
     margin-right: auto;
   }
-
   .mobile-content {
     display: none;
   }
-
   .mobile-window {
     display: none;
   }
-
   .mobile-nav-list {
     display: none;
   }
-
   .nav-switch {
     margin-right: -20px;
   }
@@ -312,7 +227,6 @@ body.dark-mode .icon-logo-book {
     line-height: 18px;
     font-weight: 500;
   }
-
   .nav-list {
     display: flex;
     flex-direction: row;
@@ -320,28 +234,23 @@ body.dark-mode .icon-logo-book {
     gap: 24px;
     margin-top: -4px;
   }
-
   body.dark-mode .icon-shopping {
     fill: currentColor;;
     position: relative;
     top: 4px;
   }
-
   .nav-logo {
     bottom: 21px;
   }
-
   .switch {
     margin-bottom: 8px;
   }
-
   .icon-shopping {
     fill: #111111;
     top: 3px;
     position: relative;
   }
 }
-
 @media screen and (min-width: 1440px) {
   .header {
     padding: 18px 0;
@@ -350,14 +259,13 @@ body.dark-mode .icon-logo-book {
     box-sizing: border-box;
     height: 64px;
     display: flex;
-    background-color: #ffffff;
+    background-color: #FFFFFF;
     position: relative;
     width: 1440px;
     height: 72px;
     margin-left: auto;
     margin-right: auto;
   }
-
   .nav-list {
     display: flex;
     flex-direction: row;
@@ -365,36 +273,28 @@ body.dark-mode .icon-logo-book {
     gap: 24px;
     margin-top: -4px;
   }
-
   .nav-link {
     bottom: 3px;
     font-size: 14px;
     font-weight: 500;
-    
   }
-
   .nav-link:hover,
   .nav-link:focus {
     font-size: 14px;
     font-weight: 700;
   }
-
   .icon-shopping {
     bottom: 6px;
   }
-
   .mobile-content {
     display: none;
   }
-
   .mobile-window {
     display: none;
   }
-
   .mobile-nav-list {
     display: none;
   }
-
   .icon-shopping {
     fill: #111111;
     top: 4px;
@@ -405,9 +305,7 @@ body.dark-mode .icon-logo-book {
    position: relative;
    top: 3px;
  }
-
  body.dark-mode .active.cart-book {
    stroke: #111111;
  }
-
 }
