@@ -1,5 +1,4 @@
 /* Mobile */
-
 @media (max-width: 375px) {
   .sidebar-section {
     width: 100%;
@@ -23,7 +22,6 @@
     max-height: 228px;
     overflow-y: scroll;
   }
-
   .sidebar-favorite {
     width: 100%;
     letter-spacing: -0.02em;
@@ -32,16 +30,13 @@
     line-height: 1.12px;
     margin-bottom: 24px;
   }
-
   .sidebar-favorite:hover {
     font-size: 14px;
   }
-
   .sidebar-list-support {
     height: 352px;
     overflow: hidden;
   }
-
   .sidebar-box-support {
     width: 100%;
     height: 352px;
@@ -49,28 +44,24 @@
     position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
     margin-top: 40px;
   }
-
   .sidebar-title {
     color: #fff;
     align-items: center;
     /* margin-bottom: 40px; */
     display: flex;
   }
-
   .support-arrow {
     margin-bottom: 15px;
   }
 }
-
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   .sidebar-container {
     width: 335px;
-    /* width: 100%; */
     padding-top: 40px;
     margin-left: auto;
     margin-right: auto;
-    padding-left: 20px;
   }
+
   .sidebar-box-categories {
     width: 100%;
     padding-top: 40px;
@@ -82,39 +73,33 @@
     max-height: 228px;
     overflow-y: scroll;
   }
-
   .sidebar-favorite {
     font-size: 14px;
     line-height: 1.12px;
     letter-spacing: -0.02em;
     margin-bottom: 24px;
   }
-
   .sidebar-favorite:hover {
     font-size: 14px;
   }
-
   .sidebar-list-support {
     width: 335px;
     height: 460px;
     overflow: hidden;
     margin-bottom: 40px;
   }
-
   .sidebar-swiper-list {
     width: 159px;
     height: 306px;
     overflow: hidden;
     margin-top: 42px;
   }
-
   .sidebar-box-support {
     width: 335px;
     height: 460px;
     display: block;
     position: relative; /* ставлю изначально относительную позицию relative, так как в будущем будет кнопка в этом контейнере, та которая со стрелочкой вниз, которой зададим позицию absolute*/
   }
-
   .sidebar-title {
     color: rgb(255, 255, 255);
     font-family: sans-serif, 'DM Sans';
@@ -126,7 +111,6 @@
     letter-spacing: 0.04em;
     text-align: left;
   }
-
   .support-arrow {
     border: none;
     border-radius: 50%;
@@ -138,35 +122,30 @@
     margin-bottom: 20px;
   }
 }
-
 /* Tablet */
-
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .sidebar-container {
     padding-top: 40px;
     display: flex;
     gap: 32px;
-  
+    padding-left: 20px;
+
   }
 
   .sidebar-box-categories {
     display: flex;
   }
-
   .sidebar-list-categories {
     max-height: 472px;
   }
-
   .sidebar-favorite {
     font-size: 16px;
     line-height: 1.33px;
     margin-bottom: 32px;
   }
-
   .sidebar-favorite:hover {
     font-size: 16px;
   }
-
   .sidebar-box-support {
     height: 472px;
     width: 335px;
@@ -177,7 +156,6 @@
 }
 
 /* Desctop */
-
 @media screen and (min-width: 1440px) {
   .sidebar-container {
     flex-direction: column;
@@ -187,6 +165,7 @@
     column-gap: 0px;
     width: 100%;
     padding-top: 40px;
+    padding-left: 20px;
     padding-left: 24px;
   }
 
@@ -194,15 +173,12 @@
     display: flex;
     flex-wrap: nowrap;
   }
-
   .sidebar-section {
     max-width: 356px;
   }
-
   .sidebar-list-categories {
     max-height: 472px;
   }
-
   .sidebar-favorite {
     margin-bottom: 32px;
     font-weight: 18px;
@@ -213,11 +189,9 @@
   .sidebar-favorite:hover {
     font-size: 18px;
   }
-
   .sidebar-list-support {
     height: 490px;
   }
-
   .sidebar-box-support {
     margin-top: 86px;
   }
@@ -230,11 +204,9 @@
   width: 100%;
   margin-right: 40px;
 }
-
 .sidebar-section {
   width: 100%;
 }
-
 .sidebar-box-categories {
   width: 356px;
   display: flex;
@@ -247,26 +219,21 @@
   scrollbar-color: rgb(224, 224, 224) transparent;
   scrollbar-width: thin;
 }
-
 body.dark-mode .sidebar-box-categories {
   scrollbar-color: rgba(17, 17, 17, 0.6) transparent;
   scrollbar-width: thin;
 }
-
 .sidebar-list-categories ul::-webkit-scrollbar {
   width: 8px; /* Ширина ползунка скроллбара */
 }
-
 .sidebar-list-categories ul::-webkit-scrollbar-thumb {
   border-radius: 12px; /* Скругление углов ползунка */
   background: #e0e0e0; /* Цвет ползунка */
 }
-
 .sidebar-list-categories ul::-webkit-scrollbar-track-piece {
   background: transparent; /* Прозрачный фон трека скроллбара */
   margin-bottom: 100px; /* Дополнительное расстояние снизу */
 }
-
 .sidebar-list-categories {
   display: flex;
   flex-direction: column;
@@ -276,7 +243,6 @@ body.dark-mode .sidebar-box-categories {
   /* margin: 32px 0px; */
   width: 356px;
 }
-
 .sidebar-favorite {
   color: rgba(17, 17, 17, 0.6);
   font-family: sans-serif, 'DM Sans';
@@ -287,7 +253,6 @@ body.dark-mode .sidebar-box-categories {
   text-align: left;
   /* margin-bottom: 32px; */
 }
-
 .sidebar-favorite:hover,
 .sidebar-favorite:focus {
   color: rgb(79, 46, 232);
@@ -300,7 +265,6 @@ body.dark-mode .sidebar-box-categories {
   text-transform: uppercase;
   cursor: pointer;
 }
-
 body.dark-mode .sidebar-favorite {
   color: rgba(255, 255, 255, 0.6);
   font-family: sans-serif, 'DM Sans';
@@ -311,7 +275,6 @@ body.dark-mode .sidebar-favorite {
   text-align: left;
   margin-bottom: 32px;
 }
-
 body.dark-mode .sidebar-favorite:hover,
 body.dark-mode .sidebar-favorite:focus {
   color: rgb(234, 198, 69);
@@ -324,20 +287,17 @@ body.dark-mode .sidebar-favorite:focus {
   text-transform: uppercase;
   cursor: pointer;
 }
-
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   body.dark-mode .sidebar-favorite {
     font-size: 16px;
     margin-bottom: 32px;
   }
-
   body.dark-mode .sidebar-favorite:hover,
   body.dark-mode .sidebar-favorite:focus {
     font-size: 16px;
     margin-bottom: 32px;
   }
 }
-
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
   body.dark-mode .sidebar-favorite {
     font-size: 14px;
@@ -351,7 +311,6 @@ body.dark-mode .sidebar-favorite:focus {
     margin-bottom: 24px;
   }
 }
-
 @media screen and (max-width: 375px) {
   body.dark-mode .sidebar-favorite {
     font-size: 14px;
@@ -365,10 +324,9 @@ body.dark-mode .sidebar-favorite:focus {
     margin-bottom: 24px;
   }
 }
-
 .sidebar-box-support {
   position: relative;
-  width: 356px;
+  width: 345px;
   height: 474px;
   border-radius: 16px;
   box-shadow: 0px 10px 10px 0px rgba(245, 245, 247, 0.1);
@@ -380,13 +338,11 @@ body.dark-mode .sidebar-favorite:focus {
   /* overflow: scroll; */
   /* margin-top: 86px; */
 }
-
 .sidebar-list-support {
   display: flex;
   flex-direction: column;
   position: relative;
 }
-
 .sidebar-support {
   display: flex;
   flex-direction: row;
@@ -395,7 +351,6 @@ body.dark-mode .sidebar-favorite:focus {
   align-items: center;
   padding-left: 20px;
 }
-
 .sidebar-title {
   color: rgb(255, 255, 255);
   font-family: sans-serif, 'DM Sans';
@@ -407,7 +362,6 @@ body.dark-mode .sidebar-favorite:focus {
   padding-left: 20px;
   padding-top: 26px;
 }
-
 .sidebar-trizub {
   position: absolute;
   width: 20px;
@@ -416,7 +370,6 @@ body.dark-mode .sidebar-favorite:focus {
   left: 250px;
   top: 24px;
 }
-
 .sidebar-swiper-list {
   width: 159px;
   height: 292px;
@@ -425,14 +378,12 @@ body.dark-mode .sidebar-favorite:focus {
   overflow-x: hidden; */
   margin-top: 42px;
 }
-
 .sidebar-company-img-box {
   margin-bottom: 20px;
   display: flex;
   flex-direction: row;
   align-items: center;
 }
-
 .sidebar-company-link {
   display: flex;
   align-items: center;
@@ -441,7 +392,6 @@ body.dark-mode .sidebar-favorite:focus {
   color: inherit;
   background-color: transparent;
 }
-
 /* .sidebar-company-link:active,
 .sidebar-company-link:hover,
 .sidebar-company-link:focus {
@@ -451,15 +401,12 @@ body.dark-mode .sidebar-favorite:focus {
   color: currentColor;
   display: none;
 } */
-
 .sidebar-company-number {
   color: rgb(255, 255, 255);
 }
-
 .sidebar-img {
   filter: brightness(0) invert(1);
 }
-
 .visually-hidden {
   position: absolute;
   width: 1px;
@@ -472,7 +419,6 @@ body.dark-mode .sidebar-favorite:focus {
   clip: rect(0 0 0 0);
   overflow: hidden;
 }
-
 .support-arrow {
   border: none;
   border-radius: 50px;
@@ -480,6 +426,7 @@ body.dark-mode .sidebar-favorite:focus {
   width: 38px;
   height: 38px;
   margin-top: 24px;
+  margin-left: 159px;
 
 }
 
@@ -487,20 +434,17 @@ body.dark-mode .sidebar-favorite:focus {
 .support-arrow:focus {
   transform: scale(1.05);
 }
-
 .support-arrow:active,
 .support-arrow:focus,
 .support-arrow:hover {
   background-color: #fff;
 }
-
 .support-button {
   margin-top: 5px;
   width: 15px;
   height: 10px;
   fill: rgb(79, 46, 232);
 }
-
 /* .sidebar-img {
   background-color: black;
   color: #000;

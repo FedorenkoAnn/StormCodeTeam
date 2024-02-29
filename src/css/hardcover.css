@@ -1,12 +1,11 @@
 @media screen and (max-width: 374.98px) {
-
     .hardcover-category-title {
         padding-top: 40px;
         padding-bottom: 40px;
         font-size: 30px;
         font-weight: 700;
         line-height: 1.2;
-        letter-spacing: -0.04em;
+        letter-spacing: -.04em;
         padding-left: 20px;
     }
     
@@ -19,7 +18,7 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
-
+        padding-left: 20px;
     }
     
     .book-list {
@@ -76,7 +75,6 @@
     }
     }
     
-
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
     
     .hardcover-category-title {
@@ -85,7 +83,7 @@
         font-size: 32px;
         font-weight: 700;
         line-height: 1.2;
-        letter-spacing: -0.02em;
+        letter-spacing: 0.02em;
         padding-left: 20px;
     }
     
@@ -98,7 +96,7 @@
         display: flex;
         flex-direction: column;
         gap: 40px;
-       
+        padding-left: 20px;
     }
     
     .book-list {
@@ -159,7 +157,6 @@
     .book-categories-span {
         color: var(--light-accent-color);
     }
-
     .books_card-heading {
         padding-left: 20px;
     }
@@ -174,7 +171,6 @@
     .hardcover-container {
         width: 218px;
     }
-
     .hardcover-category-title {
         padding-bottom: 40px;
         font-size: 48px;
@@ -182,9 +178,9 @@
         line-height: 52px;
         letter-spacing: -.04em;
         margin-top: 100px;
-       
+
     }
-    
+
     .hardcover-list {
         display: flex;
         flex-wrap: wrap;
@@ -196,12 +192,9 @@
         flex-basis: calc((100% - 40px) / 3);
         max-width: 218px;
         height: 366px;
-
     }
-
     .hardcover-wrapper {
     }
-
     .hardcover-image {
         max-height: 316px;
     }
@@ -247,7 +240,7 @@
         .hardcover-category-title {
             padding: 40px 40px 75px;
             font-size: 48px;
-             letter-spacing: -0.03em;
+             letter-spacing: .03em;
         }
         
         .hardcover-list {
@@ -256,6 +249,7 @@
             row-gap: 40px;
             column-gap: 24px;
             max-width: 996px;
+            margin-left: 40px;
         }
         
         .hardcover-item {

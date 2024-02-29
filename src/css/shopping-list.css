@@ -1,64 +1,18 @@
-@media screen and (max-width: 374.98px) {
-
-  .shopping-list-box {
-    min-width: 320px;
-    max-width: 375px;
-  }
-
-  .shop-container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-}
-
-
-
 @media screen and (max-width: 375px) {
   .sidebar-box-support.shopping-list {
     display: none;
   }
-
   .shopping-list-box {
     min-width: 320px;
     max-width: 375px;
   }
-
-  .shop-container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    width: 100%;
-    text-align: center;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
 }
-
-
-
 /* Mobile */
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
 
   .sidebar-box-support.shopping-list {
     display: none;
-  }
-  .shop-container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    max-width: 349px;
-    text-align: center;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
   }
   .shopping-list-title {
     margin-top: 40px;
@@ -72,7 +26,6 @@
     letter-spacing: 0.04em;
     text-align: left;
   }
-
   .shopping-list-span {
     color: rgb(79, 46, 232);
     font-family: sans-serif, 'DM Sans';
@@ -83,14 +36,12 @@
     text-align: left;
     padding-left: 3px;
   }
-
   .shopping-list-img-book {
     margin-top: 120px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .shopping-list-paragraf {
     width: 250px;
     height: 36px;
@@ -108,36 +59,19 @@
     letter-spacing: 0.02em;
     text-align: center;
   }
-
   .shopping-list-img {
     width: 265px;
     height: 198px;
   }
-
   body.dark-mode .shopping-list-paragraf {
     color: rgba(255, 255, 255, 0.6);
   }
-
 }
-
-
 /* Tablet */
-
 @media screen and (min-width: 768.95px) and (max-width: 1438.98px) {
   .sidebar-box-support.shopping-list {
     display: none;
   }
-  .shop-container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    max-width: 349px;
-    text-align: center;
-    height: 100%;
-    margin-left: auto;
-    margin-right: auto;
-  }
-
   .shopping-list-title {
     margin-top: 40px;
     margin-bottom: 40px;
@@ -150,7 +84,6 @@
     letter-spacing: 0.04em;
     text-align: left;
   }
-
   .shopping-list-span {
     color: rgb(79, 46, 232);
     font-family: sans-serif, 'DM Sans';
@@ -160,14 +93,12 @@
     letter-spacing: -4%;
     text-align: left;
   }
-
   .shopping-list-img-book {
     margin-top: 140px;
     display: flex;
     flex-direction: column;
     align-items: center;
   }
-
   .shopping-list-paragraf {
     width: 355px;
     height: 48px;
@@ -185,42 +116,23 @@
     letter-spacing: 0.02em;
     text-align: center;
   }
-
   .shopping-list-img {
     width: 322px;
     height: 241px;
   }
-
   body.dark-mode .shopping-list-paragraf {
     color: rgba(255, 255, 255, 0.6);
   }
-
 }
-
 /* Desctop */
-
 @media screen and (min-width: 1440px) {
   .shopping-list {
     margin-top: 40px;
   }
-
-  .shop-container {
-    flex-wrap: wrap;
-    display: flex;
-    justify-content: center;
-    max-width: 349px;
-    text-align: center;
-    height: 100%;
-    margin-left: 0;
-    margin-right: auto;
-    margin-top: 232px;
-  }
-
   .shopping-list-support {
     display: flex;
     flex-direction: row;
   }
-
   .shopping-list-title {
     margin-top: 40px;
     margin-left: 40px;
@@ -234,7 +146,6 @@
     letter-spacing: 0.04em;
     text-align: left;
   }
-
   .shopping-list-span {
     color: rgb(79, 46, 232);
     font-family: sans-serif, 'DM Sans';
@@ -244,7 +155,6 @@
     letter-spacing: 0.04em;
     text-align: left;
   }
-
   .shopping-list-img-book {
     margin-top: 140px;
     margin-left: 355px;
@@ -252,7 +162,6 @@
     flex-direction: column;
     align-items: center;
   }
-
   .shopping-list-paragraf {
     width: 355px;
     height: 48px;
@@ -270,12 +179,10 @@
     letter-spacing: 0.02em;
     text-align: center;
   }
-
   .shopping-list-img {
     width: 322px;
     height: 241px;
   }
-
   body.dark-mode .shopping-list-paragraf {
     color: rgba(255, 255, 255, 0.6);
   }
