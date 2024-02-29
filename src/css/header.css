@@ -348,7 +348,7 @@ body.dark-mode .icon-logo-book {
     position: relative;
   }
   body.dark-mode .icon-shopping {
-   fill: #ffffff;
+    fill: black;
    position: relative;
    top: 3px;
  }
