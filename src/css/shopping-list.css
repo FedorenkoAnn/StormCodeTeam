@@ -1,3 +1,24 @@
+@media screen and (max-width: 374.98px) {
+
+  .shopping-list-box {
+    min-width: 320px;
+    max-width: 375px;
+  }
+
+  .shop-container {
+    flex-wrap: wrap;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    text-align: center;
+    height: 100%;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
+
+
+
 @media screen and (max-width: 375px) {
   .sidebar-box-support.shopping-list {
     display: none;

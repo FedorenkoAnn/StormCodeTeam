@@ -199,7 +199,7 @@ body.dark-mode .icon-logo-book {
 
 .icon-shopping-mob {
   top: 3px;
-  fill: #ffffff;
+  fill: currentColor;
   position: relative;
 }
 
