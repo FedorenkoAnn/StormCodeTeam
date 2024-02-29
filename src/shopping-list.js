@@ -7,9 +7,9 @@ import logo from './img/sprite.svg';
 
 
 document.addEventListener('DOMContentLoaded', () => {
-  const shoppingListContainer = document.querySelector(
-    '.shopping-list-container'
-  );
+  const shoppingListContainer = document.querySelector('.shopping-list-container');
+  const shopContainer = document.querySelector('.shop-container');
+  
   // Отримуємо збережений список з локального сховища
   const savedShoppingList = localStorage.getItem('shoppingList');
   if (savedShoppingList) {
@@ -17,40 +17,42 @@ document.addEventListener('DOMContentLoaded', () => {
     if (shoppingList.length > 0) {
       // Викликаємо функцію для відображення елементів на сторінці, якщо список не порожній
       renderShoppingList(shoppingList, shoppingListContainer);
+      // Видаляємо клас visual-hidden
+      shopContainer.classList.add('visually-hidden');
     } else {
-      // Якщо список порожній, відображаємо заглушку
-      displayPlaceholder(shoppingListContainer);
+      // Якщо список порожній, встановлюємо клас visual-hidden на shopContainer
+      shopContainer.classList.remove('visually-hidden');
     }
   } else {
-    // Якщо локальне сховище пусте, відображаємо заглушку
-    displayPlaceholder(shoppingListContainer);
+    // Якщо збережений список не існує, також встановлюємо клас visual-hidden на shopContainer
+    shopContainer.classList.add('visually-hidden');
   }
 });
 
-function displayPlaceholder(container) {
-  const placeholderImageDesk1x = './img/shopping_books_desk@1x.png';
-  const placeholderImageDesk2x = './img/shopping_books_desk@2x.png';
-  const placeholderImageMob1x = './img/shopping_books_mob@1x.png';
-  const placeholderImageMob2x = './img/shopping_books_mob@2x.png';
-  const placeholderImageTab1x = './img/shopping_books_tab@1x.png';
-  const placeholderImageTab2x = './img/shopping_books_tab@2x.png';
+// function displayPlaceholder(container) {
+//   const placeholderImageDesk1x = './img/shopping_books_desk@1x.png';
+//   const placeholderImageDesk2x = './img/shopping_books_desk@2x.png';
+//   const placeholderImageMob1x = './img/shopping_books_mob@1x.png';
+//   const placeholderImageMob2x = './img/shopping_books_mob@2x.png';
+//   const placeholderImageTab1x = './img/shopping_books_tab@1x.png';
+//   const placeholderImageTab2x = './img/shopping_books_tab@2x.png';
 
-  const placeholderMarkup = `
-    <div class="shopping-list">
-      <h1 class="shopping-list-title">Shopping<span class="shopping-list-span">List</span></h1>
-      <div class="shopping-list-img-book">
-        <p class="shopping-list-paragraf">This page is empty, add some books and proceed to order.</p>
-        <picture>
-          <source media="(max-width: 575px)" srcset="${placeholderImageMob1x}, ${placeholderImageMob2x} 2x">
-          <source media="(max-width: 991px)" srcset="${placeholderImageTab1x}, ${placeholderImageTab2x} 2x">
-          <source srcset="${placeholderImageDesk1x}, ${placeholderImageDesk2x} 2x">
-          <img class="shopping-list-img" src="${placeholderImageDesk1x}" alt="Placeholder Image">
-        </picture>
-      </div>
-    </div>
-  `;
-  container.innerHTML = placeholderMarkup;
-}
+//   const placeholderMarkup = `
+//     <div class="shopping-list">
+//       <h1 class="shopping-list-title">Shopping<span class="shopping-list-span">List</span></h1>
+//       <div class="shopping-list-img-book">
+//         <p class="shopping-list-paragraf">This page is empty, add some books and proceed to order.</p>
+//         <picture>
+//           <source media="(max-width: 575px)" srcset="${placeholderImageMob1x}, ${placeholderImageMob2x} 2x">
+//           <source media="(max-width: 991px)" srcset="${placeholderImageTab1x}, ${placeholderImageTab2x} 2x">
+//           <source srcset="${placeholderImageDesk1x}, ${placeholderImageDesk2x} 2x">
+//           <img class="shopping-list-img" src="${placeholderImageDesk1x}" alt="Placeholder Image">
+//         </picture>
+//       </div>
+//     </div>
+//   `;
+//   container.innerHTML = placeholderMarkup;
+// }
 
 function renderShoppingList(shoppingList, container) {
   // Перебираємо елементи shoppingList і відображаємо їх
