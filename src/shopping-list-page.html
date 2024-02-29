@@ -207,6 +207,38 @@
               Shopping<span class="shopping-list-span">List</span>
             </h1>
           </div>
+          <div class="shop-container visually-hidden">
+            <p>This page is empty, add some books and proceed to order.</p>
+            <div class="shopping-list-img-container">
+              <picture class="shopping-list-img">
+                <!-- Для пристроїв з роздільною здатністю до 767px -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="
+                    ./img/shopping_books_mob@1x.png 265w,
+                    ./img/shopping_books_mob@1x.png 530w
+                  "
+                />
+                <!-- Для пристроїв з роздільною здатністю від 768px і вище -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="
+                    ./img/shopping_books_desk@1x.png 640w,
+                    ./img/shopping_books_desk@2x.png 1280w
+                  "
+                />
+                <!-- Основне зображення, якщо ніякий source не відповідає умовам -->
+                <img
+                  class="shopping-list-img"
+                  src="./img/shopping_books_mob@1x.png"
+                  alt="books"
+                  width="265"
+                  height="198"
+                />
+              </picture>
+          </div>
+          </div>
+
         </div>
       </div>
     </main>
