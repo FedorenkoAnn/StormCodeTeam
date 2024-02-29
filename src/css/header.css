@@ -269,9 +269,9 @@ body.dark-mode .icon-logo-book {
   }
 
   body.dark-mode .icon-shopping {
-    fill: black;
+    fill: #ffffff;
     position: relative;
-    top: 3px;
+    top: 4px;
   }
 
   .nav-logo {
@@ -348,12 +348,13 @@ body.dark-mode .icon-logo-book {
     position: relative;
   }
   body.dark-mode .icon-shopping {
-    fill: black;
+   fill: #ffffff;
    position: relative;
    top: 3px;
  }
- .header-menu svg.active {
-  stroke: #111111;
+ 
+ body.dark-mode .active.cart-book {
+   stroke: #111111;
  }
 
 }

@@ -70,7 +70,13 @@
     width: 265px;
     height: 198px;
   }
+
+  body.dark-mode .shopping-list-paragraf {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
 }
+
 
 /* Tablet */
 
@@ -131,6 +137,11 @@
     width: 322px;
     height: 241px;
   }
+
+  body.dark-mode .shopping-list-paragraf {
+    color: rgba(255, 255, 255, 0.6);
+  }
+
 }
 
 /* Desctop */
@@ -198,5 +209,9 @@
   .shopping-list-img {
     width: 322px;
     height: 241px;
+  }
+
+  body.dark-mode .shopping-list-paragraf {
+    color: rgba(255, 255, 255, 0.6);
   }
 }
