@@ -269,7 +269,7 @@ body.dark-mode .icon-logo-book {
   }
 
   body.dark-mode .icon-shopping {
-    fill: black;
+    fill: #ffffff;
     position: relative;
     top: 3px;
   }
@@ -348,7 +348,7 @@ body.dark-mode .icon-logo-book {
     position: relative;
   }
   body.dark-mode .icon-shopping {
-    fill: black;
+   fill: #ffffff;
    position: relative;
    top: 3px;
  }
