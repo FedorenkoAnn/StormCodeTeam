@@ -268,7 +268,7 @@ body.dark-mode .list-descr {
 }
 
 body.dark-mode .icon-amazon {
-  filter: brightness(0) invert(1);
+  filter: grayscale(100%);
 }
 
 @media screen and (max-width: 375px) {
@@ -299,7 +299,7 @@ body.dark-mode .icon-amazon {
 }
 
 body.dark-mode .icon-apple {
-  filter: brightness(0) invert(1);
+  filter: grayscale(100%);
 }
 
 @media screen and (max-width: 375px) {
