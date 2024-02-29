@@ -11,6 +11,7 @@
     margin-top: 98px;
     font-size: 48px;
     line-height: 1.1;
+    padding-left: 0;
   }
   @media screen and (min-width: 1440px){
     margin-top: 40px;
@@ -29,10 +30,11 @@
   letter-spacing: .03em;
   color: var(--light-header-secondary-color);
   text-transform: uppercase; 
-  padding-left: 30px;
+
 
   @media screen and (min-width: 768px) {
     line-height: 1.7;
+    /* padding-left: 32px; */
   }
   @media screen and (min-width: 1440px){
     margin-left: 40px;
@@ -51,6 +53,8 @@
     justify-content: space-between;
     height: 366px;
     margin-bottom: 20px;
+    padding-left: 0;
+
   }
   @media screen and (min-width: 1440px) {
     width: 996px;

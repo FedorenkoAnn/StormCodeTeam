@@ -12,6 +12,7 @@
 /* Mobile */
 
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
+
   .sidebar-box-support.shopping-list {
     display: none;
   }
