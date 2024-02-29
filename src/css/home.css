@@ -5,6 +5,7 @@
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
+    padding-left: 20px;
   }
 
   .home-section .sidebar-container {
@@ -16,6 +17,7 @@
     padding-top: 40px;
     padding-bottom: 40px;
     height: auto;
+    margin-bottom: 40px;
   }
   .sidebar-list-categories {
     max-height: 228px;
@@ -67,11 +69,13 @@
     padding-top: 40px;
     margin-left: auto;
     margin-right: auto;
+    padding-left: 20px;
   }
   .sidebar-box-categories {
     width: 100%;
     padding-top: 40px;
     padding-bottom: 40px;
+    margin-bottom: 40px;
   }
 
   .sidebar-list-categories {
@@ -142,7 +146,7 @@
     padding-top: 40px;
     display: flex;
     gap: 32px;
-    padding-left: 20px;
+  
   }
 
   .sidebar-box-categories {
@@ -167,6 +171,9 @@
     height: 472px;
     width: 335px;
   }
+  .support-arrow {
+    margin-left: 149px;
+  }
 }
 
 /* Desctop */
@@ -180,7 +187,7 @@
     column-gap: 0px;
     width: 100%;
     padding-top: 40px;
-    padding-left: 20px;
+    padding-left: 24px;
   }
 
   .home-section {
@@ -213,6 +220,9 @@
 
   .sidebar-box-support {
     margin-top: 86px;
+  }
+  .support-arrow {
+    margin-left: 159px;
   }
 }
 
@@ -470,7 +480,7 @@ body.dark-mode .sidebar-favorite:focus {
   width: 38px;
   height: 38px;
   margin-top: 24px;
-  margin-left: 159px;
+
 }
 
 .support-arrow:hover,
