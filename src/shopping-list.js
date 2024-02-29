@@ -28,12 +28,12 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function displayPlaceholder(container) {
-  const placeholderImageDesk1x = './img/shopping_books_desk@1x.png';
-  const placeholderImageDesk2x = './img/shopping_books_desk@2x.png';
-  const placeholderImageMob1x = './img/shopping_books_mob@1x.png';
-  const placeholderImageMob2x = './img/shopping_books_mob@2x.png';
-  const placeholderImageTab1x = './img/shopping_books_tab@1x.png';
-  const placeholderImageTab2x = './img/shopping_books_tab@2x.png';
+  const placeholderImageDesk1x = '/img/shopping_books_desk@1x.png';
+  const placeholderImageDesk2x = '/img/shopping_books_desk@2x.png';
+  const placeholderImageMob1x = '/img/shopping_books_mob@1x.png';
+  const placeholderImageMob2x = '/img/shopping_books_mob@2x.png';
+  const placeholderImageTab1x = '/img/shopping_books_tab@1x.png';
+  const placeholderImageTab2x = '/img/shopping_books_tab@2x.png';
 
   const placeholderMarkup = `
     <div class="shopping-list">
