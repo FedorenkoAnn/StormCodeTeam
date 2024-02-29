@@ -28,25 +28,13 @@ document.addEventListener('DOMContentLoaded', () => {
 });
 
 function displayPlaceholder(container) {
-  const placeholderImageDesk1x = './img/shopping_books_desk@1x.png';
-  const placeholderImageDesk2x = './img/shopping_books_desk@2x.png';
-  const placeholderImageMob1x = './img/shopping_books_mob@1x.png';
-  const placeholderImageMob2x = './img/shopping_books_mob@2x.png';
-  const placeholderImageTab1x = './img/shopping_books_tab@1x.png';
-  const placeholderImageTab2x = './img/shopping_books_tab@2x.png';
 
   const placeholderMarkup = `
     <div class="shopping-list">
       <h1 class="shopping-list-title">Shopping<span class="shopping-list-span">List</span></h1>
       <div class="shopping-list-img-book">
         <p class="shopping-list-paragraf">This page is empty, add some books and proceed to order.</p>
-        <picture>
-          <source media="(max-width: 575px)" srcset="${placeholderImageMob1x}, ${placeholderImageMob2x} 2x">
-          <source media="(max-width: 991px)" srcset="${placeholderImageTab1x}, ${placeholderImageTab2x} 2x">
-          <source srcset="${placeholderImageDesk1x}, ${placeholderImageDesk2x} 2x">
-          <img class="shopping-list-img" src="${placeholderImageDesk1x}" alt="Placeholder Image">
-        </picture>
-      </div>
+        </div>
     </div>
   `;
   container.innerHTML = placeholderMarkup;
@@ -121,3 +109,11 @@ function removeBook(bookId) {
     location.reload();
   }
 }
+
+
+// <picture>
+//           <source media="(max-width: 575px)" srcset="${placeholderImageMob1x}, ${placeholderImageMob2x} 2x">
+//           <source media="(max-width: 991px)" srcset="${placeholderImageTab1x}, ${placeholderImageTab2x} 2x">
+//           <source srcset="${placeholderImageDesk1x}, ${placeholderImageDesk2x} 2x">
+//           <img class="shopping-list-img" src="${placeholderImageDesk1x}" alt="Placeholder Image">
+//         </picture>

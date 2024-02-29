@@ -49,7 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 document.addEventListener('DOMContentLoaded', function() {
   const currentPath = window.location.pathname;
-  const navLinks = document.querySelectorAll('.header-menu a, .header-menu svg');
+  const navLinks = document.querySelectorAll('.header-menu a, .cart-book svg');
 
   navLinks.forEach(function(link) {
       if (link.href === window.location.href) {
