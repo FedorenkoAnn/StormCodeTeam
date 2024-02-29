@@ -11,8 +11,8 @@
     />
     
     <script type="module" crossorigin src="/StormCodeTeam/commonHelpers2.js"></script>
-    <link rel="modulepreload" crossorigin href="/StormCodeTeam/assets/header-5438414b.js">
-    <link rel="stylesheet" href="/StormCodeTeam/assets/header-d0b87db2.css">
+    <link rel="modulepreload" crossorigin href="/StormCodeTeam/assets/slider-733209a8.js">
+    <link rel="stylesheet" href="/StormCodeTeam/assets/slider-99adeb75.css">
   </head>
 
   <body>
@@ -253,6 +253,32 @@
               Shopping<span class="shopping-list-span">List</span>
             </h1>
           </div>
+          <div class="shop-container visually-hidden">
+            <p>This page is empty, add some books and proceed to order.</p>
+            <div class="shopping-list-img-container">
+              <picture class="shopping-list-img">
+                <!-- Для пристроїв з роздільною здатністю до 767px -->
+                <source
+                  media="(max-width: 767px)"
+                  srcset="/StormCodeTeam/assets/shopping_books_mob@1x-38e3dd44.png 265w, /StormCodeTeam/assets/shopping_books_mob@1x-38e3dd44.png 530w"
+                />
+                <!-- Для пристроїв з роздільною здатністю від 768px і вище -->
+                <source
+                  media="(min-width: 768px)"
+                  srcset="/StormCodeTeam/assets/shopping_books_desk@1x-c0418b52.png 640w, /StormCodeTeam/assets/shopping_books_desk@2x-fc1ffed1.png 1280w"
+                />
+                <!-- Основне зображення, якщо ніякий source не відповідає умовам -->
+                <img
+                  class="shopping-list-img"
+                  src="/StormCodeTeam/assets/shopping_books_mob@1x-38e3dd44.png"
+                  alt="books"
+                  width="265"
+                  height="198"
+                />
+              </picture>
+          </div>
+          </div>
+
         </div>
       </div>
     </main>
