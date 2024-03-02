@@ -4,12 +4,38 @@ import applebooks from './img/app_books@1x.png';
 import applebooks2x from './img/app_books@2x.png';
 import logo from './img/sprite.svg';
 
-
-
 document.addEventListener('DOMContentLoaded', () => {
-  const shoppingListContainer = document.querySelector('.shopping-list-container');
+  let currentPage = 1;
+  const shoppingListContainer = document.querySelector(
+    '.shopping-list-container'
+  );
   const shopContainer = document.querySelector('.shop-container');
-  
+  const target = document.querySelector('.js-guard');
+  let options = {
+    root: null,
+    rootMargin: '300px',
+    threshold: 1.0,
+  };
+
+  let observer = new IntersectionObserver(onLoad, options);
+
+  function onLoad(entries, observer) {
+    const savedShoppingList = localStorage.getItem('shoppingList');
+    let shoppingList = [];
+    if (savedShoppingList) {
+      shoppingList = JSON.parse(savedShoppingList);
+    }
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        currentPage += 1;
+        renderShoppingList(shoppingList, shoppingListContainer);
+        if (!shoppingList.length) {
+          observer.unobserve(target);
+        }
+      }
+    });
+  }
+
   // Отримуємо збережений список з локального сховища
   const savedShoppingList = localStorage.getItem('shoppingList');
   if (savedShoppingList) {
@@ -17,6 +43,7 @@ document.addEventListener('DOMContentLoaded', () => {
     if (shoppingList.length > 0) {
       // Викликаємо функцію для відображення елементів на сторінці, якщо список не порожній
       renderShoppingList(shoppingList, shoppingListContainer);
+      observer.observe(target);
       // Видаляємо клас visual-hidden
       shopContainer.classList.add('visually-hidden');
     } else {
@@ -29,32 +56,8 @@ document.addEventListener('DOMContentLoaded', () => {
   }
 });
 
-// function displayPlaceholder(container) {
-//   const placeholderImageDesk1x = './img/shopping_books_desk@1x.png';
-//   const placeholderImageDesk2x = './img/shopping_books_desk@2x.png';
-//   const placeholderImageMob1x = './img/shopping_books_mob@1x.png';
-//   const placeholderImageMob2x = './img/shopping_books_mob@2x.png';
-//   const placeholderImageTab1x = './img/shopping_books_tab@1x.png';
-//   const placeholderImageTab2x = './img/shopping_books_tab@2x.png';
-
-//   const placeholderMarkup = `
-//     <div class="shopping-list">
-//       <h1 class="shopping-list-title">Shopping<span class="shopping-list-span">List</span></h1>
-//       <div class="shopping-list-img-book">
-//         <p class="shopping-list-paragraf">This page is empty, add some books and proceed to order.</p>
-//         <picture>
-//           <source media="(max-width: 575px)" srcset="${placeholderImageMob1x}, ${placeholderImageMob2x} 2x">
-//           <source media="(max-width: 991px)" srcset="${placeholderImageTab1x}, ${placeholderImageTab2x} 2x">
-//           <source srcset="${placeholderImageDesk1x}, ${placeholderImageDesk2x} 2x">
-//           <img class="shopping-list-img" src="${placeholderImageDesk1x}" alt="Placeholder Image">
-//         </picture>
-//       </div>
-//     </div>
-//   `;
-//   container.innerHTML = placeholderMarkup;
-// }
-
 function renderShoppingList(shoppingList, container) {
+  container.innerHTML = '';
   // Перебираємо елементи shoppingList і відображаємо їх
   shoppingList.forEach((book, index) => {
     const bookElement = createBookElement(book, index); // Передаємо індекс у функцію
@@ -89,10 +92,14 @@ function createBookElement(book, index) {
           : `<p class="shopping-list-card-paragraf">There is no description for this book</p>`
       }
       <div class="shopping-list-card-container-img">
-        <a href="${amazonLinks}" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
+        <a href="${
+          book.buy_links[0].url
+        }" class="shopping-amazon-link" rel="noopener noreferrer nofollow" target="_blank">
           <img class="shopping-list-card-icon-amazon" srcset="${amazon2x} 2x, ${amazon} 1x" src="${amazon}" alt="Amazon" loading="lazy" width="20" height ="20">
         </a>
-        <a href="${appleLinks}" class="shopping-book-link" rel="noopener noreferrer nofollow" target="_blank">
+        <a href="${
+          book.buy_links[1].url
+        }" class="shopping-book-link" rel="noopener noreferrer nofollow" target="_blank">
           <img class="shopping-list-card-icon-book" srcset="${applebooks2x} 2x, ${applebooks} 1x" src="${applebooks}" alt="Apple books" loading="lazy" width="20" height ="20">
         </a>
       </div>
