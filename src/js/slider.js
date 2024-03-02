@@ -1,44 +1,3 @@
-// import Swiper from 'swiper/bundle';
-
-// import 'swiper/css/bundle';
-
-// const swiper = new Swiper('.swiper-scrollbar', {
-//   scrollbar: {
-//     el: '.swiper-scrollbar',
-//     draggable: true,
-//   },
-// });
-
-// const newSwiper = new Swiper('.swiper-container', {
-//   slidesPerView: 6,
-//   spaceBetween: 20,
-//   direction: 'vertical',
-//   speed: 400,
-//   navigation: {
-//     nextEl: '.swiper-button-next',
-//     prevEl: '.swiper-button-prev',
-//   },
-// });
-
-// function handlerClick() {
-//   arrowDown.classList.toggle('visually-hidden');
-//   arrowUp.classList.toggle('visually-hidden');
-
-//   supportList.scroll({
-//     top: 170,
-//     left: 0,
-//     behavior: 'smooth',
-//   });
-
-//   if (arrowUp.classList.contains('visually-hidden')) {
-//     supportList.scroll({
-//       top: -170,
-//       left: 0,
-//       behavior: 'smooth',
-//     });
-//   }
-// }
-
 // document.addEventListener('DOMContentLoaded', function () {
 //   const list = document.querySelector('.sidebar-swiper-list');
 //   const scrollStep = 100; // Величина прокрутки
@@ -84,11 +43,13 @@
 // });
 
 const supportList = document.querySelector('.sidebar-swiper-list');
+const arrowButton = document.querySelector('.support-arrow');
 const arrowDown = document.querySelector('.support-arrow-down');
 const arrowUp = document.querySelector('.support-arrow-up');
 
 // Добавляем обработчик события на кнопку "вниз"
-arrowDown.addEventListener('click', function () {
+arrowButton.addEventListener('click', function () {
+  arrowDown = document.querySelector('.support-arrow-down');
   // Прокручиваем вниз
   supportList.scrollBy({
     top: 170,
@@ -101,7 +62,8 @@ arrowDown.addEventListener('click', function () {
 });
 
 // Добавляем обработчик события на кнопку "вверх"
-arrowUp.addEventListener('click', function () {
+arrowButton.addEventListener('click', function () {
+  arrowUp = document.querySelector('.support-arrow-up');
   // Прокручиваем вверх
   supportList.scrollBy({
     top: -170,
