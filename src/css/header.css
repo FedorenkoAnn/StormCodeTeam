@@ -305,7 +305,4 @@ body.dark-mode .icon-logo-book {
    position: relative;
    top: 3px;
  }
- body.dark-mode .active.cart-book {
-   stroke: #111111;
  }
-}
