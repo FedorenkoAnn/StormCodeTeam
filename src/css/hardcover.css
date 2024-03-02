@@ -73,6 +73,7 @@
     .books_card-heading {
         padding-left: 20px;
     }
+   
     }
     
 @media screen and (min-width: 375px) and (max-width: 767.98px) {
@@ -124,7 +125,6 @@
     .hardcover-title {
         letter-spacing: -.04em;
         text-transform: uppercase;
-        color: var(--dark-header-bg-color);
         margin-top: 14px;
         margin-bottom: 4px;
         margin-left: 5px;

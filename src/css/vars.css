@@ -6,7 +6,7 @@
     --light-border-n-text-color: #111;
     --light-accent-color: #4f2ee8;
     --light-accent-color-2: #eac645;
-    --light-description-text: #11111199;
+    --light-description-text: #111111;
     --light-header-secondary-color: #b4afaf;
   
     --dark-body-color: #202024;
@@ -15,6 +15,6 @@
     --dark-border-n-text-color: #ffffff;
     --dark-accent-color: #4f2ee8;
     --dark-accent-color-2: #eac645;
-    --dark-description-text: #ffffff99;
-    --dark-header-secondary-color: #b4afaf84;
+    --dark-description-text: #ffffff;
+    --dark-header-secondary-color: #b4afaf;
 }

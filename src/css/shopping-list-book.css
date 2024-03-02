@@ -2,6 +2,19 @@
   width: 100%;
 }
 
+body.dark-mode .shopping-list-card-box {
+  background-color: #111111;
+}
+
+body.dark-mode .shopping-list-card-title {
+  color: #ffffff;
+}
+
+body.dark-mode .shopping-list-card-paragraf {
+  color: #ffffff;
+}
+
+
 
 
 /* Mobile */
