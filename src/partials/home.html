@@ -169,10 +169,7 @@
                 <img
                   class="sidebar-img"
                   src="./img/medecins1x.png"
-                  srcset="
-                      ./img/medecins1x.png 1x,
-                      ./img/medecins2x.png 2x
-                      "
+                  srcset="./img/medecins1x.png 1x, ./img/medecins2x.png 2x"
                   alt="support"
                 />
               </a>
@@ -214,11 +211,11 @@
             </li>
           </ul>
           <button class="support-arrow">
-            <svg class="support-button support-arrow-up" width="20" height="32">
+            <svg class="support-button next-btn" width="20" height="32">
               <use href="./img/sprite.svg#icon-vector-down"></use>
             </svg>
             <svg
-              class="support-button support-arrow-down visually-hidden"
+              class="support-button next-btn visually-hidden"
               width="12"
               height="20"
             >
@@ -229,7 +226,9 @@
       </div>
     </aside>
   </section>
-  <div class="home books-list js-bookslist"></div>
+  <div class="home books-list js-bookslist">
+    <div id="loader"></div>
+  </div>
 </div>
 <svg class="icon icon-power"><use xlink:href="#icon-power"></use></svg>
 

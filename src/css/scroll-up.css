@@ -13,8 +13,8 @@
   right: 20px;
   transition: opacity 250ms linear, visibility 250ms linear,
     background-color 250ms linear;
-  width: 64px;
-  height: 64px;
+  width: 50px;
+  height: 50px;
   border-radius: 50%;
   border: 5px solid rgba(80, 46, 232, 0.47);
   cursor: pointer;
@@ -36,6 +36,7 @@
     bottom: 140px;
   }
 }
+
 @media screen and (min-width: 1440px) {
   .scroll-up {
     bottom: 150px;

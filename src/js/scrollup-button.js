@@ -1,8 +1,9 @@
 import throttle from 'lodash.throttle';
-
 const scrollUpBtnEl = document.querySelector('.scroll-up');
 scrollUpBtnEl.addEventListener('click', onScrollUpClick);
-
+window.addEventListener('scroll', throttle(showScrollUpButton, 1000));
+// Приховати кнопку при завантаженні сторінки
+hideScrollUpBtn();
 function onScrollUpClick() {
   window.scrollTo({
     top: 0,
@@ -10,17 +11,19 @@ function onScrollUpClick() {
     behavior: 'smooth',
   });
 }
-window.addEventListener('scroll', throttle(showScrollUpButton, 1000));
-
 function showScrollUpButton(event) {
   const scrollY = window.scrollY || document.documentElement.scrollTop;
-  scrollY > 300 ? showScrollUpBtn() : hideScrollUpBtn();
+  const isAtTop = scrollY === 0; // Перевірка, чи користувач вже на самому верху сторінки
+  // Оновлені умови
+  if (scrollY > 100 && !isAtTop) {
+    showScrollUpBtn();
+  } else {
+    hideScrollUpBtn();
+  }
 }
-
 function hideScrollUpBtn() {
   scrollUpBtnEl.classList.add('is-hidden');
 }
-
 function showScrollUpBtn() {
   scrollUpBtnEl.classList.remove('is-hidden');
 }
