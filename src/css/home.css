@@ -271,6 +271,7 @@
     height: 472px;
     width: 335px;
   }
+
   .support-arrow {
     margin-left: 149px;
   }
@@ -609,4 +610,27 @@ body.dark-mode .sidebar-favorite:active {
   width: 15px;
   height: 10px;
   fill: rgb(79, 46, 232);
+}
+
+/* Loader */
+
+#loader {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  border: 16px solid #4230ff93; /* Світлий колір для границі */
+  border-top: 16px solid #4a17ffbb; /* Синій колір для верхньої границі */
+  border-radius: 50%;
+  width: 100px;
+  height: 100px;
+  animation: spin 3s linear infinite; /* Додавання анімації обертання */
+}
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
 }
