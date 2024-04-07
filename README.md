@@ -20,13 +20,9 @@
 
 
 
-1. [@FedorenkoAnn](https://github.com/FedorenkoAnn) **(Team Lead, Technical
+1. [@FedorenkoAnn](https://github.com/FedorenkoAnn) **(Team Lead, Technicalimplementation, Code quality assurance)**
 
-   implementation, Code quality assurance)**
-
-2. [@Viktoriia Kucher](https://github.com/torry455) **(Scrum master,
-
-   Hardcover)**
+2. [@Viktoriia Kucher](https://github.com/torry455) **(Scrum master,Hardcover)**
 
 3. [@Maria Khalenko](https://github.com/MariaKhalenko) **(Header section)**
 
